@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Snizhana Syngur](https://up.htmlacademy.ru/htmlcss/20/user/543355).
-* Наставник: [Владислав Балабанович] (https://htmlacademy.ru/profile/balabanovich)
+* Наставник: [Владислав Балабанович](https://up.htmlacademy.ru/htmlcss/20/user/6394).
 
 ---
 
