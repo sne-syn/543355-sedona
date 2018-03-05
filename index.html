@@ -5,64 +5,80 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+      <div class="page-container">
       <header class="main-header">
           <nav class="main-navigation">
-              <img src="http://placehold.it/150x100"  alt="Логотип City of Sedona">
+              <img src="info.html"  alt="Логотип City of Sedona">
               <ul class="site-navigation">
                   <li><a href="info.html">Информация</a></li>
                   <li><a href="multimedia.html">Фото и видео</a></li>
                   <li><a href="map.html">Карта штата</a></li>
-                  <li><a href="hostel.html">Гостиницы</a></li>
+                  <li><a href="catalog.html">Гостиницы</a></li>
+                <!-- все ссылки ведут на catalog.html? -->
               </ul>
           </nav>
       </header>
       <main class="container">
-          <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-              <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+        <img src="http://placehold.it/150x100" alt="background-img">
+              <h1 class="main-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
           <h2 class="visually-hidden">Преимущества Седоны</h2>
               <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-          <section class="benefits">
-              <ol class="benefits-list">
-                  <li class="benefits-city">
-                      <h3>Настоящий городок</h3>
-                          <p>— №1 —</p>
-                          <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-                      <ul class="benefits-city-list">
-                          <li class="accomodation">
+          <section class="advantage">
+              <div class="advantage-img">
+                  <img src="http://placehold.it/150x100" alt="city-view">
+              </div>
+              <div class="advantage-text">
+                  <h3>Настоящий городок</h3>
+                     <p>— №1 —</p>
+                     <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+                <!-- Здесь я все равно сделала списком. Мне кажется, что визуально эта связь не очевидна, но она есть! И проигнорировать ее - потерять логическую связь с 1м пунктом. 
+                  Скажешь переделать - переделаю. -->
+                  <ul class="advantage-services">
+                      <li class="advantage-list">
                               <h4>Жилье</h4>
                               <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                           </li>      
-                          <li class="food">
+                          <li class="advantage-list">
                               <h4>Еда</h4>
                               <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                           </li>      
-                          <li class="souvenir">
+                          <li class="advantage-list">
                               <h4>Сувениры</h4>
                               <p>Не только китайского, но и местного производства!</p>
-                          </li>        
-                      </ul>
-                  </li>   
-                  <li class="benefits-bridge">
-                      <h3>Там есть Мост дьявола</h3>
+                          </li> 
+                  </ul>
+              </div>
+          </section>
+          <section class="advantage">
+              <div class="advantage-text">
+                  <h3>Там есть Мост дьявола</h3>
                       <p>— №2 —</p>
                       <p> Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-                  </li>
-                  <li class="benefits-square">
+              </div>
+              <div class="advantage-img">
+                  <img src="http://placehold.it/150x100" alt="devil's-bridge">
+              </div>
+          </section>
+          <section class="advantage">
+              <div class="advantage-text">
                       <h3>Небольшая площадь</h3>
                       <p> — №3 —</p>
                       <p>Все достопримечательности находятся очень близко</p>
-                  </li>      
-                  <li class="benefits-road">
+              </div>
+          </section>      
+          <section class="advantage">
+              <div class="advantage-text">
                       <h3>Красивая дорога</h3>
                       <p>— №4 —</p>
                       <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-                  </li>      
-                  <li class="benefits-few-tourists">
+              </div>
+          </section>   
+          <section class="advantage">
+              <div class="advantage-text">
                       <h3>Мало туристов</h3>
                       <p>— №5 —</p>
                       <p>Большинство едет в гранд каньон и толпится там</p>
-                  </li>      
-              </ol>
+              </div>
           </section>
           <section>
               <h2 class="visually-hidden">Забронировать гостиницу</h2>
@@ -72,10 +88,6 @@
           </section>
       </main>
       <footer class="main-footer">
-          <section>
-              
-              <!-- #VISITSEDONA это ссылка? -->
-              <h2 class="visually-hidden">Мы в социальных сетях</h2>
               <a class="hashtag" href="#">#VISITSEDONA</a>
               <div class="footer-social">
                   <ul>
@@ -84,10 +96,12 @@
                      <li><a class="social-yt" href="#">YouTube</a></li>
                   </ul>
               </div>
-              <p class="footer-made-by">Website by
+              <div class="trademark">
+                <p class="footer-made-by">Website by
                   <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-              </p>      
-          </section>
+                </p>   
+              </div>
       </footer>
+     </div>
   </body>
 </html>
