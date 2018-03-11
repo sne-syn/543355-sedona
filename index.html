@@ -8,31 +8,30 @@
       <div class="page-container">
       <header class="main-header">
           <nav class="main-navigation">
-              <img src="info.html"  alt="Логотип City of Sedona">
+              <img src="img/Logo.png"  alt="Логотип City of Sedona">
               <ul class="site-navigation">
                   <li><a href="info.html">Информация</a></li>
                   <li><a href="multimedia.html">Фото и видео</a></li>
                   <li><a href="map.html">Карта штата</a></li>
                   <li><a href="catalog.html">Гостиницы</a></li>
-                <!-- все ссылки ведут на catalog.html? -->
+                <!-- куда ведут ссылки? -->
               </ul>
           </nav>
       </header>
       <main class="container">
-        <img src="http://placehold.it/150x100" alt="background-img">
+        <img src="img/background-photo.jpg" alt="background-img">
+        <!-- Welcome тра-та-та делаю через css? Или это принципиально сделать в html?-->
               <h1 class="main-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
           <h2 class="visually-hidden">Преимущества Седоны</h2>
               <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           <section class="advantage">
               <div class="advantage-img">
-                  <img src="http://placehold.it/150x100" alt="city-view">
+                  <img src="img/advantage-1.jpg" alt="city-view">
               </div>
               <div class="advantage-text">
                   <h3>Настоящий городок</h3>
                      <p>— №1 —</p>
                      <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-                <!-- Здесь я все равно сделала списком. Мне кажется, что визуально эта связь не очевидна, но она есть! И проигнорировать ее - потерять логическую связь с 1м пунктом. 
-                  Скажешь переделать - переделаю. -->
                   <ul class="advantage-services">
                       <li class="advantage-list">
                               <h4>Жилье</h4>
@@ -56,7 +55,7 @@
                       <p> Да, по нему можно пройти! Если конечно вы осмелитесь</p>
               </div>
               <div class="advantage-img">
-                  <img src="http://placehold.it/150x100" alt="devil's-bridge">
+                  <img src="img/advantage-2.jpg" alt="devil's-bridge">
               </div>
           </section>
           <section class="advantage">
@@ -84,23 +83,43 @@
               <h2 class="visually-hidden">Забронировать гостиницу</h2>
               <p>Заинтересовались?</p>
               <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <!-- Здесь будет форма -->
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <fieldset>
+                  <legend>Поиск гостиницы в Седоне</legend>
+                  <label for="check-in">Дата заезда:</label>
+                  <input type="text" name="date" id="check-in" value="24 апреля 2017">
+                    <span><img src="img/calendar.svg" width="21px" height="22px"></span>
+                  <!-- Затык с типом инпута. -->
+                  <label for="check-out">Дата выезда:</label>
+                  <input type="text" name="date" id="check-out" value="04 июля 2017">
+                    <span><img src="img/calendar.svg" width="21px" height="22px"></span>
+                  <label for="adults-field">Взрослые</label>
+                  <input type="text" name="room-adults" id="adults-field">
+                  <label for="children-field">Дети</label>
+                  <input type="text" name="room-children" id="children-field">
+                  <button type="submit">Найти</button>
+                </fieldset>
+              </form>
           </section>
       </main>
       <footer class="main-footer">
-              <a class="hashtag" href="#">#VISITSEDONA</a>
-              <div class="footer-social">
+              <section class="footer-social">
+                <h2>Мы в социальных сетях</h2>
+                <p class="footer-hashtag">
+                <a class="hashtag" href="#">#VISITSEDONA</a>
+                  </p>
                   <ul>
                      <li><a class="social-tw" href="#">Twitter</a></li>
                      <li><a class="social-fb" href="#">Facebook</a></li>
                      <li><a class="social-yt" href="#">YouTube</a></li>
                   </ul>
-              </div>
-              <div class="trademark">
+              </section>
+              <section class="footer-trademark">
+                <h2>Правообладатели</h2>
                 <p class="footer-made-by">Website by
                   <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
                 </p>   
-              </div>
+              </section>
       </footer>
      </div>
   </body>

@@ -8,7 +8,9 @@
     <div class="page-container">
     <header class="main-header">
         <nav class="main-navigation">
-              <img src="http://placehold.it/150x100"  alt="Логотип City of Sedona">
+          <a href="index.html">
+              <img src="img/Logo.png"  alt="Логотип City of Sedona">
+          </a>
               <ul class="site-navigation">
                   <li><a href="info.html">Информация</a></li>
                   <li><a href="multimedia.html">Фото и видео</a></li>
@@ -19,7 +21,7 @@
     </header>
     <main class="container">
           <section class="form">
-            <!-- Попытка. Буду дорабатывать в процессе. -->
+            <!-- Попытка. TODO: дорабатывать в процессе. -->
             <div class="checkbox-facilities">
               <fieldset>
                 <legend>Инфраструктура</legend>
@@ -36,16 +38,18 @@
                 <legend>Тип жилья</legend>
                 <input type="checkbox" name="type" id="hotel-field" checked>
                 <label for="waterpool-field">Гостиница</label>
-                <input type="checkbox" name="type" id="motel-field">
+                <input type="checkbox" name="type" id="motel-field" checked>
                 <label for="parking-field">Мотель</label>
-                <input type="checkbox" name="type" id="apartment-field">
+                <input type="checkbox" name="type" id="apartment-field" checked>
                 <label for="apartment-field">Апартаменты</label>
               </fieldset>  
             </div>
             <section class="range">
             <div class="range-input">
               <label for="price">Стоимость в сутки (Р):</label>
-              <!-- Здесь будет поле ввода: от 0 до 3000 Пока не знаю, как сделать и связать их. -->
+              <!-- TODO: поле ввода: от 0 до 3000 Пока не знаю, как сделать и связать их. -->
+              <input type="text" placeholder="от 0">
+              <input type="text" placeholder="до 3000">
               0 <input type="range" min="0" max="3000"> 3000
               <div class="range-input output-area">
                      <output name="result" id="price">
@@ -65,7 +69,7 @@
                       <article class="hotel-info">
                           <div class="hotel-discription">
                               <h3 class="hotel-name">Amara Resort & Spa</h3>
-                              <img src="http://placehold.it/150x100" alt="Hotel-view">
+                              <img src="img/hotel-1.jpg" alt="Hotel view">
                               <p class="hotel-type">Гостиница</p>
                               <p class="hotel-price">от 4000 Р.</p>
                               <div class="hotel-links">
@@ -73,7 +77,7 @@
                                       <a href="#">Забронировать</a>
                               </div>
                               <div class="hotel-stars">
-                                  <img src="http://placehold.it/150x100" alt="Hotel-stars-4">
+                                  <img src="img/star.svg" alt="Hotel 4 out of 5 stars">
                               </div>
                               <div class="hotel-raiting">Рейтинг: 8,5</div>
                           </div>
@@ -83,7 +87,7 @@
                       <article class="hotel-info">
                           <div>
                               <h3 class="hotel-name">Desert Quail Inn</h3>
-                              <img src="http://placehold.it/150x100" alt="Hotel-view">
+                              <img src="img/hotel-2.jpg" alt="Hotel view">
                               <p class="hotel-type">Мотель</p>
                               <p class="hotel-price">от 3000 Р.</p>
                               <div class="hotel-links">
@@ -91,7 +95,7 @@
                                       <a href="#">Забронировать</a>
                               </div>
                               <div class="hotel-stars">
-                                  <img src="http://placehold.it/150x100" alt="Hotel-stars-3">
+                                  <img src="img/star.svg" alt="Hotel 3 out of 5 stars">
                               </div>
                               <div class="hotel-raiting">Рейтинг: 8,9</div>
                           </div>
@@ -101,7 +105,7 @@
                       <article class="hotel-info">
                           <div>
                               <h3 class="hotel-name">Villas at Poco Diablo</h3>
-                              <img src="http://placehold.it/150x100" alt="Hotel-view">
+                              <img src="img/hotel-3.jpg" alt="Hotel view">
                               <p class="hotel-type">Апартаменты</p>
                               <p class="hotel-price">от 2000 Р.</p>
                               <div class="hotel-links">
@@ -109,7 +113,7 @@
                                       <a href="#">Забронировать</a>
                               </div>
                               <div class="hotel-stars">
-                                  <img src="http://placehold.it/150x100" alt="Hotel-stars-2">
+                                  <img src="img/star.svg" alt="Hotel 2 out of 5 stars">
                               </div>
                               <div class="hotel-raiting">Рейтинг: 9,2</div>
                           </div>
