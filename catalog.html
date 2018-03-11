@@ -21,7 +21,8 @@
     </header>
     <main class="container">
           <section class="form">
-            <!-- Попытка. TODO: дорабатывать в процессе. -->
+            <h2>Форма поиска</h2>
+            <form action="https://echo.htmlacademy.ru" method="post">
             <div class="checkbox-facilities">
               <fieldset>
                 <legend>Инфраструктура</legend>
@@ -42,12 +43,11 @@
                 <label for="parking-field">Мотель</label>
                 <input type="checkbox" name="type" id="apartment-field" checked>
                 <label for="apartment-field">Апартаменты</label>
-              </fieldset>  
+              </fieldset>
             </div>
-            <section class="range">
             <div class="range-input">
               <label for="price">Стоимость в сутки (Р):</label>
-              <!-- TODO: поле ввода: от 0 до 3000 Пока не знаю, как сделать и связать их. -->
+              <!-- поле ввода: от 0 до 3000 Пока не знаю, как связать с ползунком. -->
               <input type="text" placeholder="от 0">
               <input type="text" placeholder="до 3000">
               0 <input type="range" min="0" max="3000"> 3000
@@ -56,12 +56,11 @@
                       </output>
               </div>
             </div>
-            </section>  
-            <div class="button"> 
+            <div class="button">
               <button type="submit" value="Показать">Показать</button>
             </div>
+            </form>
           </section>
-      
           <section class="listing">
               <h2 class="visually-hidden">Результаты поиска</h2>
               <ol class="hotel-listing">
@@ -69,7 +68,7 @@
                       <article class="hotel-info">
                           <div class="hotel-discription">
                               <h3 class="hotel-name">Amara Resort & Spa</h3>
-                              <img src="img/hotel-1.jpg" alt="Hotel view">
+                              <img src="img/hotel-1.jpg" alt="Hotel Amara Resort & Spa view">
                               <p class="hotel-type">Гостиница</p>
                               <p class="hotel-price">от 4000 Р.</p>
                               <div class="hotel-links">
@@ -87,7 +86,7 @@
                       <article class="hotel-info">
                           <div>
                               <h3 class="hotel-name">Desert Quail Inn</h3>
-                              <img src="img/hotel-2.jpg" alt="Hotel view">
+                              <img src="img/hotel-2.jpg" alt="Hotel Desert Quail Inn view">
                               <p class="hotel-type">Мотель</p>
                               <p class="hotel-price">от 3000 Р.</p>
                               <div class="hotel-links">
@@ -103,9 +102,9 @@
                   </li>
                     <li class="hotel">
                       <article class="hotel-info">
-                          <div>
+                      	<div>
                               <h3 class="hotel-name">Villas at Poco Diablo</h3>
-                              <img src="img/hotel-3.jpg" alt="Hotel view">
+                              <img src="img/hotel-3.jpg" alt="Hotel Villas at Poco Diablo view">
                               <p class="hotel-type">Апартаменты</p>
                               <p class="hotel-price">от 2000 Р.</p>
                               <div class="hotel-links">
@@ -116,26 +115,30 @@
                                   <img src="img/star.svg" alt="Hotel 2 out of 5 stars">
                               </div>
                               <div class="hotel-raiting">Рейтинг: 9,2</div>
-                          </div>
+                        </div>
                       </article>
                   </li>
               </ol>
           </section>
-    </main>      
+    </main>
         <footer class="main-footer">
-              <a class="hashtag" href="#">#VISITSEDONA</a>
-              <div class="footer-social">
+              <section class="footer-social">
+                <h2>Мы в социальных сетях</h2>
+                <span class="footer-hashtag">
+                <a class="hashtag" href="#">#VISITSEDONA</a>
+                  </span>
                   <ul>
                      <li><a class="social-tw" href="#">Twitter</a></li>
                      <li><a class="social-fb" href="#">Facebook</a></li>
                      <li><a class="social-yt" href="#">YouTube</a></li>
                   </ul>
-              </div>
-              <div class="trademark">
+              </section>
+              <section class="footer-trademark">
+                <h2>Правообладатели</h2>
                 <p class="footer-made-by">Website by
                   <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-                </p>   
-              </div>
+                </p>
+              </section>
       </footer>
     </div>
   </body>
