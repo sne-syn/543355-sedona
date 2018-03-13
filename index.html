@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
@@ -16,93 +17,106 @@
           <li><a href="multimedia.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="catalog.html">Гостиницы</a></li>
-          <!-- куда ведут ссылки? -->
         </ul>
       </nav>
     </header>
     <main class="container">
-      <img src="img/background-photo.jpg" alt="Sedona-view">
-      <!-- Welcome тра-та-та делаю через css? Или это принципиально поместить в html? И еще одно. Здесь такой микс языков, что я теряюсь, на каком языке прописывать к картинкам alt.-->
+      <div class="intro">
+        <img src="img/sedona-slogan.png" width="1200" height="648" alt="Welcome to Sedona">
+        <!-- Там две строчки с текстом потерялись на белом фоне. Потом на css background добавлю и прорисуются-->
+      </div>
       <h1 class="main-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
       <h2 class="visually-hidden">Преимущества Седоны</h2>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-      <section class="advantage">
+      <!--1 section-->
+      <section class="advantage-block">
         <div class="advantage-img">
-          <img src="img/advantage-1.jpg" alt="city-view">
+          <img src="img/advantage-1.jpg" width="800" height="400" alt="city-view">
         </div>
         <div class="advantage-text">
           <h3>Настоящий городок</h3>
           <p>— №1 —</p>
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-          <ul class="advantage-services">
-            <li class="advantage-list">
-              <h4>Жилье</h4>
-              <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-            </li>
-            <li class="advantage-list">
-              <h4>Еда</h4>
-              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-            </li>
-            <li class="advantage-list">
-              <h4>Сувениры</h4>
-              <p>Не только китайского, но и местного производства!</p>
-            </li>
-          </ul>
         </div>
       </section>
+      <!-- 2 section  -->
       <section class="advantage">
+        <div class="advantage-icon advantage-text">
+          <h4>Жилье</h4>
+          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+        <div class="advantage-icon advantage-text">
+          <h4>Еда</h4>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+        <div class="advantage-icon advantage-text">
+          <h4>Сувениры</h4>
+          <p>Не только китайского, но и местного производства!</p>
+        </div>
+      </section>
+      <!-- 3 section -->
+      <section class="advantage-block">
         <div class="advantage-text">
           <h3>Там есть Мост дьявола</h3>
           <p>— №2 —</p>
           <p> Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
         <div class="advantage-img">
-          <img src="img/advantage-2.jpg" alt="devil's-bridge">
+          <img src="img/advantage-2.jpg" width="800" height="400" alt="devil's-bridge">
         </div>
       </section>
+      <!-- 4 section-->
       <section class="advantage">
         <div class="advantage-text">
           <h3>Небольшая площадь</h3>
           <p> — №3 —</p>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
-      </section>
-      <section class="advantage">
         <div class="advantage-text">
           <h3>Красивая дорога</h3>
           <p>— №4 —</p>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
-      </section>
-      <section class="advantage">
         <div class="advantage-text">
           <h3>Мало туристов</h3>
           <p>— №5 —</p>
           <p>Большинство едет в гранд каньон и толпится там</p>
         </div>
       </section>
-      <section>
+
+      <!-- 5 section -->
+      <section class="search-form">
         <h2 class="visually-hidden">Забронировать гостиницу</h2>
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <a class="button" href="#">Поиск гостиницы в Седоне</a>
+        <form class="search-fields" action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
-            <legend>Поиск гостиницы в Седоне</legend>
-            <label for="check-in">Дата заезда:</label>
-            <input type="text" name="date" id="check-in" value="24 апреля 2017">
-            <span><img src="img/calendar.svg" width="21" height="22" alt="calendar"></span>
-            <!--                   Затык с типом инпута. Правильнее было бы date, но тогда отдельные иконки с календариком лишние. -->
-            <label for="check-out">Дата выезда:</label>
-            <input type="text" name="date" id="check-out" value="04 июля 2017">
-            <span><img src="img/calendar.svg" width="21" height="22" alt="calendar"></span>
-            <label for="adults-field">Взрослые</label>
-            <button><img src="img/icon-minus.png" alt="icon-minus" width="12" height-="3"></button>
-            <input type="text" name="room-adults" id="adults-field">
-            <button><img src="img/icon-plus.png" alt="icon-plus" width="11" height="11"></button>
-            <label for="children-field">Дети</label>
-            <button><img src="img/icon-minus.png" alt="icon-minus" width="12" height-="3"></button>
-            <input type="text" name="room-children" id="children-field">
-            <button><img src="img/icon-plus.png" alt="icon-plus" width="11" height="11"></button>
+            <div class="input-field">
+              <label for="check-in">Дата заезда:</label>
+              <input type="text" name="date" id="check-in" value="24 апреля 2017">
+              <span class="calendar-button"></span>
+            </div>
+            <div class="input-field">
+              <label for="check-out">Дата выезда:</label>
+              <input type="text" name="date" id="check-out" value="04 июля 2017">
+              <span class="calendar-button"></span>
+            </div>
+
+            <!-- Вопрос №1: по кнопкам +/-. Они должны быть внутри поля с инпутом. Как это сделать?-->
+
+            <div class="input-field">
+              <label for="adults-field">Взрослые</label>
+              <button class="button-plus" type="button">+</button>
+              <input type="text" name="room-adults" id="adults-field">
+              <button class="button-minus" type="button">-</button>
+            </div>
+            <div class="input-field">
+              <label for="children-field">Дети</label>
+              <button class="button-plus" type="button">+</button>
+              <input type="text" name="room-children" id="children-field">
+              <button class="button-minus" type="button">-</button>
+            </div>
             <button type="submit">Найти</button>
           </fieldset>
         </form>
@@ -112,12 +126,12 @@
       <section class="footer-social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <span class="footer-hashtag">
-                <a class="hashtag" href="#">#VISITSEDONA</a>
+          <a class="hashtag" href="#">#VISITSEDONA</a>
         </span>
         <ul>
-          <li><a class="social-tw" href="#">Twitter</a></li>
-          <li><a class="social-fb" href="#">Facebook</a></li>
-          <li><a class="social-yt" href="#">YouTube</a></li>
+          <li><a class="social-btn social-btn-tw" href="#">Twitter</a></li>
+          <li><a class="social-btn social-btn-fb" href="#">Facebook</a></li>
+          <li><a class="social-btn social-btn-yt" href="#">YouTube</a></li>
         </ul>
       </section>
       <section class="footer-trademark">
