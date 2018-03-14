@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
-<body>
+<body class="inner-page">
   <div class="page-container">
     <header class="main-header">
       <nav class="main-navigation">
@@ -54,10 +54,12 @@
           </div>
           <div class="range-input">
             <label for="price">Стоимость в сутки (Р):</label>
-            <div class="range-control">
+            <div class="range-info">
               <input type="text" id="price" placeholder="от 0">
-              <input type="text" placeholder="до 3000"> 0 <input type="range" min="0" max="3000"> 3000
-              <!--              Пока что оставила ползунок в стандартном виде. -->
+              <input type="text" placeholder="до 3000">
+            </div>
+            <div class="range-controler">
+              0 <input type="range" min="0" max="3000"> 3000
             </div>
             <div class="button">
               <button type="submit" value="Показать">Показать</button>
@@ -81,74 +83,77 @@
             <li><button class="icon-down"></button></li>
           </ul>
         </div>
-        <article class="hotel">
-          <div class="hotel-img">
-            <img src="img/hotel-1.jpg" width="135" height="90" alt="Hotel Amara Resort & Spa view">
-          </div>
-          <div class="hotel-info">
-            <h3 class="hotel-name">Amara Resort & Spa</h3>
-            <p class="hotel-type">Гостиница</p>
-            <p class="hotel-price">от 4000 Р.</p>
-            <ul class="hotel-links">
-              <li><a href="#">Подробнее</a></li>
-              <li><a href="#">Забронировать</a></li>
-            </ul>
-          </div>
-          <div class="hotel-review">
-            <div class="hotel-stars">
-              <span class="star"></span>
-              <span class="star"></span>
-              <span class="star"></span>
-              <span class="star"></span>
+        <section class="hotel-listing">
+          <h2 class="visually-hidden">Список гостиниц</h2>
+          <article class="hotel">
+            <div class="hotel-img">
+              <img src="img/hotel-1.jpg" width="135" height="90" alt="Hotel Amara Resort & Spa view">
             </div>
-            <p class="hotel-raiting">Рейтинг: 8,5</p>
-          </div>
-        </article>
+            <div class="hotel-info">
+              <h3 class="hotel-name">Amara Resort & Spa</h3>
+              <p class="hotel-type">Гостиница</p>
+              <p class="hotel-price">от 4000 Р.</p>
+              <ul class="hotel-links">
+                <li><a href="#">Подробнее</a></li>
+                <li><a href="#">Забронировать</a></li>
+              </ul>
+            </div>
+            <div class="hotel-review">
+              <div class="hotel-stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <p class="hotel-raiting">Рейтинг: 8,5</p>
+            </div>
+          </article>
 
-        <article class="hotel">
-          <div class="hotel-img">
-            <img src="img/hotel-2.jpg" width="135" height="90" alt="Hotel Desert Quail Inn view">
-          </div>
-          <div class="hotel-info">
-            <h3 class="hotel-name">Desert Quail Inn</h3>
-            <p class="hotel-type">Мотель</p>
-            <p class="hotel-price">от 3000 Р.</p>
-            <ul class="hotel-links">
-              <li><a href="#">Подробнее</a></li>
-              <li><a href="#">Забронировать</a></li>
-            </ul>
-          </div>
-          <div class="hotel-review">
-            <div class="hotel-stars">
-              <span class="star"></span>
-              <span class="star"></span>
-              <span class="star"></span>
+          <article class="hotel">
+            <div class="hotel-img">
+              <img src="img/hotel-2.jpg" width="135" height="90" alt="Hotel Desert Quail Inn view">
             </div>
-            <p class="hotel-raiting">Рейтинг: 8,9</p>
-          </div>
-        </article>
+            <div class="hotel-info">
+              <h3 class="hotel-name">Desert Quail Inn</h3>
+              <p class="hotel-type">Мотель</p>
+              <p class="hotel-price">от 3000 Р.</p>
+              <ul class="hotel-links">
+                <li><a href="#">Подробнее</a></li>
+                <li><a href="#">Забронировать</a></li>
+              </ul>
+            </div>
+            <div class="hotel-review">
+              <div class="hotel-stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <p class="hotel-raiting">Рейтинг: 8,9</p>
+            </div>
+          </article>
 
-        <article class="hotel">
-          <div class="hotel-img">
-            <img src="img/hotel-3.jpg" width="135" height="90" alt="Hotel Villas at Poco Diablo view">
-          </div>
-          <div class="hotel-info">
-            <h3 class="hotel-name">Villas at Poco Diablo</h3>
-            <p class="hotel-type">Апартаменты</p>
-            <p class="hotel-price">от 2000 Р.</p>
-            <ul class="hotel-links">
-              <li><a href="#">Подробнее</a></li>
-              <li><a href="#">Забронировать</a></li>
-            </ul>
-          </div>
-          <div class="hotel-review">
-            <div class="hotel-stars">
-              <span class="star"></span>
-              <span class="star"></span>
+          <article class="hotel">
+            <div class="hotel-img">
+              <img src="img/hotel-3.jpg" width="135" height="90" alt="Hotel Villas at Poco Diablo view">
             </div>
-            <p class="hotel-raiting">Рейтинг: 9,2</p>
-          </div>
-        </article>
+            <div class="hotel-info">
+              <h3 class="hotel-name">Villas at Poco Diablo</h3>
+              <p class="hotel-type">Апартаменты</p>
+              <p class="hotel-price">от 2000 Р.</p>
+              <ul class="hotel-links">
+                <li><a href="#">Подробнее</a></li>
+                <li><a href="#">Забронировать</a></li>
+              </ul>
+            </div>
+            <div class="hotel-review">
+              <div class="hotel-stars">
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <p class="hotel-raiting">Рейтинг: 9,2</p>
+            </div>
+          </article>
+        </section>
       </section>
     </main>
     <footer class="main-footer">
