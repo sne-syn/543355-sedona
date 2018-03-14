@@ -57,7 +57,6 @@ a {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  text-align: center;
   color: #000000;
 }
 
@@ -65,7 +64,7 @@ a {
 
 .visually-hidden {}
 
-h3 {
+.advantage h3 {
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -86,4 +85,34 @@ h3 {
 
 .advantage:last-child {
   background-color: #eeeeee;
+}
+
+.search-text {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.search-proposal {
+  line-height: 24px;
+}
+
+.button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.hotel-btn {
+  background-color: #766357;
+}
+
+.input-field {
+  font-weight: bold;
+}
+
+.search-btn {
+  background-color: #81b3d2;
 }
