@@ -5,24 +5,85 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: normal;
+  text-align: center;
   color: #333333;
+  text-transform: uppercase;
 
 
-  background-color: #ffffff;
-  background-image: url("img/background-img.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-color: #f2f2f2;
 }
 
 .inner-page {
   font-size: 14px;
   line-height: 21px;
-  text-transform: uppercase;
-  
+  font-weight: bold;
+
   background-color: #fefefe;
 }
 
+.page-container {
+  background-color: #f2f2f2;
+}
+
+
+.main-header {
+  background-color: #ffffff;
+}
+
 a {
+  color: #000000;
   text-decoration: none;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.container {
+  background-color: #ffffff;
+}
+
+/*не подтягивается картинка*/
+
+.intro {
+  background-color: #d9eaf5;
+  background-image: url("img/background-img.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.main-title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+/*заполнить*/
+
+.visually-hidden {}
+
+h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+.advantage-block {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.advantage-block h3 {
+  color: #ffffff;
+}
+
+/* не работает переопределение на один блок*/
+
+.advantage:last-child {
+  background-color: #eeeeee;
 }
