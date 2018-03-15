@@ -81,7 +81,9 @@ a {
 
 /*заполнить*/
 
-.visually-hidden {}
+.visually-hidden {
+  font-size: 0;
+}
 
 .advantage h3 {
   font-size: 21px;
@@ -118,7 +120,7 @@ a {
 
 /* не работает переопределение на один блок*/
 
-.advantage:nth-child(2) {
+.advantage:last-of-type {
   background-color: #eeeeee;
 }
 
@@ -170,7 +172,7 @@ a {
 }
 
 
-/*не работают эти свойства*/
+/*не работают эти свойства для input*/
 
 .input-line {
   width: 345px;
@@ -229,13 +231,13 @@ a {
 }
 
 .sort-tytle,
-.sort-list {
+.sort-list a {
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
 }
 
-.sort-list a{
+.sort-list a {
   opacity: 0.3;
 }
 
@@ -243,7 +245,66 @@ a {
   color: #81b3d2;
 }
 
+/*не работает нажатие*/
+
 .sort-list a:active {
   color: #000000;
 }
 
+/* не работает отдельный элемент*/
+
+.sort-list a:first-child:active {
+  color: #81b3d2;
+}
+
+.hotel-links li {
+  width: 110px;
+  height: 27px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hotel-links li:first-of-type {
+  background-color: #81b3d2;
+}
+
+.hotel-links li:first-of-type:hover {
+  background-color: #669ec0;
+}
+
+.hotel-links li:first-of-type:active {
+  background-color: #5496bd;
+
+}
+
+.hotel-links li:last-of-type {
+  background-color: #766357;
+}
+
+.hotel-links li:last-of-type:hover {
+  background-color: #604e43;
+}
+
+.hotel-links li:last-of-type:active {
+  background-color: #503e33;
+}
+
+.hotel-links a {
+  color: #ffffff;
+}
+
+.hotel-links a:active {
+  opacity: 0, 3;
+}
+
+.hotel-raiting {
+  width: 110px;
+  height: 27px;
+  text-align: center;
+  color: #666666;
+  background-color: #f2f2f2;
+}
+
+.star {
+  background-image: url("img/star.svg");
+}
