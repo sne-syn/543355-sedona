@@ -67,8 +67,6 @@ a {
 .intro {
   background-color: #d9eaf5;
   background-image: url("img/background-img.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
 }
 
 .main-title,
@@ -118,13 +116,13 @@ a {
   background-position: top;
 }
 
-/* не работает переопределение на один блок*/
+/* не работает переопределение фона на один блок*/
 
 .advantage:last-child {
   background-color: #eeeeee;
 }
 
-/* не работает карта */
+/* не работает карта :( */
 
 .search-form {
   background-image: url("img/map.jpg");
@@ -237,6 +235,7 @@ a {
   border: solid 2px #ffffff;
   opacity: 1;
   border-radius: 5px;
+  text-align: center;
 }
 
 .form-link:hover {
@@ -246,7 +245,6 @@ a {
 
 .form-results {
   color: #ffffff;
-  text-align: center;
 }
 
 .sort-tytle,
@@ -347,5 +345,3 @@ a {
 .star {
   background-image: url("img/star.svg");
 }
-
-135 35
