@@ -8,7 +8,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="inner-page">
+<body>
   <div class="page-container">
     <header class="main-header">
       <nav class="main-navigation">
@@ -23,15 +23,14 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
+    <main class="container inner-page">
       <section class="form">
         <h2 class="visually-hidden">Форма поиска</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
 
           <div class="checkbox-facilities">
-            <!-- Вопрос №2: Могу убрать div обертку? оставить только fiedset для группировки и стилизации?-->
-            <fieldset class="checkbox-facilities">
-              <legend>Инфраструктура</legend>
+            <fieldset>
+              <legend class="form-legend">Инфраструктура</legend>
               <input type="checkbox" name="facilities" id="waterpool-field" checked>
               <label for="waterpool-field">Бассейн</label>
               <input type="checkbox" name="facilities" id="parking-field">
@@ -42,9 +41,8 @@
           </div>
 
           <div class="checkbox-type">
-            <!-- Вопрос №2: и здесь убрать такой же div?-->
-            <fieldset class="checkbox-type">
-              <legend>Тип жилья</legend>
+            <fieldset>
+              <legend class="form-legend">Тип жилья</legend>
               <input type="checkbox" name="type" id="hotel-field" checked>
               <label for="waterpool-field">Гостиница</label>
               <input type="checkbox" name="type" id="motel-field" checked>
@@ -54,7 +52,7 @@
             </fieldset>
           </div>
           <div class="range-input">
-            <label for="price">Стоимость в сутки (Р):</label>
+            <label class="form-legend" for="price">Стоимость в сутки (Р):</label>
             <div class="range-info">
               <input type="text" id="price" placeholder="от 0">
               <input type="text" placeholder="до 3000">
@@ -72,8 +70,8 @@
       <section class="listing">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <div class="listing-filtration">
-          <p>Найдено: 3</p>
-          <p>Сортировка:</p>
+          <p class="sort-amount">Найдено: 3</p>
+          <p class="sort-title">Сортировка:</p>
           <ul class="sort-list">
             <li><a class="sort-price" href="#">По цене</a></li>
             <li><a class="sort-type" href="#">По типу</a></li>
@@ -163,7 +161,7 @@
         <span class="footer-hashtag">
           <a class="hashtag" href="#">#VISITSEDONA</a>
         </span>
-        <ul>
+        <ul class="social-list">
           <li><a class="social-btn social-btn-tw" href="#">Twitter</a></li>
           <li><a class="social-btn social-btn-fb" href="#">Facebook</a></li>
           <li><a class="social-btn social-btn-yt" href="#">YouTube</a></li>

@@ -10,7 +10,6 @@ body {
   color: #333333;
   text-transform: uppercase;
 
-
   background-color: #f2f2f2;
 }
 
@@ -18,17 +17,14 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
+  text-align: left;
 
   background-color: #fefefe;
 }
 
-/*не перекрашиваются поля ввода*/
-
-.page-container,
-  {
+.page-container {
   background-color: #f2f2f2;
 }
-
 
 .main-header {
   background-color: #ffffff;
@@ -40,8 +36,26 @@ a {
 }
 
 .site-navigation,
-.social-list {
+.social-list,
+.sort-list,
+.sort-button,
+.hotel-links {
   list-style: none;
+}
+
+
+.site-navigation a:hover {
+  color: #81b3d2;
+}
+
+.site-navigation a:active {
+  color: #766357
+}
+
+/* не работает полупрозрачность у посещенной ссылки*/
+
+.site-navigation a:visited {
+  opacity: 0.3;
 }
 
 .container {
@@ -57,7 +71,8 @@ a {
   background-repeat: no-repeat;
 }
 
-.main-title {
+.main-title,
+.sort-amount {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -107,6 +122,12 @@ a {
   background-color: #eeeeee;
 }
 
+/* не работает карта */
+
+.search-form {
+  background-image: url("img/map.jpg");
+}
+
 .search-text {
   font-size: 30px;
   line-height: 36px;
@@ -136,7 +157,7 @@ a {
   background-color: #766357;
 }
 
-.hotel-btn:focus {
+.hotel-btn:hover {
   background: #604e43;
 }
 
@@ -148,8 +169,8 @@ a {
   font-weight: bold;
 }
 
-/*
-не работают эти свойства
+
+/*не работают эти свойства*/
 
 .input-line {
   width: 345px;
@@ -157,7 +178,11 @@ a {
 
   background-color: #f2f2f2;
 }
-*/
+
+.input-line:hover {
+  background-color: #ebebeb;
+}
+
 
 .search-btn {
   width: 458px;
@@ -174,8 +199,8 @@ a {
   background-color: #81b3d2;
 }
 
-.search-btn:focus,
-.social-btn:focus {
+.search-btn:hover,
+.social-btn:hover {
   background-color: #669ec0;
 }
 
@@ -184,6 +209,41 @@ a {
   background-color: #5496bd;
 }
 
-.footer {
-  height: 120px;
+/* не работает фон */
+
+.form {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+  background-image: url("img/background-filter.jpg");
 }
+
+.checkbox-facilities fieldset,
+.checkbox-type fieldset {
+  border: none;
+}
+
+.form-legend {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.sort-tytle,
+.sort-list {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.sort-list a{
+  opacity: 0.3;
+}
+
+.sort-list a:hover {
+  color: #81b3d2;
+}
+
+.sort-list a:active {
+  color: #000000;
+}
+
