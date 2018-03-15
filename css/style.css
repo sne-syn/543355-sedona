@@ -22,7 +22,10 @@ body {
   background-color: #fefefe;
 }
 
-.page-container {
+/*не перекрашиваются поля ввода*/
+
+.page-container,
+  {
   background-color: #f2f2f2;
 }
 
@@ -36,7 +39,8 @@ a {
   text-decoration: none;
 }
 
-.site-navigation {
+.site-navigation,
+.social-list {
   list-style: none;
 }
 
@@ -49,7 +53,7 @@ a {
 .intro {
   background-color: #d9eaf5;
   background-image: url("img/background-img.jpg");
-  background-position: top center;
+  background-position: 0 0;
   background-repeat: no-repeat;
 }
 
@@ -81,9 +85,25 @@ a {
   color: #ffffff;
 }
 
+.advantage-icon:first-child {
+  background-image: url("img/icon-1.svg");
+  background-position: top;
+
+}
+
+.advantage-icon:nth-child(2) {
+  background-image: url("img/icon-2.svg");
+  background-position: top;
+}
+
+.advantage-icon:last-child {
+  background-image: url("img/icon-3.svg");
+  background-position: top;
+}
+
 /* не работает переопределение на один блок*/
 
-.advantage:last-child {
+.advantage:nth-child(2) {
   background-color: #eeeeee;
 }
 
@@ -98,21 +118,72 @@ a {
   line-height: 24px;
 }
 
-.button {
+.button-text,
+.hashtag {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+}
+
+.button-text {
   color: #ffffff;
 }
 
 .hotel-btn {
+  width: 570px;
+  height: 85px;
+
   background-color: #766357;
+}
+
+.hotel-btn:focus {
+  background: #604e43;
+}
+
+.hotel-btn:active {
+  background-color: #503e33;
 }
 
 .input-field {
   font-weight: bold;
 }
 
+/*
+не работают эти свойства
+
+.input-line {
+  width: 345px;
+  height: 40px;
+
+  background-color: #f2f2f2;
+}
+*/
+
 .search-btn {
+  width: 458px;
+  height: 58px;
+}
+
+.social-btn {
+  width: 46px;
+  height: 48px;
+}
+
+.search-btn,
+.social-btn {
   background-color: #81b3d2;
+}
+
+.search-btn:focus,
+.social-btn:focus {
+  background-color: #669ec0;
+}
+
+.search-btn:active,
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+.footer {
+  height: 120px;
 }

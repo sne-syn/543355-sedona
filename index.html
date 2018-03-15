@@ -89,17 +89,19 @@
         <h2 class="visually-hidden">Забронировать гостиницу</h2>
         <p class="search-text">Заинтересовались?</p>
         <p class="search-proposal">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button hotel-btn" href="#">Поиск гостиницы в Седоне</a>
+        <div class="hotel-btn">
+          <a class="button-text" href="#">Поиск гостиницы в Седоне</a>
+        </div>
         <form class="search-fields" action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
             <div class="input-field">
               <label for="check-in">Дата заезда:</label>
-              <input type="text" name="date" id="check-in" value="24 АПРЕЛЯ 2017">
+              <input clas="input-line" type="text" name="date" id="check-in" value="24 АПРЕЛЯ 2017">
               <span class="calendar-button"></span>
             </div>
             <div class="input-field">
               <label for="check-out">Дата выезда:</label>
-              <input type="text" name="date" id="check-out" value="04 ИЮЛЯ 2017">
+              <input clas="input-line" type="text" name="date" id="check-out" value="04 ИЮЛЯ 2017">
               <span class="calendar-button"></span>
             </div>
 
@@ -108,16 +110,16 @@
             <div class="input-field">
               <label for="adults-field">Взрослые</label>
               <button class="button-plus" type="button">+</button>
-              <input type="text" name="room-adults" id="adults-field">
+              <input clas="input-line" type="text" name="room-adults" id="adults-field">
               <button class="button-minus" type="button">-</button>
             </div>
             <div class="input-field">
               <label for="children-field">Дети</label>
               <button class="button-plus" type="button">+</button>
-              <input type="text" name="room-children" id="children-field">
+              <input clas="input-line" type="text" name="room-children" id="children-field">
               <button class="button-minus" type="button">-</button>
             </div>
-            <button class="button search-btn" type="submit">Найти</button>
+            <button class="button-text search-btn" type="submit">Найти</button>
           </fieldset>
         </form>
       </section>
@@ -128,7 +130,7 @@
         <span class="footer-hashtag">
           <a class="hashtag" href="#">#VISITSEDONA</a>
         </span>
-        <ul>
+        <ul class="social-list">
           <li><a class="social-btn social-btn-tw" href="#">Twitter</a></li>
           <li><a class="social-btn social-btn-fb" href="#">Facebook</a></li>
           <li><a class="social-btn social-btn-yt" href="#">YouTube</a></li>
