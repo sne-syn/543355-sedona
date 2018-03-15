@@ -120,7 +120,7 @@ a {
 
 /* не работает переопределение на один блок*/
 
-.advantage:last-of-type {
+.advantage:last-child {
   background-color: #eeeeee;
 }
 
@@ -147,6 +147,7 @@ a {
   line-height: 26px;
   font-weight: bold;
 }
+
 
 .button-text {
   color: #ffffff;
@@ -230,6 +231,24 @@ a {
   font-weight: normal;
 }
 
+.form-link {
+  width: 135px;
+  height: 35px;
+  border: solid 2px #ffffff;
+  opacity: 1;
+  border-radius: 5px;
+}
+
+.form-link:hover {
+  background-color: #ffffff;
+  opacity: none;
+}
+
+.form-results {
+  color: #ffffff;
+  text-align: center;
+}
+
 .sort-tytle,
 .sort-list a {
   font-size: 12px;
@@ -239,10 +258,12 @@ a {
 
 .sort-list a {
   opacity: 0.3;
+  border-bottom: 1px dashed #81b3d2;
 }
 
 .sort-list a:hover {
   color: #81b3d2;
+  border-bottom: 1px dashed #81b3d2;
 }
 
 /*не работает нажатие*/
@@ -253,8 +274,20 @@ a {
 
 /* не работает отдельный элемент*/
 
-.sort-list a:first-child:active {
+.sort-list li:first-of-type:active {
   color: #81b3d2;
+  border: none;
+}
+
+.hotel-name {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.hotel-info p {
+  font-weight: normal;
 }
 
 .hotel-links li {
@@ -262,6 +295,10 @@ a {
   height: 27px;
   text-align: center;
   color: #ffffff;
+}
+
+.hotel-links li:last-of-type {
+  width: 141px;
 }
 
 .hotel-links li:first-of-type {
@@ -305,6 +342,10 @@ a {
   background-color: #f2f2f2;
 }
 
+/* напасть какая-то с картинками */
+
 .star {
   background-image: url("img/star.svg");
 }
+
+135 35
