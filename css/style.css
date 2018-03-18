@@ -46,6 +46,7 @@ a {
 .site-navigation {
   display: flex;
   justify-content: space-around;
+  width: 768px;
 }
 
 .site-navigation a:hover {
@@ -53,7 +54,7 @@ a {
 }
 
 .site-navigation a:active {
-  color: #766357
+  color: #766357;
 }
 
 /* не могу сделать ссылку серой при нажатии. проблема с цветом и псевдоклассом ?:visited?
@@ -75,30 +76,22 @@ a {
   background-position: cover;
 }
 
-.main-title,
-.sort-amount {
+.main-title {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
 }
 
-/*так скрываем заголовки? */
+/* скрываем заголовки */
 
 .visually-hidden {
   font-size: 0;
 }
 
-.advantage h3 {
-  font-size: 21px;
-  line-height: 21px;
-  font-weight: bold;
-  text-align: center;
-  color: #000000;
-}
-
 .advantage-block {
   display: flex;
+  width: 1200px;
   color: #ffffff;
   background-color: #81b3d2;
 }
@@ -107,9 +100,23 @@ a {
   color: #ffffff;
 }
 
+.advantage-text: 400px;
+
+.advantage-img {
+  width: 800px;
+}
+
 .advantage {
   display: flex;
   justify-content: space-between;
+}
+
+.advantage h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
 }
 
 .advantage-icon {
@@ -135,6 +142,12 @@ a {
   background-color: #eeeeee;
 }
 
+.search-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .background-map {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
@@ -151,8 +164,7 @@ a {
   line-height: 24px;
 }
 
-.button-text,
-.hashtag {
+.button-text {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -164,10 +176,9 @@ a {
 }
 
 .hotel-btn {
-  display: flex;
-/*  justify-content: center;*/
   width: 570px;
   border: none;
+
   padding-top: 31px;
   padding-bottom: 30px;
 
@@ -185,8 +196,8 @@ a {
 
 
 .search-fields {
-  display: flex;
-/*  align-items: center;*/
+
+
   width: 570px;
   min-height: 395px;
 }
@@ -258,27 +269,55 @@ a {
   margin-bottom: 35px;
 }
 
-
 /* no funciona */
+
+.search-btn {
+  background-color: #81b3d2;
+}
+
+.search-btn:hover {
+  background-color: #669ec0;
+}
+
+.search-btn:active {
+  background-color: #5496bd;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-hashtag {
+  width: 400px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-around;
+  width: 260px;
+}
+
 
 .social-btn {
   width: 46px;
   height: 48px;
 }
 
-.search-btn,
 .social-btn {
   background-color: #81b3d2;
 }
 
-.search-btn:hover,
-.social-btn:hover {
-  background-color: #669ec0;
-}
-
-.search-btn:active,
 .social-btn:active {
   background-color: #5496bd;
+}
+
+
+.social-btn:hover {
+  background-color: #669ec0;
 }
 
 .social-btn-tw {
@@ -296,6 +335,19 @@ a {
   background-repeat: no-repeat;
 }
 
+.footer-made-by {
+  width: 260px;
+}
+
+/* здесь что-то не так с лого. */
+
+.logo-link {
+  width: 120px;
+  background-image: url(../img/logo-htmlacademy.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .form {
   color: #ffffff;
 
@@ -304,6 +356,12 @@ a {
   background-repeat: no-repeat;
   background-position: cover;
 }
+
+.form-structure {
+  display: flex;
+  justify-content: space-around;
+}
+
 
 .checkbox-facilities fieldset,
 .checkbox-type fieldset {
@@ -334,6 +392,18 @@ a {
   color: #ffffff;
 }
 
+.listing-filtration {
+  display: flex;
+  justify-content: space-around
+}
+
+.sort-amount {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
 .sort-tytle,
 .sort-list a {
   font-size: 12px;
@@ -342,7 +412,7 @@ a {
 }
 
 .sort-list a {
-  opacity: 0.3;
+  color: rgba (129, 179, 210, 0.3);
   border-bottom: 1px dashed #81b3d2;
 }
 
@@ -361,7 +431,6 @@ a {
   color: #81b3d2;
   border-bottom: none;
 }
-
 
 /* здесь что-то странное с кнопками-стрелками, приходится каждой лично задавать размеры и состояния. Общий класс не работает */
 
@@ -389,6 +458,11 @@ a {
   background-repeat: no-repeat;
 }
 
+.hotel {
+  display: flex;
+  justify-content: space-around;
+}
+
 .hotel-name a {
   font-size: 21px;
   line-height: 26px;
@@ -404,6 +478,10 @@ a {
 
 .hotel-name a:active {
   color: #766357;
+}
+
+.hotel-info {
+  width: 370px;
 }
 
 .hotel-info p {
