@@ -52,21 +52,23 @@ a {
   color: #766357
 }
 
-/* не работает полупрозрачность у посещенной ссылки*/
+/* не могу сделать ссылку серой при нажатии. проблема с цветом и псевдоклассом ?:visited?
+
 
 .site-navigation a:visited {
-  opacity: 0.3;
+  color: rgba (0, 0, 0, 0.2);
 }
+*/
 
 .container {
   background-color: #ffffff;
 }
 
-/*не подтягивается картинка*/
-
 .intro {
   background-color: #d9eaf5;
-  background-image: url("img/background-img.jpg");
+  background-image: url("../img/background-img.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
 }
 
 .main-title,
@@ -77,7 +79,7 @@ a {
   color: #000000;
 }
 
-/*заполнить*/
+/*так скрываем заголовки? */
 
 .visually-hidden {
   font-size: 0;
@@ -100,32 +102,32 @@ a {
   color: #ffffff;
 }
 
-.advantage-icon:first-child {
-  background-image: url("img/icon-1.svg");
+.advantage-icon {
   background-position: top;
+  background-repeat: no-repeat;
+}
 
+.advantage-icon:first-child {
+  background-image: url("../img/icon-1.svg");
 }
 
 .advantage-icon:nth-child(2) {
-  background-image: url("img/icon-2.svg");
-  background-position: top;
+  background-image: url("../img/icon-2.svg");
 }
 
 .advantage-icon:last-child {
-  background-image: url("img/icon-3.svg");
-  background-position: top;
+  background-image: url("../img/icon-3.svg");
 }
 
-/* не работает переопределение фона на один блок*/
 
-.advantage:last-child {
+
+.advantage-color {
   background-color: #eeeeee;
 }
 
-/* не работает карта :( */
-
-.search-form {
-  background-image: url("img/map.jpg");
+.background-map {
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
 }
 
 .search-text {
@@ -153,7 +155,9 @@ a {
 
 .hotel-btn {
   width: 570px;
-  height: 85px;
+  border: none;
+  padding-top: 31px;
+  padding-bottom: 30px;
 
   background-color: #766357;
 }
@@ -166,29 +170,80 @@ a {
   background-color: #503e33;
 }
 
-.input-field {
-  font-weight: bold;
+
+
+.search-fields {
+  width: 570px;
+  min-height: 395px;
 }
 
-
-/*не работают эти свойства для input*/
+.input-field {
+  font-weight: bold;
+  margin-top: 35px;
+}
 
 .input-line {
   width: 345px;
-  height: 40px;
+  height: 38px;
+  font-weight: bold;
+  border: none;
 
   background-color: #f2f2f2;
+}
+
+.input-number {
+  width: 35px;
+  height: 36px;
+  text-align: center;
+}
+
+/* цвет в покое д б сереньким */
+
+.button-minus,
+.button-plus {
+  height: 38px;
+  width: 40px;
+  border: none;
+  font-weight: bold;
+
+  background-color: #f2f2f2;
+}
+
+
+.button-minus:hover,
+.button-plus:hover {
+  color: #000000;
+}
+
+.button-minus:active,
+.button-plus:active {
+  color: #81b3d2;
+}
+
+/* ?donde estan los calendarios? */
+
+.calendar-button {
+  background-image: url(../img/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .input-line:hover {
   background-color: #ebebeb;
 }
 
+.input-line:focus {
+  background-color: #ffffff;
+}
 
 .search-btn {
   width: 458px;
   height: 58px;
+  margin-bottom: 35px;
 }
+
+
+/* no funciona */
 
 .social-btn {
   width: 46px;
@@ -210,13 +265,28 @@ a {
   background-color: #5496bd;
 }
 
-/* не работает фон */
+.social-btn-tw {
+  background-image: url(../img/twitter.svg);
+  background-repeat: no-repeat;
+}
+
+.social-btn-fb {
+  background-image: url(../img/fb-icon.svg);
+  background-repeat: no-repeat;
+}
+
+.social-btn-yt {
+  background-image: url(../img/twitter.svg);
+  background-repeat: no-repeat;
+}
 
 .form {
   color: #ffffff;
 
   background-color: #81b3d2;
-  background-image: url("img/background-filter.jpg");
+  background-image: url("../img/background-filter.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
 }
 
 .checkbox-facilities fieldset,
@@ -231,19 +301,20 @@ a {
 
 .form-link {
   width: 135px;
-  height: 35px;
   border: solid 2px #ffffff;
-  opacity: 1;
   border-radius: 5px;
   text-align: center;
 }
 
 .form-link:hover {
   background-color: #ffffff;
-  opacity: none;
 }
 
-.form-results {
+.form-link:hover a {
+  color: #000000;
+}
+
+.form-link a {
   color: #ffffff;
 }
 
@@ -270,18 +341,53 @@ a {
   color: #000000;
 }
 
-/* не работает отдельный элемент*/
-
-.sort-list li:first-of-type:active {
+.sort-list .sort-active {
   color: #81b3d2;
-  border: none;
+  border-bottom: none;
 }
 
-.hotel-name {
+
+/* здесь что-то странное с кнопками-стрелками, приходится каждой лично задавать размеры и состояния. Общий класс не работает */
+
+/* А еще как их перекрашивать при наведении? из styleguide*/
+
+.sort-button li {
+  ...
+}
+
+.icon-up {
+  width: 8px;
+  height: 12px;
+
+  border: none;
+  background-image: url(../img/icon-up-dir.svg);
+  background-repeat: no-repeat;
+}
+
+.icon-down {
+  width: 8px;
+  height: 12px;
+  border: none;
+
+  background-image: url(../img/icon-down-dir.svg);
+  background-repeat: no-repeat;
+}
+
+.hotel-name a {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
+}
+
+.hotel-name a:hover {
+  color: #81b3d2;
+}
+
+/* должно быть сереньким нажатие */
+
+.hotel-name a:active {
+  color: #766357;
 }
 
 .hotel-info p {
@@ -289,47 +395,38 @@ a {
 }
 
 .hotel-links li {
-  width: 110px;
-  height: 27px;
   text-align: center;
-  color: #ffffff;
 }
 
-.hotel-links li:last-of-type {
-  width: 141px;
-}
+.hotel-details {
+  width: 110px;
 
-.hotel-links li:first-of-type {
   background-color: #81b3d2;
 }
 
-.hotel-links li:first-of-type:hover {
+.hotel-details:hover {
   background-color: #669ec0;
 }
 
-.hotel-links li:first-of-type:active {
+.hotel-details:active {
   background-color: #5496bd;
-
 }
 
-.hotel-links li:last-of-type {
+.hotel-reservation {
+  width: 141px;
   background-color: #766357;
 }
 
-.hotel-links li:last-of-type:hover {
+.hotel-reservation:hover {
   background-color: #604e43;
 }
 
-.hotel-links li:last-of-type:active {
+.hotel-reservation:active {
   background-color: #503e33;
 }
 
 .hotel-links a {
   color: #ffffff;
-}
-
-.hotel-links a:active {
-  opacity: 0, 3;
 }
 
 .hotel-raiting {
@@ -340,8 +437,6 @@ a {
   background-color: #f2f2f2;
 }
 
-/* напасть какая-то с картинками */
-
 .star {
-  background-image: url("img/star.svg");
+  background-image: url("../img/star.svg");
 }

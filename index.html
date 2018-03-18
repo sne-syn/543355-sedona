@@ -66,7 +66,7 @@
         </div>
       </section>
       <!-- 4 section-->
-      <section class="advantage">
+      <section class="advantage advantage-color">
         <div class="advantage-text">
           <h3>Небольшая площадь</h3>
           <p> — №3 —</p>
@@ -90,33 +90,36 @@
         <p class="search-text">Заинтересовались?</p>
         <p class="search-proposal">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <div class="hotel-btn">
-          <a class="button-text" href="#">Поиск гостиницы в Седоне</a>
+          <a class="button-text " href="#">Поиск гостиницы в Седоне</a>
         </div>
+
+        <!--        Этот div для пробы с картой -->
+        <div class="background-map"></div>
+
         <form class="search-fields" action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
             <div class="input-field">
               <label for="check-in">Дата заезда:</label>
-              <input clas="input-line" type="text" name="date" id="check-in" value="24 АПРЕЛЯ 2017">
+              <input class="input-line" type="text" name="date" id="check-in" value="24 АПРЕЛЯ 2017">
               <span class="calendar-button"></span>
             </div>
             <div class="input-field">
               <label for="check-out">Дата выезда:</label>
-              <input clas="input-line" type="text" name="date" id="check-out" value="04 ИЮЛЯ 2017">
+              <input class="input-line" type="text" name="date" id="check-out" value="04 ИЮЛЯ 2017">
               <span class="calendar-button"></span>
             </div>
 
-            <!-- Вопрос №1: по кнопкам +/-. Они должны быть внутри поля с инпутом. Как это сделать?-->
 
             <div class="input-field">
-              <label for="adults-field">Взрослые</label>
+              <label for="adults-field">Взрослые:</label>
               <button class="button-plus" type="button">+</button>
-              <input clas="input-line" type="text" name="room-adults" id="adults-field">
+              <input class="input-line input-number" type="text" name="room-adults" id="adults-field" value="2">
               <button class="button-minus" type="button">-</button>
             </div>
             <div class="input-field">
-              <label for="children-field">Дети</label>
+              <label for="children-field">Дети:</label>
               <button class="button-plus" type="button">+</button>
-              <input clas="input-line" type="text" name="room-children" id="children-field">
+              <input class="input-line input-number" type="text" name="room-children" id="children-field" value="0">
               <button class="button-minus" type="button">-</button>
             </div>
             <button class="button-text search-btn" type="submit">Найти</button>
