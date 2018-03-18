@@ -43,6 +43,10 @@ a {
   list-style: none;
 }
 
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+}
 
 .site-navigation a:hover {
   color: #81b3d2;
@@ -94,12 +98,18 @@ a {
 }
 
 .advantage-block {
+  display: flex;
   color: #ffffff;
   background-color: #81b3d2;
 }
 
 .advantage-block h3 {
   color: #ffffff;
+}
+
+.advantage {
+  display: flex;
+  justify-content: space-between;
 }
 
 .advantage-icon {
@@ -154,6 +164,8 @@ a {
 }
 
 .hotel-btn {
+  display: flex;
+/*  justify-content: center;*/
   width: 570px;
   border: none;
   padding-top: 31px;
@@ -173,6 +185,8 @@ a {
 
 
 .search-fields {
+  display: flex;
+/*  align-items: center;*/
   width: 570px;
   min-height: 395px;
 }
@@ -197,7 +211,9 @@ a {
   text-align: center;
 }
 
-/* цвет в покое д б сереньким */
+/* цвет в покое д б сереньким.
+
+и вообще он не хочет мигать при наведении. */
 
 .button-minus,
 .button-plus {
