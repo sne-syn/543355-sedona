@@ -23,7 +23,9 @@ body {
 }
 
 .page-container {
+  width: 1200px;
   background-color: #f2f2f2;
+  outline: 2px solid;
 }
 
 .main-header {
@@ -43,10 +45,21 @@ a {
   list-style: none;
 }
 
+
+.logo {
+  position: absolute;
+  align-self: center;
+
+}
+
 .site-navigation {
+
   display: flex;
   justify-content: space-around;
-  width: 768px;
+  height: 56px;
+
+  margin: 0;
+  font-weight: bold;
 }
 
 .site-navigation a:hover {
@@ -65,8 +78,33 @@ a {
 }
 */
 
+.site-navigation li {
+  width: 20%;
+}
+
+.navigation-info,
+.navigation-multimedia {
+  text-align: left;
+  outline: 2px solid;
+}
+
+.navigation-map,
+.navigation-hotel {
+  text-align: right;
+  border: 2px solid;
+}
+
+.navigation-info {
+  margin-left: : 0;
+}
+
+.navigation-multimedia {
+  margin-right: 11%;
+}
+
 .container {
   background-color: #ffffff;
+  outline: 2px solid;
 }
 
 .intro {
@@ -86,7 +124,11 @@ a {
 /* скрываем заголовки */
 
 .visually-hidden {
-  font-size: 0;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .advantage-block {
