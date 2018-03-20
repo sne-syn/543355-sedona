@@ -22,11 +22,21 @@ body {
   background-color: #fefefe;
 }
 
+
+/* пыталась зацентровать основную часть и бежевый контейнер. Получилось не слишком изящно */
+
 .page-container {
-  width: 1200px;
+  width: 1280px;
+  margin-left: 40px;
 
   background-color: #f2f2f2;
   outline: 2px solid;
+}
+
+.main-header,
+.container,
+.main-footer {
+  width: 1200px;
 }
 
 .main-header {
@@ -49,16 +59,14 @@ a {
 
 .logo {
   position: absolute;
-  left: 50%;
-  /*  transform: translateX(50%);*/
+  left: 53%;
+
 }
 
 .site-navigation {
   display: flex;
   justify-content: space-around;
-  height: 56px;
-
-  margin: 0;
+  padding-left: 0;
   font-weight: bold;
 }
 
@@ -74,7 +82,7 @@ a {
 
 
 .site-navigation a:visited {
-  color: rgba (0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 */
 
@@ -95,18 +103,14 @@ a {
 }
 
 .navigation-info {
-  margin-left: : 0;
+  margin-left: 0;
 }
 
 .navigation-multimedia {
-  margin-right: 30%;
+  margin-right: 10%;
 }
 
-/* я выровняла шапку, но что-то мне такой способ не нравится. Они же должны были с justify равномерно разлететься в стороны. И чей это padding торчит с той стороны? */
 
-.navigation-hotel {
-  margin-right: 3%;
-}
 
 .container {
   background-color: #ffffff;
@@ -118,7 +122,9 @@ a {
   background-image: url("../img/background-img.jpg");
   background-repeat: no-repeat;
   background-position: cover;
-  height: 570px;
+  height: 568px;
+
+  /* картинка стоит неправильно 773px на макете, должна начинаться под nav */
 }
 
 .slogan {
@@ -144,12 +150,20 @@ a {
   margin: -1px;
 }
 
+.text {
+  padding-bottom: 36px;
+}
+
 .advantage-block {
   display: flex;
   width: 100%;
+  /*  временно? */
+  height: 256px;
   color: #ffffff;
   background-color: #81b3d2;
 }
+
+
 
 .advantage-block h3 {
   font-size: 21px;
@@ -161,25 +175,24 @@ a {
 .advantage-text {
   width: 33%;
   line-height: 21px;
+  padding: 45px;
 }
 
 .advantage-img {
   width: 66%;
+  /*  временно? */
+  height: 250px;
+
 }
 
 .advantage {
   display: flex;
   justify-content: space-between;
-
+  /*  временно? */
+  height: 268px;
 }
 
-.advantage h3 {
-  font-size: 21px;
-  line-height: 21px;
-  font-weight: bold;
-  text-align: center;
-  color: #000000;
-}
+/*нет иконок. куда ушли?*/
 
 .advantage-icon {
   background-position: top;
@@ -198,7 +211,13 @@ a {
   background-image: url("../img/icon-3.svg");
 }
 
-
+.advantage h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
 
 .advantage-color {
   background-color: #eeeeee;
@@ -238,6 +257,7 @@ a {
 }
 
 .hotel-btn {
+  align-self: center;
   width: 570px;
   border: none;
 
@@ -255,18 +275,34 @@ a {
   background-color: #503e33;
 }
 
-
-
 .search-fields {
+  align-self: center;
 
+}
 
+.search-fields fieldset {
+  /*
+  display: flex;
+  flex-direction: row;
+*/
+  margin: 0;
+  padding: 0;
   width: 570px;
   min-height: 395px;
 }
 
 .input-field {
+  flex-direction: row;
   font-weight: bold;
   margin-top: 35px;
+}
+
+/* не работает перенос в две колонки */
+
+.input-field:nth-child(3),
+.input-field:last-child {
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .input-line {
@@ -288,7 +324,7 @@ a {
   padding: 0;
 }
 
-/* цвет в покое д б сереньким.
+/* цвет в покое д.б. сереньким.
 
 и вообще он не хочет мигать при наведении. */
 
@@ -359,12 +395,14 @@ a {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  padding-top: 48px;
 }
 
 .social-list {
   display: flex;
   justify-content: space-around;
   width: 260px;
+  padding-top: 37px;
 }
 
 
