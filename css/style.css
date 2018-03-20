@@ -24,6 +24,7 @@ body {
 
 .page-container {
   width: 1200px;
+
   background-color: #f2f2f2;
   outline: 2px solid;
 }
@@ -48,12 +49,11 @@ a {
 
 .logo {
   position: absolute;
-  align-self: center;
-
+  left: 50%;
+  /*  transform: translateX(50%);*/
 }
 
 .site-navigation {
-
   display: flex;
   justify-content: space-around;
   height: 56px;
@@ -99,7 +99,13 @@ a {
 }
 
 .navigation-multimedia {
-  margin-right: 11%;
+  margin-right: 30%;
+}
+
+/* я выровняла шапку, но что-то мне такой способ не нравится. Они же должны были с justify равномерно разлететься в стороны. И чей это padding торчит с той стороны? */
+
+.navigation-hotel {
+  margin-right: 3%;
 }
 
 .container {
@@ -112,9 +118,16 @@ a {
   background-image: url("../img/background-img.jpg");
   background-repeat: no-repeat;
   background-position: cover;
+  height: 570px;
+}
+
+.slogan {
+  margin-top: 77px;
 }
 
 .main-title {
+  margin-top: 0;
+  margin-bottom: 25px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -133,24 +146,31 @@ a {
 
 .advantage-block {
   display: flex;
-  width: 1200px;
+  width: 100%;
   color: #ffffff;
   background-color: #81b3d2;
 }
 
 .advantage-block h3 {
+  font-size: 21px;
+  line-height: 21px;
   color: #ffffff;
+
 }
 
-.advantage-text: 400px;
+.advantage-text {
+  width: 33%;
+  line-height: 21px;
+}
 
 .advantage-img {
-  width: 800px;
+  width: 66%;
 }
 
 .advantage {
   display: flex;
   justify-content: space-between;
+
 }
 
 .advantage h3 {
@@ -252,7 +272,10 @@ a {
 .input-line {
   width: 345px;
   height: 38px;
+  font-size: 14px;
+  line-height: 26px;
   font-weight: bold;
+  padding-left: 10px;
   border: none;
 
   background-color: #f2f2f2;
@@ -262,6 +285,7 @@ a {
   width: 35px;
   height: 36px;
   text-align: center;
+  padding: 0;
 }
 
 /* цвет в покое д б сереньким.
