@@ -22,25 +22,20 @@ body {
   background-color: #fefefe;
 }
 
-
-/* пыталась зацентровать основную часть и бежевый контейнер. Получилось не слишком изящно */
-
 .page-container {
-  width: 1280px;
-  margin-left: 40px;
-
   background-color: #f2f2f2;
-  outline: 2px solid;
-}
-
-.main-header,
-.container,
-.main-footer {
-  width: 1200px;
+  width: 100%;
 }
 
 .main-header {
+  /*  здесь наверняка не так делается */
+  margin-left: 40px;
+  padding: 0;
+  width: 1200px;
   background-color: #ffffff;
+
+  /*  временно для сетки */
+  min-height: 56px;
 }
 
 a {
@@ -56,17 +51,22 @@ a {
   list-style: none;
 }
 
-
 .logo {
   position: absolute;
-  left: 53%;
-
+  left: 44.5%;
+  width: 138px;
+  height: 70px;
 }
 
 .site-navigation {
   display: flex;
   justify-content: space-around;
-  padding-left: 0;
+
+  margin: 0;
+  padding-left: 57px;
+  padding-right: 58px;
+  padding-top: 15px;
+
   font-weight: bold;
 }
 
@@ -93,47 +93,47 @@ a {
 .navigation-info,
 .navigation-multimedia {
   text-align: left;
-  outline: 2px solid;
-}
-
-.navigation-map,
-.navigation-hotel {
-  text-align: right;
-  border: 2px solid;
-}
-
-.navigation-info {
-  margin-left: 0;
 }
 
 .navigation-multimedia {
   margin-right: 10%;
 }
 
+.navigation-map,
+.navigation-hotel {
+  text-align: right;
+}
 
 
 .container {
+  /*  и здесь, но я пока оставлю так */
+  margin-left: 40px;
+  padding: 0;
+  width: 1200px;
+
   background-color: #ffffff;
-  outline: 2px solid;
 }
 
 .intro {
   background-color: #d9eaf5;
   background-image: url("../img/background-img.jpg");
-  background-repeat: no-repeat;
-  background-position: cover;
-  height: 568px;
 
-  /* картинка стоит неправильно 773px на макете, должна начинаться под nav */
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 567px;
+  background-position: 52% 28%;
+
 }
 
+/* пора бы уже маску прикрутить */
+
 .slogan {
-  margin-top: 77px;
+  margin-top: 75px;
 }
 
 .main-title {
-  margin-top: 0;
-  margin-bottom: 25px;
+  margin: 2px;
+  margin-bottom: 27px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -150,65 +150,69 @@ a {
   margin: -1px;
 }
 
-.text {
+.intro-text {
   padding-bottom: 36px;
 }
 
 .advantage-block {
   display: flex;
-  width: 100%;
+  width: 1200px;
+
   /*  временно? */
-  height: 256px;
+  /*  min-height: 250px;*/
   color: #ffffff;
   background-color: #81b3d2;
 }
 
-
+.advantage-img {
+  display: inline-block;
+  width: 66%;
+}
 
 .advantage-block h3 {
   font-size: 21px;
   line-height: 21px;
   color: #ffffff;
+}
+
+.advantage {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 
 }
 
 .advantage-text {
-  width: 33%;
+  display: inline-block;
+  width: 300px;
   line-height: 21px;
-  padding: 45px;
+  margin-left: 40px;
+  margin-right: 60px;
+  padding-top: 45px;
 }
 
-.advantage-img {
-  width: 66%;
-  /*  временно? */
-  height: 250px;
-
+.advantage-text-width {
+  width: 320px;
 }
 
-.advantage {
-  display: flex;
-  justify-content: space-between;
-  /*  временно? */
-  height: 268px;
-}
-
-/*нет иконок. куда ушли?*/
-
-.advantage-icon {
-  background-position: top;
+.advantage-icons .advantage-text {
+  padding-top: 132px;
+  margin-bottom: 43px;
+  background-position: 50% 25%;
   background-repeat: no-repeat;
 }
 
-.advantage-icon:first-child {
+.advantage-icons .advantage-text:first-child {
   background-image: url("../img/icon-1.svg");
 }
 
-.advantage-icon:nth-child(2) {
-  background-image: url("../img/icon-2.svg");
+.advantage-icons .advantage-text:nth-child(2) {
+  background-image: url("../img/icon-3.svg");
 }
 
-.advantage-icon:last-child {
-  background-image: url("../img/icon-3.svg");
+.advantage-icons .advantage-text:last-child {
+  background-image: url("../img/icon-2.svg");
 }
 
 .advantage h3 {
@@ -637,4 +641,11 @@ a {
 
 .star {
   background-image: url("../img/star.svg");
+}
+
+
+.main-footer {
+  margin-left: 40px;
+  padding: 0;
+  width: 1200px;
 }
