@@ -33,8 +33,6 @@ body {
   padding-bottom: 16px;
   width: 1200px;
   background-color: #ffffff;
-
-
 }
 
 a {
@@ -49,6 +47,8 @@ a {
 .hotel-links {
   list-style: none;
 }
+
+/* гуляет по шапке, если менять размеры окна. А вот контент с ним не двигается. */
 
 .logo {
   position: absolute;
@@ -73,17 +73,15 @@ a {
   color: #81b3d2;
 }
 
-.site-navigation a:active {
-  color: #766357;
-}
-
-/* не могу сделать ссылку серой при нажатии. проблема с цветом и псевдоклассом ?:visited?
-
-
-.site-navigation a:visited {
+.site-navigation a:focus {
   color: rgba(0, 0, 0, 0.2);
 }
-*/
+
+/* visited не тот класс, чтобы задать "находимся на странице". Но у меня нет других вариантов пока */
+
+.site-navigation a:visited {
+  color: #766357;
+}
 
 .site-navigation li {
   width: 20%;
@@ -102,7 +100,6 @@ a {
 .navigation-hotel {
   text-align: right;
 }
-
 
 .container {
   /*  и здесь, но я пока оставлю так */
@@ -139,7 +136,7 @@ a {
   color: #000000;
 }
 
-/* скрываем заголовки */
+
 
 .visually-hidden {
   position: absolute;
@@ -160,9 +157,6 @@ a {
 .advantage-block {
   display: flex;
   width: 1200px;
-
-  /*  временно? */
-  /*  min-height: 250px;*/
   color: #ffffff;
   background-color: #81b3d2;
 }
@@ -313,7 +307,7 @@ a {
 }
 
 .input-line {
-  width: 345px;
+  width: 347px;
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
@@ -322,6 +316,21 @@ a {
   border: none;
 
   background-color: #f2f2f2;
+}
+
+/*с календарем не ладится. через absolute задвинуть в поле? или уменьшить поле и приклеить календарь? */
+
+.calendar-button {
+  fill: #a9a9a9;
+  border: none;
+}
+
+.calendar-button:hover {
+  fill: #000000;
+}
+
+.calendar-button:active {
+  fill: #81b3d2;
 }
 
 .input-number {
@@ -337,10 +346,6 @@ a {
   padding-left: 0;
 }
 
-/* цвет в покое д.б. сереньким.
-
-и вообще он не хочет мигать при наведении. */
-
 .button-minus,
 .button-plus {
   position: relative;
@@ -350,6 +355,7 @@ a {
   font-size: 21px;
   font-weight: bold;
   text-align: center;
+  color: #a9a9a9;
   padding: 6px;
   margin: 0;
   background-color: #f2f2f2;
@@ -366,13 +372,6 @@ a {
   color: #81b3d2;
 }
 
-/* ?donde estan los calendarios? */
-
-.calendar-button {
-  background-image: url(../img/calendar.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-}
 
 .input-line:hover {
   background-color: #ebebeb;
@@ -404,72 +403,6 @@ a {
   background-color: #5496bd;
 }
 
-.main-footer {
-  display: flex;
-  justify-content: space-around;
-}
-
-.footer-hashtag {
-  width: 400px;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-  padding-top: 48px;
-}
-
-.social-list {
-  display: flex;
-  justify-content: space-around;
-  width: 260px;
-  padding-top: 37px;
-}
-
-
-.social-btn {
-  width: 46px;
-  height: 48px;
-}
-
-.social-btn {
-  background-color: #81b3d2;
-}
-
-.social-btn:active {
-  background-color: #5496bd;
-}
-
-
-.social-btn:hover {
-  background-color: #669ec0;
-}
-
-.social-btn-tw {
-  background-image: url(../img/twitter.svg);
-  background-repeat: no-repeat;
-}
-
-.social-btn-fb {
-  background-image: url(../img/fb-icon.svg);
-  background-repeat: no-repeat;
-}
-
-.social-btn-yt {
-  background-image: url(../img/twitter.svg);
-  background-repeat: no-repeat;
-}
-
-.footer-made-by {
-  width: 260px;
-}
-
-/* здесь что-то не так с лого. */
-
-.logo-link {
-  width: 120px;
-  background-image: url(../img/logo-htmlacademy.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
 .form {
   color: #ffffff;
@@ -483,12 +416,17 @@ a {
 .form-structure {
   display: flex;
   justify-content: space-around;
-}
+  padding-top: 25px;
 
+}
 
 .checkbox-facilities fieldset,
 .checkbox-type fieldset {
+  display: block;
+  width: 170px;
+  min-height: 180px;
   border: none;
+
 }
 
 .form-legend {
@@ -515,9 +453,16 @@ a {
   color: #ffffff;
 }
 
+/* поставила cursor. На input не нужен pointer? */
+
+.range-button,
+.form-link {
+  cursor: pointer;
+}
+
 .listing-filtration {
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .sort-amount {
@@ -525,6 +470,13 @@ a {
   line-height: 26px;
   font-weight: bold;
   color: #000000;
+}
+
+/*почему не идете в строчку?*/
+
+.sort-tytle {
+  display: inline-block;
+  width: 400px;
 }
 
 .sort-tytle,
@@ -535,7 +487,7 @@ a {
 }
 
 .sort-list a {
-  color: rgba (129, 179, 210, 0.3);
+  color: #b2b2b2;
   border-bottom: 1px dashed #81b3d2;
 }
 
@@ -543,8 +495,6 @@ a {
   color: #81b3d2;
   border-bottom: 1px dashed #81b3d2;
 }
-
-/*не работает нажатие*/
 
 .sort-list a:active {
   color: #000000;
@@ -555,60 +505,77 @@ a {
   border-bottom: none;
 }
 
-/* здесь что-то странное с кнопками-стрелками, приходится каждой лично задавать размеры и состояния. Общий класс не работает */
-
-/* А еще как их перекрашивать при наведении? из styleguide*/
-
 .sort-button li {
-  ...
+  display: inline-block;
 }
 
-.icon-up {
-  width: 8px;
-  height: 12px;
+/* Не мигают. Что их не устраивает? */
 
-  border: none;
-  background-image: url(../img/icon-up-dir.svg);
-  background-repeat: no-repeat;
-}
-
+.icon-up,
 .icon-down {
-  width: 8px;
-  height: 12px;
-  border: none;
+  fill: #cacaca;
+  border: 0;
+}
 
-  background-image: url(../img/icon-down-dir.svg);
-  background-repeat: no-repeat;
+.icon-up:focus,
+.icon-down:focus {
+  fill: #ffffff;
+}
+
+.icon-up:active,
+.icon-down:active {
+  fill: #81b3d2;
 }
 
 .hotel {
   display: flex;
-  justify-content: space-around;
+  outline: 2px solid;
+}
+
+.hotel-img {
+  width: 135px;
+  height: 90px;
+  padding: 0;
+  /*
+  margin-top: 30px;
+  margin-left: 73px;
+  margin-right: 25px;
+  margin-bottom: 21px;
+*/
+  margin-right: 25px;
+}
+
+.hotel-info {
+  display: inline-block;
+  width: 260px;
+}
+
+.hotel-info p {
+  font-weight: normal;
 }
 
 .hotel-name a {
+
+  width: 280px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
+
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .hotel-name a:hover {
   color: #81b3d2;
 }
 
-/* должно быть сереньким нажатие */
-
 .hotel-name a:active {
-  color: #766357;
+  color: #f0f0f0;
 }
 
-.hotel-info {
-  width: 370px;
-}
-
-.hotel-info p {
-  font-weight: normal;
+.hotel-links {
+  display: inline-block;
 }
 
 .hotel-links li {
@@ -654,15 +621,75 @@ a {
   background-color: #f2f2f2;
 }
 
-.star {
-  background-image: url("../img/star.svg");
-}
 
 
 .main-footer {
+  display: flex;
+  justify-content: space-around;
   margin-left: 40px;
   padding: 0;
   width: 1200px;
 
   background-color: #fdfdfd;
+}
+
+.footer-hashtag {
+  width: 160px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-top: 48px;
+  margin-left: 115px;
+  margin-bottom: 55px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 151px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  margin-top: 35px;
+}
+
+.social-btn {
+  background-color: #81b3d2;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+/*в нажатии картинки должны стать прозрачнее. */
+
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.footer-copyright {
+  display: inline-block;
+}
+
+.footer-made-by {
+  width: 240px;
+}
+
+.logo-link {
+  width: 140px;
+}
+
+.logo-link:hover path {
+  fill: #81b3d2;
+}
+
+.logo-link:active path {
+  fill: #bdbbbc;
 }
