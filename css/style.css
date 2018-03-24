@@ -318,7 +318,7 @@ a {
   background-color: #f2f2f2;
 }
 
-/*с календарем не ладится. через absolute задвинуть в поле? или уменьшить поле и приклеить календарь? */
+/*с календарем не ладится. через absolute задвинуть в поле? или уменьшить поле и приклеить календарь? или вообще в background-img ? */
 
 .calendar-button {
   fill: #a9a9a9;
@@ -346,8 +346,9 @@ a {
   padding-left: 0;
 }
 
-.button-minus,
-.button-plus {
+/* игры с кнопками. */
+
+.button-sign {
   position: relative;
   bottom: -3px;
   width: 40px;
@@ -372,6 +373,39 @@ a {
   color: #81b3d2;
 }
 
+.button-plus::before,
+.button-plus::after {
+  content: "";
+
+  position: absolute;
+  top: -3px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #d0d0d0;
+}
+
+.button-plus::before {
+  transform: rotate(90deg);
+}
+
+.button-plus::after {
+  transform: rotate(-180deg);
+}
+
+.button-minus::before,
+.button-minus::after {
+  content: "";
+
+  position: absolute;
+  top: -3px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #d0d0d0;
+}
 
 .input-line:hover {
   background-color: #ebebeb;
