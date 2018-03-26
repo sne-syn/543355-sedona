@@ -37,6 +37,7 @@ body {
 
 .main-header {
   /*  здесь наверняка не так делается margin для обертки */
+  position: relative;
   margin-left: 40px;
   padding-bottom: 16px;
   width: 1200px;
@@ -55,8 +56,6 @@ a {
 .hotel-links {
   list-style: none;
 }
-
-/* гуляет по шапке, если менять размеры окна. А вот контент с ним не двигается. */
 
 .logo {
   position: absolute;
@@ -235,29 +234,29 @@ h2 + p {
   background-color: #eeeeee;
 }
 
-.search-form {
+.booking-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* еще карту прикрутить */
+/* еще карту прикрутить
 
-/*
-.background-map {
+ {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
 }
-*/
 
-.search-form p:first-of-type {
+ */
+
+.booking-form p:first-of-type {
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
   color: #000000;
 }
 
-.search-form p:last-of-type {
+.booking-form p:last-of-type {
   line-height: 24px;
   margin-bottom: 50px;
 }
@@ -272,10 +271,10 @@ h2 + p {
 
 .hotel-button {
   align-self: center;
-  width: 574px;
+  width: 570px;
   border: none;
 
-  padding-top: 31px;
+  padding-top: 30px;
   padding-bottom: 30px;
 
   background-color: #766357;
@@ -293,36 +292,33 @@ h2 + p {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.search-fields {
+.booking-fields {
   align-self: center;
+  width: 570px;
 }
 
-.search-fields fieldset {
+.booking-fields fieldset {
+  display: flex;
+  width: 460px;
   margin: 0;
-  padding: 0;
-  width: 570px;
-  border: none;
-  outline: 2px solid;
+  border: 0;
+  outline: 1px solid;
 }
 
 .input-field {
-  display: inline-block;
+
   font-weight: bold;
-  margin-top: 30px;
+
 }
 
-.input-field:first-child {
-  margin-top: 55px;
-}
+.input-field:first-child {}
 
-.input-field:nth-child(3) {
-  margin: 0;
-  padding: 0;
-}
+.input-field:nth-child(3) {}
 
-
+.input-field label {}
 
 input[type="text"] {
+
   width: 347px;
   font: inherit;
   text-transform: uppercase;
@@ -332,11 +328,14 @@ input[type="text"] {
   background-color: #f2f2f2;
 }
 
+/* не получилось через абсолют.*/
+
 .calendar-button {
-  position: absolute;
-  right: 40px;
-  bottom: 5px;
+  position: relative;
+  right: 35px;
+  top: 7px;
   fill: #a9a9a9;
+  background-color: #f2f2f2;
   border: none;
   padding: 0;
   margin: 0;
@@ -354,8 +353,10 @@ input[id="children-field"],
 input[id="adults-field"] {
   width: 35px;
   text-align: center;
+  /*
   padding: 5px;
   margin: 0px;
+*/
 }
 
 /* не хотят реагировать на margin и отползать от label и  к началу строки*/
@@ -369,15 +370,19 @@ input[id="adults-field"] {
 .input-field .button-minus,
 .input-field .button-plus {
   position: relative;
+  /*
   bottom: -3px;
   width: 40px;
+*/
   border: none;
   font-size: 21px;
   font-weight: bold;
   text-align: center;
   color: #a9a9a9;
+  /*
   padding: 6px;
   margin: 0;
+*/
   background-color: #f2f2f2;
 }
 
@@ -435,9 +440,13 @@ input[id="adults-field"] {
 }
 
 .button-search {
+  align-self: center;
   width: 458px;
+
+  /*
   margin-top: 50px;
   margin-bottom: 50px;
+*/
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -485,6 +494,13 @@ input[id="adults-field"] {
   font-weight: normal;
 }
 
+.checkbox-facilities label,
+.checkbox-type label {
+  margin-left: 37px;
+  margin-top: 25px;
+}
+
+/* сделать checkbox */
 
 .filter-range {
   width: 330px;
@@ -680,8 +696,6 @@ input[id="adults-field"] {
   text-align: center;
   margin-left: 460px;
   padding: 0;
-  border: none;
-
 }
 
 .icon-up path,
