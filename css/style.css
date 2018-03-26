@@ -22,6 +22,14 @@ body {
   background-color: #fefefe;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .page-container {
   background-color: #f2f2f2;
   width: 100%;
@@ -121,11 +129,22 @@ a {
 
 }
 
-/* пора бы уже маску прикрутить */
+/* пора бы уже маску прикрутить. Не прикручивается */
 
-.slogan {
+/*
+.intro::after {
+  content: "";
+  position: absolute;
+  background: url(../img/background-shape.png) no-repeat 100% 50%;
+  width: 100%;
+}
+*/
+
+.intro img {
   margin-top: 75px;
 }
+
+/* пересмотреть переносы строк и классы*/
 
 .main-title {
   margin: 2px;
@@ -136,19 +155,12 @@ a {
   color: #000000;
 }
 
+/* понаблюдать за этим тегом. Он цепляет сразу два разных абзаца*/
 
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
-.intro-text {
+h2 + p {
   padding-bottom: 36px;
 }
+
 
 .container {
   background-color: #ffffff;
@@ -166,7 +178,10 @@ a {
   width: 66%;
 }
 
-.advantage-block h3 {
+.advantage-text h3 {
+  display: inline-block;
+  width: 150px;
+  margin: 0;
   font-size: 21px;
   line-height: 21px;
   color: #ffffff;
@@ -189,32 +204,22 @@ a {
   padding-top: 45px;
 }
 
-.advantage-title {
-  display: inline-block;
-  width: 150px;
-  margin: 0;
-}
-
-.advantage-text-width {
-  width: 320px;
-}
-
-.advantage-icons .advantage-text {
+.advantage-icon .advantage-text {
   padding-top: 132px;
   margin-bottom: 43px;
   background-position: 50% 25%;
   background-repeat: no-repeat;
 }
 
-.advantage-icons .advantage-text:first-child {
+.advantage-icon .advantage-text:first-child {
   background-image: url("../img/icon-1.svg");
 }
 
-.advantage-icons .advantage-text:nth-child(2) {
+.advantage-icon .advantage-text:nth-child(2) {
   background-image: url("../img/icon-3.svg");
 }
 
-.advantage-icons .advantage-text:last-child {
+.advantage-icon .advantage-text:last-child {
   background-image: url("../img/icon-2.svg");
 }
 
@@ -226,7 +231,7 @@ a {
   color: #000000;
 }
 
-.advantage-color {
+.advantage-background {
   background-color: #eeeeee;
 }
 
@@ -241,30 +246,27 @@ a {
   background-repeat: no-repeat;
 }
 
-.search-text {
+.search-form p:first-of-type {
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
   color: #000000;
 }
 
-.search-proposal {
+.search-form p:last-of-type {
   line-height: 24px;
   margin-bottom: 50px;
 }
 
-.button-text {
+.hotel-button a,
+.button-search {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-}
-
-
-.button-text {
   color: #ffffff;
 }
 
-.hotel-btn {
+.hotel-button {
   align-self: center;
   width: 574px;
   border: none;
@@ -275,11 +277,11 @@ a {
   background-color: #766357;
 }
 
-.hotel-btn:hover {
+.hotel-button:hover {
   background: #604e43;
 }
 
-.hotel-btn:active {
+.hotel-button:active {
   background-color: #503e33;
 }
 
@@ -300,29 +302,39 @@ a {
   display: inline-block;
   font-weight: bold;
   margin-top: 30px;
+
+
 }
 
 .input-field:first-child {
   margin-top: 55px;
 }
 
-.input-line {
+.input-field:nth-child(3) {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+input[type="text"] {
   width: 347px;
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: bold;
-  padding: 10px;
-  margin-left: 20px;
+  font: inherit;
+  text-transform: uppercase;
+
   border: none;
 
   background-color: #f2f2f2;
 }
 
-/*с календарем не ладится. через absolute задвинуть в поле? или уменьшить поле и приклеить календарь? или вообще в background-img ? */
-
 .calendar-button {
+  position: absolute;
+  right: 40px;
+  bottom: 5px;
   fill: #a9a9a9;
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .calendar-button:hover {
@@ -333,11 +345,12 @@ a {
   fill: #81b3d2;
 }
 
-.input-number {
+input[id="children-field"],
+input[id="adults-field"] {
   width: 35px;
   text-align: center;
   padding: 5px;
-  margin: -4px;
+  margin: 0px;
 }
 
 /* не хотят реагировать на margin и отползать от label и  к началу строки*/
@@ -348,7 +361,7 @@ a {
 
 /* игры с кнопками. */
 
-.button-sign {
+button[type="button"] {
   position: relative;
   bottom: -3px;
   width: 40px;
@@ -415,28 +428,23 @@ a {
   background-color: #ffffff;
 }
 
-.search-btn {
+.button-search {
   width: 458px;
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 15px;
   padding-bottom: 15px;
-}
 
-/* no funciona */
-
-.search-btn {
   background-color: #81b3d2;
 }
 
-.search-btn:hover {
+.button-search:hover {
   background-color: #669ec0;
 }
 
-.search-btn:active {
+.button-search:active {
   background-color: #5496bd;
 }
-
 
 .form {
   color: #ffffff;
@@ -487,11 +495,139 @@ a {
   color: #ffffff;
 }
 
-/* поставила cursor. На input не нужен pointer? */
+.filter-range {
+  width: 330px;
+  margin: 50px auto;
+  /* для демо */
+  color: #ffffff;
+  text-transform: uppercase;
+}
 
-.range-button,
-.form-link {
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
   cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 .listing-filtration {
