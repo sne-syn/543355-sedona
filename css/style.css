@@ -36,7 +36,7 @@ body {
 }
 
 .main-header {
-  /*  здесь наверняка не так делается margin */
+  /*  здесь наверняка не так делается margin для обертки */
   margin-left: 40px;
   padding-bottom: 16px;
   width: 1200px;
@@ -241,10 +241,14 @@ h2 + p {
   justify-content: center;
 }
 
+/* еще карту прикрутить */
+
+/*
 .background-map {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
 }
+*/
 
 .search-form p:first-of-type {
   font-size: 30px;
@@ -285,9 +289,12 @@ h2 + p {
   background-color: #503e33;
 }
 
+.hotel-button:active a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .search-fields {
   align-self: center;
-
 }
 
 .search-fields fieldset {
@@ -302,8 +309,6 @@ h2 + p {
   display: inline-block;
   font-weight: bold;
   margin-top: 30px;
-
-
 }
 
 .input-field:first-child {
@@ -361,7 +366,8 @@ input[id="adults-field"] {
 
 /* игры с кнопками. */
 
-button[type="button"] {
+.input-field .button-minus,
+.input-field .button-plus {
   position: relative;
   bottom: -3px;
   width: 40px;
@@ -444,9 +450,11 @@ button[type="button"] {
 
 .button-search:active {
   background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.5)
 }
 
 .form {
+  width: 1200px;
   color: #ffffff;
 
   background-color: #81b3d2;
@@ -464,11 +472,12 @@ button[type="button"] {
 
 .checkbox-facilities fieldset,
 .checkbox-type fieldset {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 170px;
-  min-height: 180px;
   border: none;
-
+  margin: 0;
+  padding: 0;
 }
 
 .form-legend {
@@ -476,29 +485,9 @@ button[type="button"] {
   font-weight: normal;
 }
 
-.form-link {
-  width: 135px;
-  border: solid 2px #ffffff;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.form-link:hover {
-  background-color: #ffffff;
-}
-
-.form-link:hover a {
-  color: #000000;
-}
-
-.form-link a {
-  color: #ffffff;
-}
 
 .filter-range {
   width: 330px;
-  margin: 50px auto;
-  /* для демо */
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -612,6 +601,7 @@ button[type="button"] {
   display: block;
   margin: 0 auto;
   padding: 6px 35px;
+  margin-bottom: 30px;
 
   font-size: 14px;
   line-height: 20px;
@@ -632,7 +622,7 @@ button[type="button"] {
 
 .listing-filtration {
   display: flex;
-  justify-content: space-around;
+
 }
 
 .sort-amount {
@@ -640,16 +630,24 @@ button[type="button"] {
   line-height: 26px;
   font-weight: bold;
   color: #000000;
+  padding-left: 72px
 }
 
-/*почему не идете в строчку?*/
-
-.sort-tytle {
-  display: inline-block;
-  width: 400px;
+.sort-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 45px;
 }
 
-.sort-tytle,
+.sort-title ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 260px;
+}
+
+.sort-title,
 .sort-list a {
   font-size: 12px;
   line-height: 18px;
@@ -675,44 +673,51 @@ button[type="button"] {
   border-bottom: none;
 }
 
-.sort-button li {
+/*а точно ли это button?*/
+
+.sort-button {
   display: inline-block;
+  text-align: center;
+  margin-left: 460px;
+  padding: 0;
+  border: none;
+
 }
 
-/* Не мигают. Что их не устраивает? */
-
-.icon-up,
-.icon-down {
+.icon-up path,
+.icon-down path {
   fill: #cacaca;
-  border: 0;
+
 }
 
-.icon-up:focus,
-.icon-down:focus {
+/* сломала мигание */
+
+.icon-up path:focus,
+.icon-down path:focus {
   fill: #ffffff;
 }
 
-.icon-up:active,
-.icon-down:active {
+.icon-up path:active,
+.icon-down path:active {
   fill: #81b3d2;
+}
+
+hotel-listing {
+  display: flex;
 }
 
 .hotel {
   display: flex;
-  outline: 2px solid;
+  border-top: 2px solid #e5e5e5;
+}
+
+.hotel:last-child {
+  border-bottom: 2px solid #e5e5e5;
 }
 
 .hotel-img {
   width: 135px;
   height: 90px;
-  padding: 0;
-  /*
-  margin-top: 30px;
-  margin-left: 73px;
-  margin-right: 25px;
-  margin-bottom: 21px;
-*/
-  margin-right: 25px;
 }
 
 .hotel-info {
@@ -745,7 +750,7 @@ button[type="button"] {
 }
 
 .hotel-links {
-  display: inline-block;
+  /*  display: inline-block;*/
 }
 
 .hotel-links li {
@@ -784,6 +789,7 @@ button[type="button"] {
 }
 
 .hotel-raiting {
+  justify-content: flex-end;
   width: 110px;
   height: 27px;
   text-align: center;
@@ -791,7 +797,9 @@ button[type="button"] {
   background-color: #f2f2f2;
 }
 
-
+.star {
+  justify-content: flex-end;
+}
 
 .main-footer {
   display: flex;
@@ -838,22 +846,27 @@ button[type="button"] {
   background-color: #5496bd;
 }
 
-/*в нажатии картинки должны стать прозрачнее. */
+.social-btn path:active {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+
 
 .social-btn:hover {
   background-color: #669ec0;
 }
 
-.footer-copyright {
-  display: inline-block;
-}
-
 .footer-made-by {
+  display: flex;
+  flex-direction: row;
   width: 240px;
+  margin-top: 35px;
+  margin-right: 50px;
 }
 
 .logo-link {
-  width: 140px;
+  width: 110px;
+  margin-left: 10px;
 }
 
 .logo-link:hover path {
