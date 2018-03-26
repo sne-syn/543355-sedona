@@ -118,6 +118,7 @@ a {
 }
 
 .intro {
+  position: relative;
   background-color: #d9eaf5;
   background-image: url("../img/background-img.jpg");
 
@@ -128,20 +129,20 @@ a {
 
 }
 
-/* пора бы уже маску прикрутить. Не прикручивается */
+/* пора бы уже маску прикрутить. Не прикручивается. Что-то я с псевдоклассами делаю не так */
 
-/*
 .intro::after {
   content: "";
   position: absolute;
   background: url(../img/background-shape.png) no-repeat 100% 50%;
-  width: 100%;
+
 }
-*/
 
 .intro img {
   margin-top: 75px;
 }
+
+
 
 /* пересмотреть переносы строк и классы*/
 
@@ -153,13 +154,6 @@ a {
   font-weight: bold;
   color: #000000;
 }
-
-/* понаблюдать за этим тегом. Он цепляет сразу два разных абзаца*/
-
-h2 + p {
-  padding-bottom: 36px;
-}
-
 
 .container {
   background-color: #ffffff;
@@ -243,7 +237,7 @@ h2 + p {
 
 }
 
-/* еще карту прикрутить
+/* еще карту прикрутить на что?
 
  {
   background-image: url("../img/map.jpg");
@@ -458,7 +452,6 @@ input[type="checkbox"]:not(:checked) + label:before {
   content: "";
   background-image: url(../img/checkbox-off.svg);
 }
-
 
 .filter-range {
   width: 330px;
@@ -694,8 +687,6 @@ hotel-listing {
   margin-right: 30px;
 }
 
-/* есть ли смысл делать инлайнами? трудности */
-
 .hotel-info {
   display: inline-block;
   text-align: left;
@@ -712,7 +703,6 @@ hotel-listing {
   width: 111px;
   font-weight: normal;
   margin: 0;
-
 }
 
 .hotel-name a {
@@ -722,7 +712,6 @@ hotel-listing {
   line-height: 26px;
   font-weight: bold;
   color: #000000;
-
 }
 
 .hotel-name a:hover {
