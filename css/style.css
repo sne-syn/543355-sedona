@@ -318,6 +318,7 @@ a {
 .input-field label {}
 
 input[type="text"] {
+  box-sizing: border-box;
   width: 300px;
   font: inherit;
   text-transform: uppercase;
@@ -355,6 +356,7 @@ input[type="text"] {
 
 input[id="children-field"],
 input[id="adults-field"] {
+  box-sizing: border-box;
   width: 35px;
   text-align: center;
 }
@@ -454,18 +456,8 @@ input[type="checkbox"]:not(:checked) + label {
   font-weight: normal;
 }
 
-/* не работает */
+/* не работают чекбоксы */
 
-input[type="checkbox"]:checked + label:before,
-  {
-  content: "";
-  background-image: url(../img/checkbox-on.svg);
-}
-
-input[type="checkbox"]:not(:checked) + label:before {
-  content: "";
-  background-image: url(../img/checkbox-off.svg);
-}
 
 .filter-range {
   width: 330px;

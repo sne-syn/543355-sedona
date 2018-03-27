@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -32,24 +33,51 @@
           <div class="checkbox-facilities">
             <fieldset>
               <legend class="form-legend">Инфраструктура</legend>
+              
+              <label for="waterpool-field">
               <input class="visually-hidden" type="checkbox" name="facilities" id="waterpool-field" checked>
-              <label for="waterpool-field">Бассейн</label>
+                <span class="checkbox-indicator"></span>
+                Бассейн
+              </label>
+
+              <label for="parking-field">
               <input class="visually-hidden" type="checkbox" name="facilities" id="parking-field">
-              <label for="parking-field">Парковка</label>
-              <input class="visually-hidden" type="checkbox" name="facilities" id="wifi-field">
-              <label for="wifi-field">Wi-Fi</label>
+                <span class="checkbox-indicator"></span>
+               Парковка
+              </label>
+
+
+              <label for="wifi-field">
+                <input class="visually-hidden" type="checkbox" name="facilities" id="wifi-field">
+                <span class="checkbox-indicator"></span>
+                Wi-Fi
+              </label>
+              
             </fieldset>
           </div>
 
           <div class="checkbox-type">
             <fieldset>
               <legend class="form-legend">Тип жилья</legend>
-              <input class="visually-hidden" type="checkbox" name="type" id="hotel-field" checked>
-              <label for="waterpool-field">Гостиница</label>
-              <input class="visually-hidden" type="checkbox" name="type" id="motel-field" checked>
-              <label for="parking-field">Мотель</label>
-              <input class="visually-hidden" type="checkbox" name="type" id="apartment-field" checked>
-              <label for="apartment-field">Апартаменты</label>
+
+              <label for="waterpool-field">
+                <input class="visually-hidden" type="checkbox" name="type" id="hotel-field" checked>
+                <span class="checkbox-indicator"></span>
+                Гостиница
+              </label>
+
+              <label for="parking-field">
+                <input class="visually-hidden" type="checkbox" name="type" id="motel-field" checked>
+                <span class="checkbox-indicator"></span>
+                Мотель
+              </label>
+
+              <label for="apartment-field">
+                <input class="visually-hidden" type="checkbox" name="type" id="apartment-field" checked>
+                <span class="checkbox-indicator"></span>
+                Апартаменты
+              </label>
+              
             </fieldset>
           </div>
           <div class="filter-range">
