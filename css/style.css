@@ -31,16 +31,16 @@ body {
 }
 
 .page-container {
-  background-color: #f2f2f2;
-  width: 100%;
+  margin: 0 auto;
+  width: 1200px;
+
+  background-color: #ffffff;
 }
 
 .main-header {
-  /*  здесь наверняка не так делается margin для обертки */
+
   position: relative;
-  margin-left: 40px;
   padding-bottom: 16px;
-  width: 1200px;
   background-color: #ffffff;
 }
 
@@ -61,7 +61,10 @@ a {
 
 .logo {
   position: absolute;
-  left: 44.5%;
+  left: 50%;
+  top: 0;
+  margin-left: -69px;
+  z-index: 100;
   width: 138px;
   height: 70px;
 }
@@ -111,8 +114,6 @@ a {
 }
 
 .container {
-  /*  и здесь, но я пока оставлю так */
-  margin-left: 40px;
   padding: 0;
   width: 1200px;
 
@@ -248,14 +249,14 @@ a {
 
 /* слезь с формы */
 
-.map-background::before {
+.background-map::before {
   content: "";
   position: absolute;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
 
   display: block;
-  height: 410px;
+  height: 400px;
   width: 100%;
   left: 0;
 }
@@ -284,7 +285,7 @@ a {
   align-self: center;
   width: 570px;
   border: none;
-
+  margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -304,8 +305,14 @@ a {
 }
 
 .booking-fields {
+  position: absolute;
+  top: 100%;
+  left;
+  50%;
+  margin-left: -285px;
   align-self: center;
   width: 570px;
+  background: #ffffff;
 }
 
 .booking-fields fieldset {
@@ -424,7 +431,7 @@ input[id="adults-field"] {
   background-color: #81b3d2;
   background-image: url("../img/background-filter.jpg");
   background-repeat: no-repeat;
-  background-position: cover;
+  background-position: contain;
 }
 
 
@@ -652,10 +659,13 @@ input[id="adults-field"] {
 /*а точно ли это button?*/
 
 .sort-button {
-  display: inline-block;
   text-align: right;
   margin-left: 460px;
   padding: 0;
+}
+
+.sort-button li {
+  display: inline-block;
 }
 
 .icon-up path,
@@ -682,15 +692,20 @@ hotel-listing {
 
 .hotel {
   display: flex;
+  justify-content: space-between;
   border-top: 2px solid #e5e5e5;
-  padding-left: 73px;
-  padding-right: 73px;
+  padding-left: 6%;
+  padding-right: 6%;
   padding-top: 50px;
 
 }
 
 .hotel:last-child {
   border-bottom: 2px solid #e5e5e5;
+}
+
+.hotel-content {
+  display: flex;
 }
 
 .hotel-img {
@@ -736,12 +751,16 @@ hotel-listing {
 /* как уложить их в одну строку? */
 
 .hotel-links {
-  display: inline-block;
+
   text-align: center;
   width: 260px;
 
   padding: 0;
   margin-bottom: 0;
+}
+
+.hotel-links li {
+  display: inline-block;
 }
 
 .hotel-details {
@@ -804,9 +823,6 @@ hotel-listing {
 .main-footer {
   display: flex;
   justify-content: space-around;
-  margin-left: 40px;
-  padding: 0;
-  width: 1200px;
 
   background-color: #fdfdfd;
 }
