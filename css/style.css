@@ -57,6 +57,7 @@ a {
   list-style: none;
 }
 
+/* у лого спрятался нос */
 .logo {
   position: absolute;
   left: 44.5%;
@@ -118,7 +119,7 @@ a {
 }
 
 .intro {
-
+ position: relative;
   background-color: #d9eaf5;
   background-image: url("../img/background-img.jpg");
 
@@ -129,13 +130,17 @@ a {
 
 }
 
-/* пора бы уже маску прикрутить. Не прикручивается. Что-то я с псевдоклассами делаю не так */
+/* размеры заданы правильно?*/
 
-.intro::after {
+.background-shape::after {
   content: "";
   position: absolute;
-  background: url(../img/background-shape.png) no-repeat 100% 50%;
-
+  background-image: url(../img/background-shape.png);
+  background-repeat: no-repeat;
+  top: 90%;
+  display: block;
+  height: 115px;
+  width: 100%;
 }
 
 .intro img {
@@ -231,6 +236,7 @@ a {
 }
 
 .booking-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -239,14 +245,19 @@ a {
 
 }
 
-/* еще карту прикрутить на что?
+/* слезь с формы */
 
- {
+.map-background::before {
+  content: "";
+  position: absolute;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
-}
 
- */
+  display: block;
+  height: 410px;
+  width: 100%;
+  left: 0;
+}
 
 .booking-form p:first-of-type {
   font-size: 30px;
@@ -319,7 +330,7 @@ a {
 
 input[type="text"] {
   box-sizing: border-box;
-  width: 300px;
+  width: 345px;
   font: inherit;
   text-transform: uppercase;
   padding: 10px;
@@ -373,10 +384,7 @@ input[id="adults-field"] {
   padding: 10px;
   font-size: 22px;
   color: #a9a9a9;
-
 }
-
-
 
 .input-field:nth-child(3) {
   padding-left: 0;
@@ -458,6 +466,7 @@ input[type="checkbox"]:not(:checked) + label {
 
 /* не работают чекбоксы */
 
+/*сломался range */
 
 .filter-range {
   width: 330px;
