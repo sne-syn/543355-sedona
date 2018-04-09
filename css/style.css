@@ -121,22 +121,22 @@ a {
   position: relative;
   background-color: #d9eaf5;
   background-image: url("../img/background-img.jpg");
-
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 567px;
-  background-position: 52% 28%;
+
+  /*  Это плохо. Как поправить? */
+  min-height: 507px;
+  background-position: 50% 21%;
 }
 
-/* размеры заданы правильно?*/
+/* уехал */
 
 .background-shape::after {
   content: "";
   position: absolute;
   background-image: url(../img/background-shape.png);
   background-repeat: no-repeat;
-  top: 90%;
-  display: block;
+  top: 89%;
   height: 115px;
   width: 100%;
 }
@@ -145,30 +145,28 @@ a {
   margin-top: 75px;
 }
 
-/* пересмотреть переносы строк и классы*/
+/* сделать им отдельный див и сдвинуть в центр? */
 
 .main-title {
-  margin: 2px;
+  text-align: center;
+  margin-top: 60px;
   margin-bottom: 27px;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
 }
 
-.container {
-  background-color: #ffffff;
-}
-
 .advantage-block {
   display: flex;
-  width: 1200px;
   color: #ffffff;
   background-color: #81b3d2;
 }
 
+/* полоска внизу. есть идеи? картинке не хватает высоты. если задать с css, то м.б. растянуть */
+
 .advantage-img {
-  display: inline-block;
   width: 66%;
 }
 
@@ -176,15 +174,12 @@ a {
   display: inline-block;
   vertical-align: top;
   width: 150px;
-  margin: 0;
   font-size: 21px;
   line-height: 21px;
   color: #ffffff;
 }
 
 .advantage {
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-around;
 }
@@ -308,60 +303,56 @@ a {
   background: #ffffff;
 }
 
-.booking-fields fieldset {
+.booking-field fieldset {
   display: flex;
-  width: 460px;
-  margin: 0;
-  padding: 55px;
-  border: 0;
-  outline: 1px solid;
+
+  width: 458px;
 }
 
 .input-field {
+  justify-content: space-around;
+  align-self: baseline;
+  display: flex;
+  width: 458px;
+  margin-left: 40px;
   font-weight: bold;
 }
 
-.input-field:first-child {
-
-}
-
-.input-field:nth-child(2) {
-
-}
-
-.input-field:nth-child(3) {
-display: inline-block;
-vertical-align: top;
-  margin-right: 50px;
-}
-
+.input-field:nth-child(3),
 .input-field:nth-child(4) {
-display: inline-block;
+  display: inline-block;
+  width: 232px;
+  margin: 0;
+}
+
+
+.input-field label {
+  width: 110px;
+  margin-right: 25px;
 }
 
 
 input[type="text"] {
-  box-sizing: border-box;
-  width: 345px;
+  width: 350px;
   font: inherit;
   text-transform: uppercase;
-  padding: 10px;
-
+  padding: 6px 10px;
   border: none;
-
   background-color: #f2f2f2;
 }
 
-.input-field label {
-  margin-right: 20px;
+input[id="children-field"],
+input[id="adults-field"] {
+  width: 35px;
+  text-align: center;
+  padding: 6px 0;
 }
-
-/* не получилось через абсолют.*/
 
 .calendar-button {
   position: relative;
+  height: 30px;
   right: 35px;
-  top: 7px;
+  top: 5px;
   fill: #a9a9a9;
   background-color: #f2f2f2;
   border: none;
@@ -369,39 +360,17 @@ input[type="text"] {
   margin: 0;
 }
 
-.calendar-button:hover {
-  fill: #000000;
+.room-field {
+  margin-right: 20px;
 }
 
-.calendar-button:active {
-  fill: #81b3d2;
-}
-
-input[id="children-field"],
-input[id="adults-field"] {
-  box-sizing: border-box;
-  width: 35px;
-  text-align: center;
-}
-
-/*
 .button-minus,
 .button-plus {
-  display: inline-block;
-  vertical-align: middle;
-  width: 40px;
-  margin: -4px;
+  width: 35px;
+  padding: 8px;
+  /*  margin-left: px;*/
   border: none;
-  padding: 0;
   background-color: #f2f2f2;
-  padding: 10px;
-  font-size: 22px;
-  color: #a9a9a9;
-}
-*/
-
-.input-field:nth-child(3) {
-  padding-left: 0;
 }
 
 .button-search {
