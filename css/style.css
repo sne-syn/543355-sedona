@@ -303,76 +303,77 @@ a {
   background: #ffffff;
 }
 
-.input-field {
+.booking-fields fieldset {
   display: flex;
-  justify-content: space-between;
-  align-self: stretch;
 
   width: 458px;
-  margin-left: 40px;
-  font-weight: bold;
+  margin: 54px;
+  padding: 0;
+  border: none;
 }
 
+.input-field {
+  display: flex;
+  /*  justify-content: space-between;*/
+  width: 458px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* AAAAAA!*/
 
 .input-field:nth-child(3),
 .input-field:nth-child(4) {
-
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 232px;
   margin: 0;
-
 }
 
+/* почему не распространяется на два последних элемента? */
 
 .input-field label {
-  width: 110px;
+  width: 120px;
   margin-right: 25px;
+  padding-top: 5px;
   text-align: left;
 }
 
-
-label.room-field {
-
-  width: 95px;
-  text-align: left;
-  margin-right: 23px;
-
-}
-
-label.children-room-field {
-  text-align: center;
-}
-
-input[type="text"] {
-  width: 350px;
+input[id="check-in"],
+input[id="check-out"] {
+  width: 345px;
   font: inherit;
   text-transform: uppercase;
   padding: 6px 10px;
+  padding-right: 0px;
+  margin-right: 0;
   border: none;
   background-color: #f2f2f2;
 }
 
 input[id="children-field"],
 input[id="adults-field"] {
+  font: inherit;
+  text-transform: uppercase;
   width: 35px;
   text-align: center;
   padding: 6px 0;
+  background-color: #f2f2f2;
+  border: none;
+
 }
 
 .calendar-button {
   position: relative;
-  height: 30px;
-  right: 35px;
-  top: 5px;
+  width: 45px;
+  right: 5px;
+  top: 0px;
   fill: #a9a9a9;
   background-color: #f2f2f2;
   border: none;
   padding: 0;
   margin: 0;
-}
-
-.room-field {
-  margin-right: 20px;
 }
 
 .button-minus,
