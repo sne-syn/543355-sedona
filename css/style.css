@@ -303,34 +303,45 @@ a {
   background: #ffffff;
 }
 
-.booking-field fieldset {
-  display: flex;
-
-  width: 458px;
-}
-
 .input-field {
-  justify-content: space-around;
-  align-self: baseline;
   display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+
   width: 458px;
   margin-left: 40px;
   font-weight: bold;
 }
 
+
 .input-field:nth-child(3),
 .input-field:nth-child(4) {
-  display: inline-block;
+
+  display: inline-flex;
   width: 232px;
   margin: 0;
+
 }
 
 
 .input-field label {
   width: 110px;
   margin-right: 25px;
+  text-align: left;
 }
 
+
+label.room-field {
+
+  width: 95px;
+  text-align: left;
+  margin-right: 23px;
+
+}
+
+label.children-room-field {
+  text-align: center;
+}
 
 input[type="text"] {
   width: 350px;
@@ -368,7 +379,7 @@ input[id="adults-field"] {
 .button-plus {
   width: 35px;
   padding: 8px;
-  /*  margin-left: px;*/
+
   border: none;
   background-color: #f2f2f2;
 }
