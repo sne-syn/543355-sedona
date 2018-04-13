@@ -113,7 +113,6 @@ a {
 .container {
   padding: 0;
   width: 1200px;
-
   background-color: #ffffff;
 }
 
@@ -129,14 +128,16 @@ a {
   background-position: 50% 21%;
 }
 
-/* уехал */
+/* уголок не острый*/
 
 .background-shape::after {
   content: "";
   position: absolute;
   background-image: url(../img/background-shape.png);
   background-repeat: no-repeat;
-  top: 89%;
+  /*  сделала уголок на десятых, но где-то ошибка */
+  top: 88.7%;
+  left: 0;
   height: 115px;
   width: 100%;
 }
@@ -145,12 +146,12 @@ a {
   margin-top: 75px;
 }
 
-/* сделать им отдельный див и сдвинуть в центр? */
-
 .main-title {
+  display: inline-block;
+  width: 570px;
   text-align: center;
   margin-top: 60px;
-  margin-bottom: 27px;
+  margin-bottom: 15px;
 
   font-size: 21px;
   line-height: 26px;
@@ -158,13 +159,21 @@ a {
   color: #000000;
 }
 
+.container > p {
+  margin-bottom: 48px;
+}
+
+
+/* ??????? */
+
 .advantage-block {
   display: flex;
+  width: 100%;
   color: #ffffff;
   background-color: #81b3d2;
 }
 
-/* полоска внизу. есть идеи? картинке не хватает высоты. если задать с css, то м.б. растянуть */
+/* полоска внизу. есть идеи? картинка ездит туда-сюда */
 
 .advantage-img {
   width: 66%;
@@ -172,7 +181,6 @@ a {
 
 .advantage-text h3 {
   display: inline-block;
-  vertical-align: top;
   width: 150px;
   font-size: 21px;
   line-height: 21px;
@@ -185,12 +193,8 @@ a {
 }
 
 .advantage-text {
-  display: inline-block;
-  vertical-align: top;
-  width: 300px;
+  width: 280px;
   line-height: 21px;
-  margin-left: 40px;
-  margin-right: 60px;
   padding-top: 45px;
 }
 
@@ -199,6 +203,10 @@ a {
   margin-bottom: 43px;
   background-position: 50% 25%;
   background-repeat: no-repeat;
+}
+
+.advantage-icon p {
+  width: 290px;
 }
 
 .advantage-icon .advantage-text:first-child {
@@ -221,6 +229,12 @@ a {
   color: #000000;
 }
 
+.advantage-background p {
+
+  width: 270px;
+
+}
+
 .advantage-background {
   background-color: #eeeeee;
 }
@@ -234,12 +248,13 @@ a {
   padding-top: 55px;
 }
 
-/*
- слезь с формы
+
+/* футер убежал вверх */
 
 .background-map::before {
   content: "";
   position: absolute;
+  z-index: -1;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
 
@@ -248,7 +263,7 @@ a {
   width: 100%;
   left: 0;
 }
-*/
+
 
 .booking-form p:first-of-type {
   font-size: 30px;
@@ -305,7 +320,6 @@ a {
 
 .booking-fields fieldset {
   display: flex;
-
   width: 458px;
   margin: 54px;
   padding: 0;
@@ -314,7 +328,6 @@ a {
 
 .input-field {
   display: flex;
-  /*  justify-content: space-between;*/
   width: 458px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -331,7 +344,7 @@ a {
   margin: 0;
 }
 
-/* почему не распространяется на два последних элемента? */
+/* почему последние label другой ширины и им на мои свойства наплевать? */
 
 .input-field label {
   width: 120px;
@@ -339,6 +352,8 @@ a {
   padding-top: 5px;
   text-align: left;
 }
+
+/* подсветка outline выглядит очень коряво */
 
 input[id="check-in"],
 input[id="check-out"] {
@@ -350,6 +365,7 @@ input[id="check-out"] {
   margin-right: 0;
   border: none;
   background-color: #f2f2f2;
+
 }
 
 input[id="children-field"],
@@ -361,7 +377,28 @@ input[id="adults-field"] {
   padding: 6px 0;
   background-color: #f2f2f2;
   border: none;
+}
 
+/*мигают немного по-разному*/
+
+input[id="check-in"]:hover,
+input[id="check-out"]:hover,
+input[id="children-field"]:hover,
+input[id="adults-field"]:hover,
+.calendar-button:hover,
+.button-minus:hover,
+.button-plus:hover {
+  background-color: #ebebeb;
+}
+
+input[id="check-in"]:active,
+input[id="check-out"]:active,
+input[id="children-field"]:active,
+input[id="adults-field"]:active,
+.calendar-button:active,
+.button-minus:active,
+.button-plus:active {
+  background-color: #ffffff;
 }
 
 .calendar-button {
@@ -376,6 +413,8 @@ input[id="adults-field"] {
   margin: 0;
 }
 
+/* кнопки не работают. Действие потом навешивается?*/
+
 .button-minus,
 .button-plus {
   width: 35px;
@@ -383,7 +422,22 @@ input[id="adults-field"] {
 
   border: none;
   background-color: #f2f2f2;
+
 }
+
+
+.calendar-button:hover path,
+.button-minus:hover line,
+.button-plus:hover line {
+  fill: #000000;
+}
+
+.calendar-button:active path,
+.button-minus:active line,
+.button-plus:active line {
+  fill: #81b3d2;
+}
+
 
 .button-search {
   align-self: center;
@@ -468,12 +522,9 @@ input[id="adults-field"] {
 
 .price-controls {
   position: relative;
-
   height: 36px;
   margin-bottom: 20px;
-
   font-size: 0;
-
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
@@ -483,10 +534,8 @@ input[id="adults-field"] {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 2px;
   height: 22px;
-
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
@@ -588,6 +637,7 @@ input[id="adults-field"] {
 
 .listing-filtration {
   display: flex;
+  margin: 9px 0;
 
 }
 
@@ -679,7 +729,8 @@ hotel-listing {
   border-top: 2px solid #e5e5e5;
   padding-left: 6%;
   padding-right: 6%;
-  padding-top: 50px;
+  padding-top: 29px;
+  padding-bottom: 10px;
 
 }
 
@@ -697,7 +748,8 @@ hotel-listing {
 }
 
 .hotel-info {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   text-align: left;
   width: 260px;
 }
@@ -706,9 +758,10 @@ hotel-listing {
   margin: 0;
 }
 
+/* в одну строку ?!*/
+
 .hotel-info p {
   display: inline-block;
-  text-align: left;
   width: 111px;
   font-weight: normal;
   margin: 0;
@@ -731,10 +784,7 @@ hotel-listing {
   color: #f0f0f0;
 }
 
-/* как уложить их в одну строку? */
-
 .hotel-links {
-
   text-align: center;
   width: 260px;
 
@@ -749,6 +799,7 @@ hotel-listing {
 .hotel-details {
   width: 110px;
   padding: 5px 0;
+  margin-right: 3px;
   background-color: #81b3d2;
 }
 
@@ -763,6 +814,7 @@ hotel-listing {
 .hotel-reservation {
   width: 141px;
   padding: 5px 0;
+  margin: 0;
   background-color: #766357;
 }
 
