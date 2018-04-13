@@ -163,7 +163,6 @@ a {
   margin-bottom: 48px;
 }
 
-
 /* ??????? */
 
 .advantage-block {
@@ -197,6 +196,12 @@ a {
   line-height: 21px;
   padding-top: 45px;
 }
+/* поправить первый блок */
+
+.advantage-block p {
+  margin-top: 0;
+  width: 305px;
+}
 
 .advantage-icon .advantage-text {
   padding-top: 132px;
@@ -207,6 +212,11 @@ a {
 
 .advantage-icon p {
   width: 290px;
+}
+
+.advantage-icon {
+  margin: 0;
+  padding: 0;
 }
 
 .advantage-icon .advantage-text:first-child {
@@ -227,6 +237,7 @@ a {
   font-weight: bold;
   text-align: center;
   color: #000000;
+  margin-bottom: 0;
 }
 
 .advantage-background p {
@@ -347,13 +358,13 @@ a {
 /* почему последние label другой ширины и им на мои свойства наплевать? */
 
 .input-field label {
-  width: 120px;
-  margin-right: 25px;
+  width: 115px;
+  margin-right: 15px;
   padding-top: 5px;
   text-align: left;
 }
 
-/* подсветка outline выглядит очень коряво */
+/* подсветка outline выглядит очень коряво Везде. И на +- И inputam не хватает ширины.*/
 
 input[id="check-in"],
 input[id="check-out"] {
@@ -379,15 +390,15 @@ input[id="adults-field"] {
   border: none;
 }
 
-/*мигают немного по-разному*/
+/*мигают немного по-разному. Кнопки с +- вообще не мигают */
 
 input[id="check-in"]:hover,
 input[id="check-out"]:hover,
 input[id="children-field"]:hover,
 input[id="adults-field"]:hover,
 .calendar-button:hover,
-.button-minus:hover,
-.button-plus:hover {
+.button-plus:hover,
+.button-minus:hover {
   background-color: #ebebeb;
 }
 
@@ -395,9 +406,7 @@ input[id="check-in"]:active,
 input[id="check-out"]:active,
 input[id="children-field"]:active,
 input[id="adults-field"]:active,
-.calendar-button:active,
-.button-minus:active,
-.button-plus:active {
+.calendar-button:active {
   background-color: #ffffff;
 }
 
@@ -427,8 +436,8 @@ input[id="adults-field"]:active,
 
 
 .calendar-button:hover path,
-.button-minus:hover line,
-.button-plus:hover line {
+.button-minus:hover,
+.button-plus:hover {
   fill: #000000;
 }
 
