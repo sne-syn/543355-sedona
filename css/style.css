@@ -86,7 +86,7 @@ a {
   color: rgba(0, 0, 0, 0.2);
 }
 
-/* visited не тот класс, чтобы задать "находимся на странице". Но у меня нет других вариантов пока */
+/* visited оставляет окрашенным кнопку. нужен другой вариант для 4го состояния */
 
 .site-navigation a:visited {
   color: #766357;
@@ -196,7 +196,8 @@ a {
   line-height: 21px;
   padding-top: 45px;
 }
-/* поправить первый блок */
+
+/* поправить первый текстовый блок */
 
 .advantage-block p {
   margin-top: 0;
@@ -241,9 +242,7 @@ a {
 }
 
 .advantage-background p {
-
   width: 270px;
-
 }
 
 .advantage-background {
@@ -260,7 +259,7 @@ a {
 }
 
 
-/* футер убежал вверх */
+/* футер убежал вверх, карта уехала вниз */
 
 .background-map::before {
   content: "";
@@ -344,7 +343,7 @@ a {
   margin-bottom: 30px;
 }
 
-/* AAAAAA!*/
+/* AAAAAA! станьте в ряд */
 
 .input-field:nth-child(3),
 .input-field:nth-child(4) {
@@ -355,7 +354,7 @@ a {
   margin: 0;
 }
 
-/* почему последние label другой ширины и им на мои свойства наплевать? */
+/* почему последние labels другой ширины и им на мои свойства наплевать? */
 
 .input-field label {
   width: 115px;
@@ -364,7 +363,7 @@ a {
   text-align: left;
 }
 
-/* подсветка outline выглядит очень коряво Везде. И на +- И inputam не хватает ширины.*/
+/* подсветка outline выглядит очень коряво Везде. И на +- И input'am не хватает ширины.*/
 
 input[id="check-in"],
 input[id="check-out"] {
@@ -431,9 +430,7 @@ input[id="adults-field"]:active,
 
   border: none;
   background-color: #f2f2f2;
-
 }
-
 
 .calendar-button:hover path,
 .button-minus:hover,
@@ -513,7 +510,7 @@ input[id="adults-field"]:active,
 
 /* не работают чекбоксы */
 
-/*сломался range */
+/*поехал range */
 
 .filter-range {
   width: 330px;
