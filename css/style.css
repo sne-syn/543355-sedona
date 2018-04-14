@@ -511,18 +511,20 @@ input[id="adults-field"]:focus,
 
 .form-legend {
   font-size: 16px;
+  margin-bottom: 28px;
 }
 
 .form label {
   font-weight: normal;
+  margin-bottom: 20px;
 }
 
-/* не работают чекбоксы */
+/*  чекбоксы */
 
 .checkbox-field {
   position: relative;
 
-  padding-left: 30px;
+  padding-left: 40px;
 
   cursor: pointer;
 }
@@ -532,19 +534,60 @@ input[id="adults-field"]:focus,
   color: #ffffff;
 }
 
+.checkbox-field:disabled {
+  color: aquamarine;
+/*  color: rgba(255, 255, 255, 0.5);*/
+}
 
 .checkbox-field input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
 
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
 
   border: 2px solid #ffffff;
 }
 
-/*поехал range */
+
+.checkbox-field input[type="checkbox"]:checked + .checkbox-indicator::before {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: 2px;
+
+  width: 10px;
+  height: 4px;
+
+  background-color: #ffffff;
+}
+
+.checkbox-field input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 6px;
+
+  width: 21px;
+  height: 4px;
+
+  background-color: #ffffff;
+}
+
+.checkbox-field input[type="checkbox"]:checked + .checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.checkbox-field input[type="checkbox"]:checked + .checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+
+
+/*поехал range => поправить */
 
 .filter-range {
   width: 330px;
@@ -927,6 +970,10 @@ hotel-listing {
   background-color: #81b3d2;
 }
 
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
 .social-btn:active {
   background-color: #5496bd;
 }
@@ -935,9 +982,7 @@ hotel-listing {
   fill: rgba(255, 255, 255, 0.5);
 }
 
-.social-btn:hover {
-  background-color: #669ec0;
-}
+
 
 .footer-made-by {
   display: flex;
