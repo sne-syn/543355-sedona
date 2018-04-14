@@ -338,6 +338,7 @@ a {
 
 .input-field {
   display: flex;
+
   width: 458px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -367,11 +368,12 @@ a {
 
 input[id="check-in"],
 input[id="check-out"] {
+  box-sizing: border-box;
   width: 345px;
   font: inherit;
   text-transform: uppercase;
   padding: 6px 10px;
-  padding-right: 0px;
+  padding-right: 35px;
   margin-right: 0;
   border: none;
   background-color: #f2f2f2;
@@ -380,6 +382,7 @@ input[id="check-out"] {
 
 input[id="children-field"],
 input[id="adults-field"] {
+  box-sizing: border-box;
   font: inherit;
   text-transform: uppercase;
   width: 35px;
@@ -409,11 +412,15 @@ input[id="adults-field"]:active,
   background-color: #ffffff;
 }
 
+
+/* а иконку не background задавать? */
+
 .calendar-button {
   position: relative;
   width: 45px;
-  right: 5px;
-  top: 0px;
+  height: 33px;
+  right: 42px;
+  top: 2px;
   fill: #a9a9a9;
   background-color: #f2f2f2;
   border: none;
