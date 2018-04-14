@@ -364,7 +364,7 @@ a {
   text-align: left;
 }
 
-/* подсветка outline выглядит очень коряво Везде. И на +- И input'am не хватает ширины.*/
+/*   input'am не хватает ширины.*/
 
 input[id="check-in"],
 input[id="check-out"] {
@@ -404,11 +404,13 @@ input[id="adults-field"]:hover,
   background-color: #ebebeb;
 }
 
-input[id="check-in"]:active,
-input[id="check-out"]:active,
-input[id="children-field"]:active,
-input[id="adults-field"]:active,
-.calendar-button:active {
+
+
+input[id="check-in"]:focus,
+input[id="check-out"]:focus,
+input[id="children-field"]:focus,
+input[id="adults-field"]:focus,
+.calendar-button:focus {
   background-color: #ffffff;
 }
 
@@ -516,6 +518,31 @@ input[id="adults-field"]:active,
 }
 
 /* не работают чекбоксы */
+
+.checkbox-field {
+  position: relative;
+
+  padding-left: 30px;
+
+  cursor: pointer;
+}
+
+.checkbox-field:hover,
+.checkbox-field:focus {
+  color: #ffffff;
+}
+
+
+.checkbox-field input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid #ffffff;
+}
 
 /*поехал range */
 
