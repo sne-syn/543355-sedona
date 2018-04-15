@@ -30,9 +30,13 @@ body {
   margin: -1px;
 }
 
+/* тень на глаз */
+
 .page-container {
   margin: 0 auto;
   width: 1200px;
+  box-shadow: 2px 2px 15px -1px #dbdbdb,
+  -2px 2px 15px -1px #dbdbdb;
 
   background-color: #ffffff;
 }
@@ -260,7 +264,15 @@ a {
 
 /* футер убежал вверх, карта уехала вниз */
 
-.background-map::before {
+.background-map {
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+
+  display: block;
+  width: 100%;
+  left: 0;
+
+  /*
   content: "";
   position: absolute;
   z-index: -1;
@@ -271,6 +283,7 @@ a {
   height: 400px;
   width: 100%;
   left: 0;
+*/
 }
 
 .booking-form h3 {
@@ -712,8 +725,16 @@ input[id="adults-field"]:focus,
 
 .listing-filtration {
   display: flex;
-  margin: 9px 0;
+  flex-wrap: wrap;
+  width: 1056px;
+  justify-content: space-between;
+  padding-left: 70px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
 
+.sort {
+  display: flex;
 }
 
 .sort-amount {
@@ -721,7 +742,7 @@ input[id="adults-field"]:focus,
   line-height: 26px;
   font-weight: bold;
   color: #000000;
-  padding-left: 72px
+
 }
 
 .sort-title {
@@ -734,8 +755,7 @@ input[id="adults-field"]:focus,
 .sort-title ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 260px;
+  justify-content: space-between;
 }
 
 .sort-title,
@@ -748,6 +768,8 @@ input[id="adults-field"]:focus,
 .sort-list a {
   color: #b2b2b2;
   border-bottom: 1px dashed #81b3d2;
+  margin-right: 35px;
+
 }
 
 .sort-list a:hover {
@@ -767,15 +789,13 @@ input[id="adults-field"]:focus,
 /*а точно ли это button?*/
 
 .sort-button {
-  text-align: right;
-  margin-left: 460px;
-  padding: 0;
-  margin-top: 20px;
+  text-align: center;
 
 }
 
 .sort-button li {
   display: inline-block;
+  padding-right: 1px;
 
 }
 
@@ -787,7 +807,6 @@ input[id="adults-field"]:focus,
 .icon-up path,
 .icon-down path {
   fill: #cacaca;
-
 }
 
 /* сломала мигание */
@@ -864,16 +883,18 @@ input[id="adults-field"]:focus,
   color: #f0f0f0;
 }
 
+.hotel-type-price {
+  display: flex;
+
+}
+
 .hotel-links {
+  display: flex;
   text-align: center;
   width: 260px;
 
   padding: 0;
   margin-bottom: 0;
-}
-
-.hotel-links li {
-  display: inline-block;
 }
 
 .hotel-details {
@@ -915,7 +936,8 @@ input[id="adults-field"]:focus,
 }
 
 .hotel-review {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   text-align: right;
 }
 
