@@ -164,19 +164,11 @@ a {
   margin-bottom: 48px;
 }
 
-/* ??????? */
-
 .advantage-block {
   display: flex;
   width: 100%;
   color: #ffffff;
   background-color: #81b3d2;
-}
-
-/* полоска внизу. есть идеи? картинка ездит туда-сюда */
-
-.advantage-img {
-  width: 800px;
 }
 
 .advantage-text h3 {
@@ -193,9 +185,16 @@ a {
 }
 
 .advantage-text {
-  width: 280px;
   line-height: 21px;
   padding-top: 45px;
+
+}
+
+.advantage-text p,
+.advantage-background p {
+  text-align: center;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /* поправить первый текстовый блок */
@@ -214,7 +213,7 @@ a {
 /* здесь тоже убрать ширину?*/
 
 .advantage-icon p {
-  width: 290px;
+  /*  width: 290px;*/
 }
 
 .advantage-icon {
@@ -222,15 +221,15 @@ a {
   padding: 0;
 }
 
-.advantage-icon .advantage-text:first-child {
+.advantage-icon .advantage-accomodation {
   background-image: url("../img/icon-1.svg");
 }
 
-.advantage-icon .advantage-text:nth-child(2) {
+.advantage-icon .advantage-food {
   background-image: url("../img/icon-3.svg");
 }
 
-.advantage-icon .advantage-text:last-child {
+.advantage-icon .advantage-souvenir {
   background-image: url("../img/icon-2.svg");
 }
 
@@ -245,9 +244,7 @@ a {
 
 /*убрать ширину, задать паддингами ?*/
 
-.advantage-background p {
-  width: 270px;
-}
+.advantage-background p {}
 
 .advantage-background {
   background-color: #eeeeee;
@@ -358,13 +355,14 @@ a {
 
 .fields-in-line {
   display: flex;
-  justify-content: space-between;
+  width: 458px;
+  margin-bottom: 54px;
+
 }
 
 .fields-in-line .input-field {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 232px;
   margin: 0;
 }
@@ -376,6 +374,12 @@ a {
   margin-right: 15px;
   padding-top: 5px;
   text-align: left;
+}
+
+.fields-in-line label {
+  width: 90px;
+  ;
+  margin-right: 25px
 }
 
 /*   input'am не хватает ширины.*/
@@ -407,20 +411,20 @@ a {
 
 /*мигают немного по-разному. Кнопки с +- вообще не мигают */
 
-input[id="check-in"]:hover,
-input[id="check-out"]:hover,
-input[id="children-field"]:hover,
-input[id="adults-field"]:hover,
+.input-field input[id="check-in"]:hover,
+.input-field input[id="check-out"]:hover,
+.input-field input[id="children-field"]:hover,
+.input-field input[id="adults-field"]:hover,
 .calendar-button:hover,
-.button-plus:hover,
-.button-minus:hover {
+.input-field .button-plus:hover,
+.input-field .button-minus:hover {
   background-color: #ebebeb;
 }
 
-input[id="check-in"]:focus,
-input[id="check-out"]:focus,
-input[id="children-field"]:focus,
-input[id="adults-field"]:focus,
+.input-field input[id="check-in"]:focus,
+.input-field input[id="check-out"]:focus,
+.input-field input[id="children-field"]:focus,
+.input-field input[id="adults-field"]:focus,
 .calendar-button:focus {
   background-color: #ffffff;
 }
@@ -445,6 +449,16 @@ input[id="adults-field"]:focus,
 
   border: none;
   background-color: #f2f2f2;
+}
+
+.button-minus {
+  position: relative;
+  left: 0;
+}
+
+.button-plus {
+  position: relative;
+  right: 0px;
 }
 
 .calendar-button:hover path,
@@ -790,7 +804,6 @@ input[id="adults-field"]:focus,
 
 .sort-button {
   text-align: center;
-
 }
 
 .sort-button li {
@@ -854,6 +867,7 @@ input[id="adults-field"]:focus,
 }
 
 .hotel-name {
+  padding-bottom: 5px;
   margin: 0;
 }
 
@@ -864,6 +878,7 @@ input[id="adults-field"]:focus,
   width: 111px;
   font-weight: normal;
   margin: 0;
+  padding-bottom: 5px;
 }
 
 .hotel-name a {
@@ -894,7 +909,7 @@ input[id="adults-field"]:focus,
   width: 260px;
 
   padding: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .hotel-details {
