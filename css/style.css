@@ -130,7 +130,7 @@ a {
   padding-bottom: 70px;
 }
 
-.background-shape::after {
+.intro::after {
   content: "";
   position: absolute;
   background-image: url(../img/background-shape.png);
@@ -140,8 +140,6 @@ a {
   height: 57px;
   width: 100%;
 }
-
-/* картинка без черточек. Перетянуть слой */
 
 .intro img {
   margin-top: 75px;
