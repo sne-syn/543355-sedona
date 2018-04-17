@@ -145,7 +145,7 @@ a {
   margin-top: 75px;
 }
 
-/* здесь тоже убрать ширину для текствого блока? */
+/* здесь тоже убрать ширину для текстoвого блока? */
 
 .main-title {
   display: inline-block;
@@ -162,17 +162,23 @@ a {
   margin-bottom: 48px;
 }
 
+/* сделала инлайн флексом. Можно было бы обычным способ растасовать, но так мне показалось проще */
+
 .advantage-text {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
   line-height: 21px;
-  /*  padding-top: 45px;*/
 }
 
+/* задала ширину. больше идей нет */
+
 .advantage-text h3 {
+  width: 150px;
   font-size: 21px;
   font-weight: bold;
   text-align: center;
   color: #000000;
-  /*  margin-bottom: 0;*/
 }
 
 .advantage-image-block .advantage-text h3 {
@@ -204,15 +210,15 @@ a {
   background-repeat: no-repeat;
 }
 
-.advantage-icon-block .advantage-accomodation {
+.advantage-accomodation {
   background-image: url("../img/icon-1.svg");
 }
 
-.advantage-icon-block .advantage-food {
+.advantage-food {
   background-image: url("../img/icon-3.svg");
 }
 
-.advantage-icon-block .advantage-souvenir {
+.advantage-souvenir {
   background-image: url("../img/icon-2.svg");
 }
 
@@ -226,7 +232,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 55px;
+  /*  padding-top: 55px;*/
 }
 
 /* футер убежал вверх, карта уехала вниз */
