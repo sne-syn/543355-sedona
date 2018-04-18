@@ -190,7 +190,7 @@ a {
 
 .advantage-image-block h3,
 .advantage-background-block {
-  padding-top: 28px;
+  padding-top: 27px;
 }
 
 .advantage-image-block h3,
@@ -226,23 +226,29 @@ a {
   margin-bottom: 10px;
 }
 
+/* я оставила здесь усредненную background-position для icons. А потом отдельно подогнала каждую картинку по более личному классу. */
+
 .advantage-icon-block .advantage-text {
   padding-top: 132px;
   margin-bottom: 68px;
-  background-position: 50% 32%;
+  background-position: 50% 30%;
+
   background-repeat: no-repeat;
 }
 
-.advantage-accomodation {
+.advantage-icon-block .advantage-accomodation {
   background-image: url("../img/icon-1.svg");
+  background-position: 50% 32%;
 }
 
-.advantage-food {
+.advantage-icon-block .advantage-food {
   background-image: url("../img/icon-3.svg");
+  background-position: 49% 32%;
 }
 
-.advantage-souvenir {
+.advantage-icon-block .advantage-souvenir {
   background-image: url("../img/icon-2.svg");
+  background-position: 50% 30%;
 }
 
 .advantage-background-block {
@@ -388,8 +394,8 @@ a {
   margin-right: 15px;
   padding-top: 7px;
 
-/*  плохо подгоняются label */
- padding-left: 1px;
+  /*  плохо подгоняются label */
+  padding-left: 1px;
   text-align: left;
 }
 
@@ -536,12 +542,19 @@ a {
 .checkbox-type fieldset {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 170px;
 
   border: none;
   margin: 0;
   padding: 0;
+}
+
+.checkbox-facilities fieldset {
+  margin-left: 28px;
+}
+
+.checkbox-type fieldset {
+  margin-right: 100px;
 }
 
 .form-legend {
@@ -551,7 +564,7 @@ a {
 
 .form label {
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 /*  чекбоксы, с клавиатуры не видны */
@@ -580,8 +593,8 @@ a {
   top: -2px;
   left: 0;
 
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   border-radius: 3px;
 
   border: 2px solid #ffffff;
@@ -599,6 +612,8 @@ a {
 
   background-color: #ffffff;
 }
+
+/* можем галочке дать тень с одной, а лучше сразу с 2х сторон */
 
 .checkbox-field input[type="checkbox"]:checked + .checkbox-indicator::after {
   content: "";
@@ -621,12 +636,16 @@ a {
   transform: rotate(-45deg);
 }
 
-/*поехал range => поправить */
+/*поехал range => поправить.  через флекс располагать?*/
 
 .filter-range {
+  display: flex;
+  flex-direction: column;
+
   width: 330px;
   color: #ffffff;
   text-transform: uppercase;
+
 }
 
 .filter-range-title {
@@ -884,8 +903,6 @@ a {
   padding-bottom: 5px;
   margin: 0;
 }
-
-/* в одну строку ?!*/
 
 .hotel-info p {
   display: inline-block;
