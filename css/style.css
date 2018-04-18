@@ -151,49 +151,67 @@ a {
   display: inline-block;
   vertical-align: top;
   width: 570px;
-  margin-top: 60px;
-  margin-bottom: 15px;
+  margin-top: 62px;
+  margin-bottom: 13px;
   font-size: 21px;
   font-weight: bold;
   color: #000000;
 }
 
 .main-title-text {
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
-/* сделала инлайн флексом. Можно было бы обычным способ растасовать, но так мне показалось проще */
+.advantage-block {
+  display: flex;
+  justify-content: space-around;
+}
 
 .advantage-text {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-around;
   line-height: 21px;
+  width: 400px;
 }
 
-/* задала ширину. больше идей нет */
-
 .advantage-text h3 {
+  display: inline-block;
+  vertical-align: top;
+
   width: 150px;
+
   font-size: 21px;
   font-weight: bold;
   text-align: center;
   color: #000000;
 }
 
-.advantage-image-block .advantage-text h3 {
+.advantage-image-block h3 {
   color: #ffffff;
+}
+
+.advantage-image-block h3,
+.advantage-background-block {
+  padding-top: 28px;
+}
+
+.advantage-image-block h3,
+.advantage-background-block h3 {
+  margin-bottom: 7px;
+}
+
+.advantage-image-block p,
+.advantage-background-block p {
+  padding-bottom: 8px;
+}
+
+.advantage-background-block {
+  padding-bottom: 38px;
+  margin-bottom: 20px;
 }
 
 .advantage-image-block {
   display: flex;
   color: #ffffff;
   background-color: #81b3d2;
-}
-
-.advantage-block {
-  display: flex;
-  justify-content: space-around;
 }
 
 .advantage-text p,
@@ -203,10 +221,15 @@ a {
   padding-right: 60px;
 }
 
+.advantage-icon-block h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
 .advantage-icon-block .advantage-text {
   padding-top: 132px;
-  margin-bottom: 43px;
-  background-position: 50% 25%;
+  margin-bottom: 68px;
+  background-position: 50% 32%;
   background-repeat: no-repeat;
 }
 
@@ -226,13 +249,27 @@ a {
   background-color: #eeeeee;
 }
 
+.advantage-food p {
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.advantage-bridge h3 {
+  padding-top: 27px;
+}
+
+.advantage-bridge p {
+  margin-top: 15px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
 .booking-form {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /*  padding-top: 55px;*/
 }
 
 /* футер убежал вверх, карта уехала вниз */
@@ -264,11 +301,12 @@ a {
   line-height: 36px;
   font-weight: bold;
   color: #000000;
+  margin-bottom: 9px;
 }
 
 .booking-form p {
   line-height: 24px;
-  margin-bottom: 50px;
+  margin-bottom: 46px;
 }
 
 .hotel-button a,
@@ -278,13 +316,16 @@ a {
   color: #ffffff;
 }
 
+
+/* с клавиатуры не подсвечивается вся кнопка, а только текст внутри. Некрасиво */
+
 .hotel-button {
   align-self: center;
   width: 570px;
   border: none;
   margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 31px;
+  padding-bottom: 27px;
 
   background-color: #766357;
 }
@@ -345,7 +386,10 @@ a {
 .input-field label {
   width: 115px;
   margin-right: 15px;
-  padding-top: 5px;
+  padding-top: 7px;
+
+/*  плохо подгоняются label */
+ padding-left: 1px;
   text-align: left;
 }
 
