@@ -2,10 +2,10 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: normal;
   font-size: 14px;
   line-height: 26px;
-  font-weight: normal;
+  font-family: "PT Sans", Arial, sans-serif;
   text-align: center;
   color: #333333;
   text-transform: uppercase;
@@ -14,9 +14,9 @@ body {
 }
 
 .inner-page {
+  font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  font-weight: bold;
   text-align: left;
 
   background-color: #fefefe;
@@ -25,6 +25,7 @@ body {
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -33,17 +34,19 @@ body {
 /* тень на глаз */
 
 .page-container {
-  margin: 0 auto;
   width: 1200px;
-  box-shadow: 2px 2px 15px -1px #dbdbdb,
-  -2px 2px 15px -1px #dbdbdb;
+  margin: 0 auto;
 
   background-color: #ffffff;
+  box-shadow: 2px 2px 15px -1px #dbdbdb,
+  -2px 2px 15px -1px #dbdbdb;
 }
 
 .main-header {
   position: relative;
+
   padding-bottom: 16px;
+
   background-color: #ffffff;
 }
 
@@ -64,10 +67,13 @@ a {
   position: absolute;
   left: 50%;
   top: 0;
-  margin-left: -69px;
   z-index: 100;
+
   width: 138px;
   height: 70px;
+  margin-left: -69px;
+
+
 }
 
 .site-navigation {
@@ -115,30 +121,35 @@ a {
 }
 
 .container {
-  padding: 0;
   width: 1200px;
+  padding: 0;
+
   background-color: #ffffff;
 }
 
 .intro {
   position: relative;
+
+  padding-bottom: 70px;
+
   background-color: #d9eaf5;
   background-image: url("../img/background-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 21%;
-  padding-bottom: 70px;
 }
 
 .intro::after {
   content: "";
   position: absolute;
-  background-image: url(../img/background-shape.png);
-  background-repeat: no-repeat;
   bottom: 0;
   left: 0;
+
   height: 57px;
   width: 100%;
+
+  background-image: url(../img/background-shape.png);
+  background-repeat: no-repeat;
 }
 
 .intro img {
@@ -150,11 +161,13 @@ a {
 .main-title {
   display: inline-block;
   vertical-align: top;
+
   width: 570px;
   margin-top: 62px;
   margin-bottom: 13px;
-  font-size: 21px;
+
   font-weight: bold;
+  font-size: 21px;
   color: #000000;
 }
 
@@ -168,8 +181,9 @@ a {
 }
 
 .advantage-text {
-  line-height: 21px;
   width: 400px;
+
+  line-height: 21px;
 }
 
 .advantage-text h3 {
@@ -178,8 +192,8 @@ a {
 
   width: 150px;
 
-  font-size: 21px;
   font-weight: bold;
+  font-size: 21px;
   text-align: center;
   color: #000000;
 }
@@ -204,21 +218,24 @@ a {
 }
 
 .advantage-background-block {
-  padding-bottom: 38px;
   margin-bottom: 20px;
+  padding-bottom: 38px;
 }
 
 .advantage-image-block {
   display: flex;
+
   color: #ffffff;
+
   background-color: #81b3d2;
 }
 
 .advantage-text p,
 .advantage-background p {
-  text-align: center;
   padding-left: 60px;
   padding-right: 60px;
+
+  text-align: center;
 }
 
 .advantage-icon-block h3 {
@@ -229,11 +246,11 @@ a {
 /* я оставила здесь усредненную background-position для icons. А потом отдельно подогнала каждую картинку по более личному классу. */
 
 .advantage-icon-block .advantage-text {
-  padding-top: 132px;
   margin-bottom: 68px;
-  background-position: 50% 30%;
+  padding-top: 132px;
 
   background-repeat: no-repeat;
+  background-position: 50% 30%;
 }
 
 .advantage-icon-block .advantage-accomodation {
@@ -281,12 +298,12 @@ a {
 /* футер убежал вверх, карта уехала вниз */
 
 .background-map {
+  display: block;
+  left: 0;
+  width: 100%;
+
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
-
-  display: block;
-  width: 100%;
-  left: 0;
 
   /*
   content: "";
@@ -303,22 +320,25 @@ a {
 }
 
 .booking-form h3 {
+  margin-bottom: 9px;
+
+  font-weight: bold;
   font-size: 30px;
   line-height: 36px;
-  font-weight: bold;
   color: #000000;
-  margin-bottom: 9px;
+
 }
 
 .booking-form p {
-  line-height: 24px;
   margin-bottom: 46px;
+
+  line-height: 24px;
 }
 
 .hotel-button a,
 .button-search {
-  font-size: 21px;
   font-weight: bold;
+  font-size: 21px;
   color: #ffffff;
 }
 
@@ -328,12 +348,12 @@ a {
 .hotel-button {
   align-self: center;
   width: 570px;
-  border: none;
   margin: 0 auto;
   padding-top: 31px;
   padding-bottom: 27px;
 
   background-color: #766357;
+  border: none;
 }
 
 .hotel-button:hover {
@@ -350,11 +370,12 @@ a {
 
 .booking-fields {
   position: absolute;
+  align-self: center;
   top: 100%;
   left: 50%;
-  margin-left: -285px;
-  align-self: center;
   width: 570px;
+  margin-left: -285px;
+
   background: #ffffff;
 }
 
@@ -363,16 +384,17 @@ a {
   width: 458px;
   margin: 54px;
   padding: 0;
+
   border: none;
 }
 
 .input-field {
   display: flex;
   width: 458px;
-  font-weight: bold;
   margin-bottom: 30px;
-}
 
+  font-weight: bold;
+}
 
 .fields-in-line {
   display: flex;
@@ -396,6 +418,7 @@ a {
 
   /*  плохо подгоняются label */
   padding-left: 1px;
+
   text-align: left;
 }
 
@@ -410,23 +433,29 @@ a {
 .input-field input[id="check-out"] {
   box-sizing: border-box;
   width: 345px;
-  font: inherit;
-  text-transform: uppercase;
+
   padding: 6px 10px;
   padding-right: 35px;
   margin-right: 0;
-  border: none;
+
+  font: inherit;
+  text-transform: uppercase;
+
   background-color: #f2f2f2;
+  border: none;
 }
 
 .input-field input[id="children-field"],
 .input-field input[id="adults-field"] {
   box-sizing: border-box;
+
+  width: 35px;
+  padding: 6px 0;
+
   font: inherit;
   text-transform: uppercase;
-  width: 35px;
   text-align: center;
-  padding: 6px 0;
+
   background-color: #f2f2f2;
   border: none;
 }
@@ -457,11 +486,13 @@ a {
   height: 33px;
   right: 42px;
   top: 2px;
+
+  padding: 0;
+  margin: 0;
+
   fill: #a9a9a9;
   background-color: #f2f2f2;
   border: none;
-  padding: 0;
-  margin: 0;
 }
 
 .button-minus,
@@ -469,8 +500,8 @@ a {
   width: 35px;
   padding: 8px;
 
-  border: none;
   background-color: #f2f2f2;
+  border: none;
 }
 
 .button-minus {
@@ -509,8 +540,9 @@ a {
 }
 
 .button-search:active {
+  color: rgba(255, 255, 255, 0.5);
+
   background-color: #5496bd;
-  color: rgba(255, 255, 255, 0.5)
 }
 
 .input-line:hover {
@@ -544,9 +576,10 @@ a {
   flex-direction: column;
   width: 170px;
 
-  border: none;
   margin: 0;
   padding: 0;
+
+  border: none;
 }
 
 .checkbox-facilities fieldset {
@@ -585,28 +618,28 @@ a {
 /* проблемы с disabled   */
 
 .checkbox-field input[type="checkbox"] + .checkbox-indicator {
-
-
   position: absolute;
   top: -2px;
   left: 0;
 
   width: 19px;
   height: 19px;
-  border-radius: 3px;
 
   border: 2px solid #ffffff;
+  border-radius: 3px;
 
 }
 
 /* надо checked-размер как-то увеличить */
 
 .checkbox-field input[type="checkbox"]:checked + .checkbox-indicator {
+  width: 25px;
+
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
   background-position: 7% 55%;
   background-size: cover;
-  width: 25px;
+
   border: none;
 
 }
@@ -668,7 +701,6 @@ a {
 }
 */
 
-*/
 /*поехал range => поправить.  как подвинуть вправо?*/
 
 .filter-range {
@@ -676,8 +708,9 @@ a {
   flex-direction: column;
 
   width: 330px;
-  color: #ffffff;
+
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 .filter-range-title {
@@ -691,7 +724,9 @@ a {
   position: relative;
   height: 36px;
   margin-bottom: 20px;
+
   font-size: 0;
+
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
@@ -843,15 +878,17 @@ a {
 
 .sort-title,
 .sort-list a {
+  font-weight: normal;
+
   font-size: 12px;
   line-height: 18px;
-  font-weight: normal;
 }
 
 .sort-list a {
+  margin-right: 35px;
+
   color: #b2b2b2;
   border-bottom: 1px dashed #81b3d2;
-  margin-right: 35px;
 
 }
 
@@ -874,12 +911,14 @@ a {
 .sort-button {
   width: 110px;
   text-align: right;
+
   background-color: #ffffff;
 }
 
 .sort-button li {
   display: inline-block;
   vertical-align: top;
+
   padding-top: 10px;
 }
 
@@ -914,11 +953,13 @@ a {
 .hotel {
   display: flex;
   justify-content: space-between;
-  border-top: 2px solid #e5e5e5;
+
   padding-left: 72px;
   padding-right: 72px;
   padding-top: 25px;
   padding-bottom: 10px;
+
+  border-top: 2px solid #e5e5e5;
 }
 
 .hotel-content {
@@ -934,27 +975,29 @@ a {
 .hotel-info {
   display: flex;
   flex-direction: column;
-  text-align: left;
   width: 260px;
+
+  text-align: left;
 }
 
 .hotel-name {
+  margin: 0;
   padding-top: 0px;
   padding-bottom: 6px;
-  margin: 0;
 }
 
 .hotel-info p {
   display: inline-block;
   width: 111px;
-  font-weight: normal;
   margin: 0;
   padding-bottom: 10px;
+
+  font-weight: normal;
 }
 
 .hotel-name a {
-
   width: 280px;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -981,9 +1024,10 @@ a {
 
 .hotel-details {
   width: 110px;
+  margin-right: 6px;
   padding-top: 3px;
   padding-bottom: 3px;
-  margin-right: 6px;
+
   background-color: #81b3d2;
 }
 
@@ -997,9 +1041,10 @@ a {
 
 .hotel-reservation {
   width: 141px;
+  margin: 0;
   padding-top: 3px;
   padding-bottom: 3px;
-  margin: 0;
+
   background-color: #766357;
 }
 
@@ -1028,17 +1073,19 @@ a {
 
 .hotel-raiting {
   width: 100px;
+  margin-top: 41px;
   padding: 5px;
+
   text-align: center;
   font-weight: normal;
   color: #666666;
+
   background-color: #f2f2f2;
-  margin-top: 41px;
 }
 
 .hotel-stars .star {
-  padding-left: 2px;
   margin-top: 5px;
+  padding-left: 2px;
 }
 
 .main-footer {
@@ -1050,12 +1097,14 @@ a {
 
 .footer-hashtag {
   width: 160px;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
   margin-top: 48px;
   margin-left: 115px;
   margin-bottom: 55px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+
 }
 
 .social-list {
