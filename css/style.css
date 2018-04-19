@@ -584,19 +584,9 @@ a {
 
 /* проблемы с disabled   */
 
-.checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator::before {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator::after {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator {
-  border: rgba(255, 255, 255, 0.5);
-}
-
 .checkbox-field input[type="checkbox"] + .checkbox-indicator {
+
+
   position: absolute;
   top: -2px;
   left: 0;
@@ -606,8 +596,28 @@ a {
   border-radius: 3px;
 
   border: 2px solid #ffffff;
+
 }
 
+/* надо checked-размер как-то увеличить */
+
+.checkbox-field input[type="checkbox"]:checked + .checkbox-indicator {
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: 7% 55%;
+  background-size: cover;
+  width: 25px;
+  border: none;
+
+}
+
+/* не понимаю я, почему не слушается */
+
+.checkbox-field input[type="checkbox"]:checked:disabled + .checkbox-indicator {
+  fill: rgba(250, 250, 250, 0.3)
+}
+
+/*
 .checkbox-field input[type="checkbox"]:checked + .checkbox-indicator::before {
   content: "";
 
@@ -621,7 +631,7 @@ a {
   background-color: #ffffff;
 }
 
-/* можем галочке дать тень с одной, а лучше сразу с 2х сторон? */
+ можем галочке дать тень с одной, а лучше сразу с 2х сторон?
 
 .checkbox-field input[type="checkbox"]:checked + .checkbox-indicator::after {
   content: "";
@@ -644,6 +654,21 @@ a {
   transform: rotate(-45deg);
 }
 
+/*
+.checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator::after {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator {
+  border: rgba(255, 255, 255, 0.5);
+}
+*/
+
+*/
 /*поехал range => поправить.  как подвинуть вправо?*/
 
 .filter-range {
