@@ -874,6 +874,7 @@ a {
 .sort-button {
   width: 110px;
   text-align: right;
+  background-color: #ffffff;
 }
 
 .sort-button li {
@@ -1014,7 +1015,8 @@ a {
   color: #ffffff;
 }
 
-.hotel-links:active a {
+.hotel-detailes:active a,
+.hotel-reservation:active a {
   color: rgba(250, 250, 250, 0.5);
 }
 
