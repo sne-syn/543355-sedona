@@ -947,29 +947,29 @@ a {
 .hotel-listing {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel {
   display: flex;
   justify-content: space-between;
-
+  padding-top: 30px;
   padding-left: 72px;
   padding-right: 72px;
-  padding-top: 25px;
   padding-bottom: 10px;
 
-  border-top: 2px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
 }
 
 .hotel-content {
   display: flex;
+
 }
 
 .hotel-img {
   width: 135px;
   margin-right: 30px;
-  padding-top: 3px;
+  /*  padding-top: 3px;*/
 }
 
 .hotel-info {
@@ -982,15 +982,16 @@ a {
 
 .hotel-name {
   margin: 0;
-  padding-top: 0px;
-  padding-bottom: 6px;
+  padding-left: 1px;
+  padding-bottom: 2px;
 }
 
 .hotel-info p {
   display: inline-block;
   width: 111px;
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 7px;
+  padding-right: 2px;
 
   font-weight: normal;
 }
@@ -1016,18 +1017,18 @@ a {
   display: flex;
   text-align: center;
   width: 260px;
-
-  padding: 5px 1px;
+  padding: 0;
+  padding-top: 5px;
+  /*  padding: 5px 1px;*/
   margin: 0;
-  margin-bottom: 14px;
+  /*  margin-bottom: 14px;*/
 }
 
 .hotel-details {
   width: 110px;
   margin-right: 6px;
   padding-top: 3px;
-  padding-bottom: 3px;
-
+  /*  padding-bottom: 1px;*/
   background-color: #81b3d2;
 }
 
@@ -1069,11 +1070,13 @@ a {
   display: flex;
   flex-direction: column;
   text-align: right;
+
 }
 
 .hotel-raiting {
-  width: 100px;
-  margin-top: 41px;
+  width: 98px;
+  margin-top: 39px;
+
   padding: 5px;
 
   text-align: center;
@@ -1083,28 +1086,29 @@ a {
   background-color: #f2f2f2;
 }
 
+.hotel-stars {
+  margin-top: 2px;
+}
+
 .hotel-stars .star {
-  margin-top: 5px;
   padding-left: 2px;
 }
 
 .main-footer {
   display: flex;
-  justify-content: space-around;
+  padding: 34px;
 
   background-color: #fdfdfd;
 }
 
 .footer-hashtag {
   width: 160px;
-  margin-top: 48px;
-  margin-left: 115px;
-  margin-bottom: 55px;
+  margin-top: 11px;
+  margin-left: 87px;
 
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-
 }
 
 .social-list {
@@ -1113,15 +1117,19 @@ a {
   width: 151px;
   margin: 0 auto;
   padding: 0;
+  padding-right: 3px;
+
 }
 
 .social-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 48px;
-  margin-top: 35px;
+  width: 45px;
+  height: 47px;
+
+  margin-right: 3px
+  /*  margin-top: 35px;*/
 }
 
 .social-btn {
@@ -1144,8 +1152,10 @@ a {
   display: flex;
   flex-direction: row;
   width: 240px;
+  /*
   margin-top: 35px;
   margin-right: 50px;
+*/
 }
 
 /* с клавиатуры некрасивый бордер */
