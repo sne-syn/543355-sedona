@@ -111,9 +111,12 @@ a {
   text-align: left;
 }
 
-.navigation-left:last-child(2) {
-  margin-right: 10%;
+/* непонятно что творится */
+
+.navigation-left {
+  margin-right: 5%;
 }
+
 
 .navigation-right {
   text-align: right;
@@ -408,6 +411,9 @@ a {
   display: flex;
   width: 458px;
   margin-bottom: 54px;
+
+
+  font-weight: bold;
 }
 
 .some-field {
@@ -422,8 +428,6 @@ a {
   margin: 0;
 }
 
-/* почему последние labels другой ширины и им на мои свойства наплевать? */
-
 .input-field label {
   width: 115px;
   margin-right: 15px;
@@ -435,9 +439,16 @@ a {
   text-align: left;
 }
 
-.some-fields label {
+.some-field label {
   width: 90px;
-  margin-right: 25px;
+  margin-right: 22px;
+  padding-top: 7px;
+  text-align: left;
+}
+
+.some-field:nth-last-of-type(1) label {
+  text-align: center;
+  margin-right: 0;
 }
 
 .input-field input[id="check-in"],
@@ -477,8 +488,8 @@ a {
 
 .input-field input[id="check-in"]:hover,
 .input-field input[id="check-out"]:hover,
-.input-field input[id="children-field"]:hover,
-.input-field input[id="adults-field"]:hover,
+.some-field input[id="children-field"]:hover,
+.some-field input[id="adults-field"]:hover,
 .calendar-button:hover,
 .input-field .button-plus:hover,
 .input-field .button-minus:hover {
@@ -487,8 +498,8 @@ a {
 
 .input-field input[id="check-in"]:focus,
 .input-field input[id="check-out"]:focus,
-.input-field input[id="children-field"]:focus,
-.input-field input[id="adults-field"]:focus,
+.some-field input[id="children-field"]:focus,
+.some-field input[id="adults-field"]:focus,
 .calendar-button:focus {
   background-color: #ffffff;
 }
@@ -511,6 +522,7 @@ a {
 .button-minus,
 .button-plus {
   width: 35px;
+  height: 38px;
   padding: 8px;
 
   background-color: #f2f2f2;
@@ -519,12 +531,14 @@ a {
 
 .button-minus {
   position: relative;
-  left: 0;
+  left: 3px;
+  top: 2px;
 }
 
 .button-plus {
   position: relative;
-  right: 0;
+  right: 4px;
+  top: 2px;
 }
 
 .calendar-button:hover path,
@@ -645,6 +659,18 @@ a {
   border-radius: 3px;
 }
 
+.checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator {
+  position: absolute;
+  top: -2px;
+  left: 0;
+
+  width: 19px;
+  height: 19px;
+
+  border: 2px solid #6a6a6a;
+  border-radius: 3px;
+}
+
 .checkbox-field input[type="checkbox"]:checked + .checkbox-indicator {
   width: 27px;
   height: 23px;
@@ -658,7 +684,7 @@ a {
 
 /* не понимаю я, почему не слушается */
 
-.checkbox-field input[type="checkbox"]:checked:disabled + .checkbox-indicator {
+.checkbox-field input[type="checkbox"]:disabled:checked + .checkbox-indicator {
   width: 27px;
   height: 23px;
 
@@ -892,7 +918,6 @@ a {
 
   color: #b2b2b2;
   border-bottom: 1px dashed #81b3d2;
-
 }
 
 .sort-list a:hover {
