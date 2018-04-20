@@ -17,10 +17,10 @@
               <img class="logo" src="img/logo.png" width="138" height="70" alt="Логотип City of Sedona">
         </a>
         <ul class="site-navigation">
-          <li class="navigation-info"><a href="info.html">Информация</a></li>
-          <li class="navigation-multimedia"><a href="multimedia.html">Фото и видео</a></li>
-          <li class="navigation-map"><a href="map.html">Карта штата</a></li>
-          <li class="navigation-hotel"><a href="catalog.html">Гостиницы</a></li>
+          <li class="navigation-left"><a href="info.html">Информация</a></li>
+          <li class="navigation-left"><a href="multimedia.html">Фото и видео</a></li>
+          <li class="navigation-right"><a href="map.html">Карта штата</a></li>
+          <li class="navigation-right active"><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -29,70 +29,74 @@
         <h2 class="visually-hidden">Форма поиска</h2>
         <form class="form-structure" action="https://echo.htmlacademy.ru" method="post">
 
-          <div class="checkbox-facilities">
-            <fieldset>
-              <legend class="form-legend">Инфраструктура:</legend>
+          <div class="checkbox">
+            <div class="checkbox-facilities">
+              <fieldset>
+                <legend class="form-legend">Инфраструктура:</legend>
 
-              <label class="checkbox-field" for="waterpool-field">
+                <label class="checkbox-field" for="waterpool-field">
               <input class="visually-hidden" type="checkbox" name="facilities" id="waterpool-field" checked>
                 <span class="checkbox-indicator"></span>
                 Бассейн
               </label>
 
-              <label class="checkbox-field" for="parking-field">
+                <label class="checkbox-field" for="parking-field">
               <input class="visually-hidden" type="checkbox" name="facilities" id="parking-field">
                 <span class="checkbox-indicator"></span>
                Парковка
               </label>
 
 
-              <label class="checkbox-field" for="wifi-field">
+                <label class="checkbox-field" for="wifi-field">
                 <input class="visually-hidden" type="checkbox" name="facilities" id="wifi-field">
                 <span class="checkbox-indicator"></span>
                 Wi-Fi
               </label>
-            </fieldset>
-          </div>
+              </fieldset>
+            </div>
 
-          <div class="checkbox-type">
-            <fieldset>
-              <legend class="form-legend">Тип жилья:</legend>
+            <div class="checkbox-type">
+              <fieldset>
+                <legend class="form-legend">Тип жилья:</legend>
 
-              <label class="checkbox-field" for="hotel-field">
+                <label class="checkbox-field" for="hotel-field">
                 <input class="visually-hidden" type="checkbox" name="type" id="hotel-field" checked>
                 <span class="checkbox-indicator"></span>
                 Гостиница
               </label>
 
-              <label class="checkbox-field" for="motel-field">
+                <label class="checkbox-field" for="motel-field">
                 <input class="visually-hidden" type="checkbox" name="type" id="motel-field" checked>
                 <span class="checkbox-indicator"></span>
                 Мотель
               </label>
 
-              <label class="checkbox-field" for="apartment-field">
+                <label class="checkbox-field" for="apartment-field">
                 <input class="visually-hidden" type="checkbox" name="type" id="apartment-field" checked disabled>
                 <span class="checkbox-indicator"></span>
                 Апартаменты
               </label>
 
-            </fieldset>
+              </fieldset>
+            </div>
           </div>
 
-          <div class="filter-range">
-            <div class="filter-range-title">Стоимость в сутки (р):</div>
-            <div class="price-controls">
-              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
-            </div>
-            <div class="range-controls">
-              <div class="scale">
-                <div class="bar"></div>
+          <div class="range">
+            <div class="filter-range">
+              <div class="filter-range-title">Стоимость в сутки (р):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
               </div>
-              <div class="range-toggle range-toggle-min"></div>
-              <div class="range-toggle range-toggle-max"></div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="btn-transparent" type="submit">Показать</button>
             </div>
-            <button class="btn-transparent" type="submit">Показать</button>
           </div>
         </form>
       </section>
