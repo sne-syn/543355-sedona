@@ -387,9 +387,11 @@ a {
 }
 
 .booking-fields fieldset {
+  /*
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+*/
   width: 458px;
   margin: 54px;
   padding: 0;
@@ -397,23 +399,15 @@ a {
   border: none;
 }
 
-/*
-
-.input {
-  display: flex;
-}
-*/
-
 .input-field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*  flex-direction: column;*/
+  flex-direction: row;
   justify-content: space-between;
   width: 458px;
   margin: 0;
   padding: 0;
-
 
   font-weight: bold;
 }
@@ -425,7 +419,6 @@ a {
   justify-content: space-between;
   width: 458px;
   margin-bottom: 54px;
-
 
   font-weight: bold;
 }
@@ -480,6 +473,11 @@ a {
 
   background-color: #f2f2f2;
   border: none;
+}
+
+.adults-field,
+.children-field {
+  background-color: #f2f2f2;
 }
 
 .some-field input[id="adults-field"],
@@ -545,19 +543,20 @@ a {
 
 .button-minus {
   position: relative;
-  left: 4px;
-  top: 2px;
+  left: 1px;
+  top: 1px;
 }
 
 .button-plus {
   position: relative;
-  right: 4px;
-  top: 2px;
+  right: 1px;
+  top: 1px;
+  padding-left: 10px;
 }
 
 .calendar-button:hover path,
-.button-minus:hover,
-.button-plus:hover {
+.button-minus:hover stroke,
+.button-plus:hover stroke {
   fill: #000000;
 }
 
@@ -574,6 +573,7 @@ a {
   padding-bottom: 15px;
 
   background-color: #81b3d2;
+  border: 0;
 }
 
 .button-search:hover {
@@ -682,7 +682,7 @@ a {
   width: 19px;
   height: 19px;
 
-  border: 2px solid #6a6a6a;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 3px;
 }
 
@@ -697,13 +697,11 @@ a {
   border: none;
 }
 
-/* не понимаю я, почему не слушается */
-
 .checkbox-field input[type="checkbox"]:disabled:checked + .checkbox-indicator {
   width: 27px;
   height: 23px;
 
-  background-image: url(../img/checkbox-disabled.svg);
+  background-image: url(../img/checkbox-on-disabled.svg);
   background-repeat: no-repeat;
   background-position: 7% 55%;
 
