@@ -13,6 +13,8 @@ body {
   background-color: #f2f2f2;
 }
 
+/* внизу полоски на обеих страницах */
+
 .inner-page {
   font-weight: bold;
   font-size: 14px;
@@ -22,7 +24,6 @@ body {
   background-color: #fefefe;
 }
 
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -31,7 +32,6 @@ body {
   height: 1px;
   margin: -1px;
 }
-
 
 /* тень на глаз */
 
@@ -44,6 +44,8 @@ body {
   -2px 2px 15px -1px #dbdbdb;
   box-shadow: 2px 2px 15px -1px #dbdbdb,
   -2px 2px 15px -1px #dbdbdb;
+
+  outline: 2px solid black;
 }
 
 .main-header {
@@ -67,7 +69,6 @@ a {
   list-style: none;
 }
 
-
 .logo {
   position: absolute;
   left: 50%;
@@ -78,7 +79,6 @@ a {
   height: 70px;
   margin-left: -69px;
 }
-
 
 .site-navigation {
   display: -webkit-box;
@@ -150,7 +150,7 @@ a {
   bottom: 0;
   left: 0;
 
-  height: 57px;
+  height: 56px;
   width: 100%;
 
   background-image: url(../img/background-shape.png);
@@ -165,14 +165,13 @@ a {
 
 .main-title {
   display: inline-block;
-  vertical-align: top;
-
   width: 570px;
   margin-top: 62px;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 
   font-weight: bold;
   font-size: 21px;
+  vertical-align: top;
   color: #000000;
 }
 
@@ -196,13 +195,13 @@ a {
 
 .advantage-text h3 {
   display: inline-block;
-  vertical-align: top;
 
   width: 150px;
 
   font-weight: bold;
   font-size: 21px;
   text-align: center;
+  vertical-align: top;
   color: #000000;
 }
 
@@ -217,7 +216,7 @@ a {
 
 .advantage-image-block h3,
 .advantage-background-block h3 {
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 .advantage-image-block p,
@@ -242,8 +241,8 @@ a {
 
 .advantage-text p,
 .advantage-background p {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 61px;
+  padding-right: 62px;
 
   text-align: center;
 }
@@ -270,7 +269,7 @@ a {
 
 .advantage-icon-block .advantage-food {
   background-image: url("../img/icon-3.svg");
-  background-position: 49% 32%;
+  background-position: 49% 31%;
 }
 
 .advantage-icon-block .advantage-souvenir {
@@ -288,11 +287,17 @@ a {
 }
 
 .advantage-bridge h3 {
-  padding-top: 27px;
+  padding-top: 26px;
+}
+
+.advantage-city p {
+  margin-top: 14px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .advantage-bridge p {
-  margin-top: 15px;
+  margin-top: 13px;
   padding-left: 45px;
   padding-right: 45px;
 }
@@ -313,6 +318,8 @@ a {
   -ms-flex-align: center;
   align-items: center;
 }
+
+/* а карта у нас в jpg или лучше в png ? */
 
 .background-map {
   display: block;
@@ -387,13 +394,8 @@ a {
 }
 
 .booking-fields fieldset {
-  /*
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-*/
   width: 458px;
-  margin: 54px;
+  margin: 56px;
   padding: 0;
 
   border: none;
@@ -431,7 +433,7 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 232px;
+  width: 230px;
 
 }
 
@@ -447,7 +449,7 @@ a {
 }
 
 .some-field label {
-  width: 90px;
+  width: 88px;
   margin-right: 22px;
   padding-top: 7px;
   text-align: left;
@@ -455,7 +457,7 @@ a {
 
 .some-field:nth-last-of-type(1) label {
   text-align: right;
-  margin-right: 25px;
+  margin-right: 26px;
 }
 
 .input-field input[id="check-in"],
@@ -486,7 +488,8 @@ a {
   box-sizing: border-box;
 
   width: 35px;
-  padding: 6px 0;
+  padding: 6px 0px;
+  padding-left: 5px;
 
   font: inherit;
   text-transform: uppercase;
@@ -537,6 +540,7 @@ a {
   height: 38px;
   padding: 8px;
 
+
   background-color: #f2f2f2;
   border: none;
 }
@@ -545,13 +549,15 @@ a {
   position: relative;
   left: 1px;
   top: 1px;
+  padding-left: 13px;
 }
 
 .button-plus {
   position: relative;
   right: 1px;
   top: 1px;
-  padding-left: 10px;
+  padding-left: 13px;
+  margin-right: 2px;
 }
 
 .calendar-button:hover path,
@@ -644,10 +650,11 @@ a {
   margin-bottom: 25px;
 }
 
+/* edge не видит марген */
+
 .form label {
   font-weight: normal;
   margin-bottom: 24px;
-
 }
 
 /*  чекбоксы, с клавиатуры не видны */
@@ -786,7 +793,7 @@ a {
   padding-left: 64px;
 }
 
-/* нужно как-то цифры подныть выше на пару пикселей. Идей пока нет */
+/* нужно как-то цифры поднять выше на пару пикселей. Идей пока нет */
 
 .price-controls .max-price {
   width: 90px;
@@ -906,7 +913,6 @@ a {
   line-height: 26px;
   font-weight: bold;
   color: #000000;
-
 }
 
 .sort-title {
@@ -964,8 +970,6 @@ a {
   color: #81b3d2;
   border-bottom: none;
 }
-
-/* двигайтесь вправо!!!*/
 
 .sort-button {
   width: 110px;
@@ -1075,6 +1079,7 @@ a {
   padding-right: 2px;
 
   font-weight: normal;
+  vertical-align: top;
 }
 
 .hotel-name a {
@@ -1098,11 +1103,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   width: 260px;
   margin: 0;
   padding: 0;
   padding-top: 5px;
+
+  text-align: center;
 }
 
 .hotel-details {
@@ -1141,8 +1147,7 @@ a {
   color: #ffffff;
 }
 
-.hotel-detailes:active a,
-.hotel-reservation:active a {
+.hotel-links a:active {
   color: rgba(250, 250, 250, 0.5);
 }
 
@@ -1154,13 +1159,13 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+
   text-align: right;
 }
 
 .hotel-raiting {
   width: 98px;
   margin-top: 39px;
-
   padding: 5px;
 
   text-align: center;
@@ -1187,6 +1192,8 @@ a {
   background-color: #fdfdfd;
 }
 
+/* нужно ли задавать ему состояния по hover, active, как для logo html academy ?*/
+
 .footer-hashtag {
   width: 160px;
   margin-top: 11px;
@@ -1208,7 +1215,6 @@ a {
   margin: 0 auto;
   padding: 0;
   padding-right: 3px;
-
 }
 
 .social-btn {
@@ -1254,8 +1260,6 @@ a {
   flex-direction: row;
   width: 240px;
 }
-
-/* с клавиатуры некрасивый бордер */
 
 .logo-link {
   width: 110px;
