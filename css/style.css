@@ -567,8 +567,8 @@ a {
 
 /* Кнопки с +- не мигают */
 
-.button-minus:active svg,
-.button-plus:active svg {
+.button-minus:active line,
+.button-plus:active line {
   fill: #81b3d2;
 }
 
@@ -649,14 +649,21 @@ a {
   margin-bottom: 25px;
 }
 
-/* edge не видит марген */
+/* edge не видит маргин. не подсвечивает checkbox с клавиатуры  */
 
 .form label {
   font-weight: normal;
   margin-bottom: 24px;
 }
 
-/*  чекбоксы, с клавиатуры не видны */
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label {
+    min-height: 150px;
+  }
+}
+
+
 
 .checkbox-field {
   position: relative;
@@ -685,6 +692,10 @@ a {
 
   border: 2px solid #ffffff;
   border-radius: 4px;
+}
+
+.checkbox-field input[type="checkbox"]:focus + .checkbox-indicator {
+  outline: rgb(59, 153, 252) auto 5px;
 }
 
 .checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator {
