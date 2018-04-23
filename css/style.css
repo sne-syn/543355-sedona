@@ -273,7 +273,7 @@ a {
 
 .advantage-icon-block .advantage-food {
   background-image: url("../img/icon-3.svg");
-  background-position: 49% 31%;
+  background-position: 49% 32%;
 }
 
 .advantage-icon-block .advantage-souvenir {
@@ -655,15 +655,6 @@ a {
   font-weight: normal;
   margin-bottom: 24px;
 }
-
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-  .form-label {
-    min-height: 150px;
-  }
-}
-
-
 
 .checkbox-field {
   position: relative;
@@ -1163,7 +1154,7 @@ a {
 
 /*  обводка с клавиатуры некрасивая */
 
-/*текст не прозрачневеет при нажатии. раньше ставила active на ссылку и все работало, но только если мышкой попадать по тексту*/
+/*текст не прозрачный при нажатии. раньше ставила active на ссылку и все работало, но только если мышкой попадать по тексту*/
 
 .hotel-detailes:active a {
   color: rgba(250, 250, 250, 0.5);
@@ -1255,7 +1246,6 @@ a {
   height: 48px;
 
   margin-right: 2px
-  /*  margin-top: 35px;*/
 }
 
 .social-btn {
