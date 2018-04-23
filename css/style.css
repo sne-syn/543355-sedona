@@ -85,7 +85,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   margin: 0;
@@ -166,11 +167,9 @@ a {
   margin-top: 75px;
 }
 
-/* здесь тоже убрать ширину для текстoвого блока? */
-
 .main-title {
   display: inline-block;
-  width: 570px;
+  width: 571px;
   margin-top: 62px;
   margin-bottom: 14px;
 
@@ -419,6 +418,68 @@ a {
   font-weight: bold;
 }
 
+.input-field label {
+  width: 115px;
+  margin-right: 15px;
+  padding-top: 7px;
+
+  /*  плохо подгоняются label */
+  padding-left: 1px;
+
+  text-align: left;
+}
+
+.input-field input[id="check-in"],
+.input-field input[id="check-out"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 347px;
+
+  padding: 6px 10px;
+  padding-right: 35px;
+
+  font: inherit;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.calendar-button {
+  position: relative;
+  width: 45px;
+  height: 34px;
+  left: 150px;
+  bottom: 36px;
+
+  padding: 0;
+  margin: 0;
+
+  fill: #a9a9a9;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.calendar-button:hover path {
+  fill: #000000;
+}
+
+.calendar-button:active path {
+  fill: #81b3d2;
+}
+
+.input-field input[id="check-in"]:hover,
+.input-field input[id="check-out"]:hover,
+.calendar-button:hover {
+  background-color: #ebebeb;
+}
+
+.input-field input[id="check-in"]:focus,
+.input-field input[id="check-out"]:focus,
+.calendar-button:focus {
+  background-color: #ffffff;
+}
+
 .fields-in-line {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,18 +500,6 @@ a {
   -ms-flex-direction: row;
   flex-direction: row;
   width: 230px;
-
-}
-
-.input-field label {
-  width: 115px;
-  margin-right: 15px;
-  padding-top: 7px;
-
-  /*  плохо подгоняются label */
-  padding-left: 1px;
-
-  text-align: left;
 }
 
 .some-field label {
@@ -462,28 +511,12 @@ a {
 
 .some-field:nth-last-of-type(1) label {
   text-align: right;
-  margin-right: 26px;
-}
-
-.input-field input[id="check-in"],
-.input-field input[id="check-out"] {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 347px;
-
-  padding: 6px 10px;
-  padding-right: 35px;
-  margin-right: 0;
-
-  font: inherit;
-  text-transform: uppercase;
-
-  background-color: #f2f2f2;
-  border: none;
 }
 
 .adults-field,
 .children-field {
+  width: 115px;
+
   background-color: #f2f2f2;
 }
 
@@ -492,9 +525,9 @@ a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
-  width: 36px;
-  padding: 6px 0px;
-  margin-left: 2px;
+  width: 35px;
+  padding: 7px 0px;
+  padding-top: 8px;
 
   font: inherit;
   text-transform: uppercase;
@@ -504,45 +537,14 @@ a {
   border: none;
 }
 
-/*мигают немного по-разному. Кнопки с +- вообще не мигают */
-
-.input-field input[id="check-in"]:hover,
-.input-field input[id="check-out"]:hover,
 .some-field input[id="children-field"]:hover,
-.some-field input[id="adults-field"]:hover,
-.calendar-button:hover,
-.input-field .button-plus:hover,
-.input-field .button-minus:hover {
+.some-field input[id="adults-field"]:hover {
   background-color: #ebebeb;
 }
 
-.input-field .button-plus:hover,
-.input-field .button-minus:hover {
-  color: #ebebeb;
-}
-
-
-.input-field input[id="check-in"]:focus,
-.input-field input[id="check-out"]:focus,
 .some-field input[id="children-field"]:focus,
-.some-field input[id="adults-field"]:focus,
-.calendar-button:focus {
+.some-field input[id="adults-field"]:focus {
   background-color: #ffffff;
-}
-
-.calendar-button {
-  position: relative;
-  width: 45px;
-  height: 34px;
-  left: 150px;
-  bottom: 36px;
-
-  padding: 0;
-  margin: 0;
-
-  fill: #a9a9a9;
-  background-color: #f2f2f2;
-  border: none;
 }
 
 .button-minus,
@@ -551,38 +553,22 @@ a {
   height: 40px;
   padding: 8px;
 
-
   background-color: #f2f2f2;
   border: none;
 }
 
-.button-minus {
-  position: relative;
-  left: px;
-  bottom: 0px;
-  padding-left: 13px;
-}
-
-
 .button-plus {
-  position: relative;
-  right: 0px;
-  bottom: 0;
   padding-left: 10px;
-  margin-right: px;
 }
 
-.button-minus:active,
-.button-plus:active {
-  background-color: #ffffff;
-  fill: #81b3d2;
+.button-minus {
+  padding-left: 10px;
 }
 
-.calendar-button:hover path {
-  fill: #000000;
-}
+/* Кнопки с +- не мигают */
 
-.calendar-button:active path {
+.button-minus:active svg,
+.button-plus:active svg {
   fill: #81b3d2;
 }
 
@@ -735,8 +721,6 @@ a {
   border: none;
 }
 
-/*поехал range => поправить.*/
-
 .range {
   display: flex;
   justify-content: flex-end;
@@ -878,7 +862,7 @@ a {
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 34px;
+  padding: 6px 33px;
   padding-top: 7px;
   margin-bottom: 30px;
   margin-left: 85px;
@@ -1014,6 +998,10 @@ a {
 .icon-up path,
 .icon-down path {
   fill: #cacaca;
+}
+
+.active-icon-down path {
+  fill: #81b3d2;
 }
 
 .icon-up path:hover,
