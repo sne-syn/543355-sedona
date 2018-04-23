@@ -329,7 +329,7 @@ a {
   display: block;
   left: 0;
   width: 100%;
-  height: 400px;
+  height: 473px;
 
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
@@ -412,8 +412,11 @@ a {
   flex-direction: row;
   justify-content: space-between;
   width: 458px;
+  height: 38px;
   margin: 0;
   padding: 0;
+
+  margin-bottom: 28px;
 
   font-weight: bold;
 }
@@ -423,8 +426,6 @@ a {
   margin-right: 15px;
   padding-top: 7px;
 
-  /*  плохо подгоняются label */
-  padding-left: 1px;
 
   text-align: left;
 }
@@ -437,6 +438,7 @@ a {
 
   padding: 6px 10px;
   padding-right: 35px;
+  padding-left: 13px;
 
   font: inherit;
   text-transform: uppercase;
@@ -447,10 +449,8 @@ a {
 
 .calendar-button {
   position: relative;
-  width: 45px;
-  height: 34px;
-  left: 150px;
-  bottom: 36px;
+  left: 154px;
+  bottom: 31px;
 
   padding: 0;
   margin: 0;
@@ -505,19 +505,19 @@ a {
 .some-field label {
   width: 89px;
   margin-right: 22px;
-  padding-top: 7px;
+  padding-top: 9px;
   text-align: left;
 }
 
 .some-field:nth-last-of-type(1) label {
   text-align: right;
+  margin-right: 25px;
 }
 
 .adults-field,
 .children-field {
-  width: 115px;
-
-  background-color: #f2f2f2;
+  display: flex;
+  padding-top: 2px;
 }
 
 .some-field input[id="adults-field"],
@@ -526,8 +526,8 @@ a {
   box-sizing: border-box;
 
   width: 35px;
-  padding: 7px 0px;
-  padding-top: 8px;
+  height: 38px;
+  line-height: 38px;
 
   font: inherit;
   text-transform: uppercase;
@@ -549,13 +549,16 @@ a {
 
 .button-minus,
 .button-plus {
-  width: 34px;
-  height: 40px;
-  padding: 8px;
+  width: 40px;
+  height: 38px;
+
+  line-height: 45px;
 
   background-color: #f2f2f2;
   border: none;
 }
+
+/*
 
 .button-plus {
   padding-left: 10px;
@@ -564,18 +567,24 @@ a {
 .button-minus {
   padding-left: 10px;
 }
+*/
 
-/* Кнопки с +- не мигают */
+.button-minus:hover line,
+.button-plus:hover line {
+  stroke: #000000;
+}
 
 .button-minus:active line,
 .button-plus:active line {
-  fill: #81b3d2;
+  stroke: #81b3d2;
 }
 
 .button-search {
   width: 458px;
-  padding-top: 15px;
+  padding-top: 19px;
   padding-bottom: 15px;
+
+  text-transform: unset;
 
   background-color: #81b3d2;
   border: 0;
