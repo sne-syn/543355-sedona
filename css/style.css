@@ -256,8 +256,6 @@ a {
   margin-bottom: 10px;
 }
 
-/* я оставила здесь усредненную background-position для icons. А потом отдельно подогнала каждую картинку по более личному классу. */
-
 .advantage-icon-block .advantage-text {
   margin-bottom: 68px;
   padding-top: 132px;
@@ -647,7 +645,7 @@ a {
   margin-bottom: 25px;
 }
 
-/* не подсвечивает checkbox с клавиатуры  */
+/* не подсвечивает checkbox с клавиатуры на edge IE  */
 
 .form label {
   font-weight: normal;
@@ -657,6 +655,7 @@ a {
 .checkbox-field {
   position: relative;
   display: inline-block;
+  vertical-align: top;
 
   padding-left: 39px;
 
