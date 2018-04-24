@@ -859,12 +859,10 @@ a {
   display: block;
   /*  width: 126px;*/
   margin: 0 auto;
+  margin-left: 84px;
   padding: 6px 33px;
   padding-top: 7px;
-  /*
-  margin-bottom: 30px;
-  margin-left: 85px;
-*/
+
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
