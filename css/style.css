@@ -46,6 +46,8 @@ body {
   -2px 2px 15px -1px #dbdbdb;
 }
 
+
+
 .main-header {
   position: relative;
 
@@ -688,7 +690,7 @@ a {
 }
 
 .checkbox-field input[type="checkbox"]:focus + .checkbox-indicator {
-  outline: rgb(59, 153, 252) auto 5px;
+  outline: rgb(59, 153, 252) auto 3px;
 }
 
 .checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator {
