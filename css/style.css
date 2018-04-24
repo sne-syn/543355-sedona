@@ -326,7 +326,7 @@ a {
 .background-map {
   position: absolute;
   display: block;
-  left: 20;
+
   width: 100%;
   min-height: 595px;
 
@@ -558,17 +558,6 @@ a {
   border: none;
 }
 
-/*
-
-.button-plus {
-  padding-left: 10px;
-}
-
-.button-minus {
-  padding-left: 10px;
-}
-*/
-
 .button-minus:hover line,
 .button-plus:hover line {
   stroke: #000000;
@@ -792,10 +781,8 @@ a {
   display: inline-block;
   vertical-align: top;
 
-
   font-size: 14px;
   line-height: 38px;
-
 
   cursor: pointer;
 }
@@ -804,8 +791,6 @@ a {
   width: 90px;
   padding-left: 63px;
 }
-
-/* нужно как-то цифры поднять выше на пару пикселей. Идей пока нет */
 
 .price-controls .max-price {
   width: 90px;
@@ -857,14 +842,6 @@ a {
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
-
-/* в styleguide этого цвета в ховере нет. Хотя выглядит отлично
-
-.range-toggle:hover {
-  background: #1c4f80;
-}
-
-*/
 
 .range-toggle-min {
   left: 0;
@@ -1167,9 +1144,7 @@ a {
 
 /*  обводка с клавиатуры некрасивая */
 
-/*текст не прозрачный при нажатии. раньше ставила active на ссылку и все работало, но только если мышкой попадать по тексту*/
-
-.hotel-detailes:active a {
+.hotel-details:active a {
   color: rgba(250, 250, 250, 0.5);
 }
 
@@ -1230,10 +1205,7 @@ a {
   margin-top: 475px;
 
   background-color: #fefefe;
-
 }
-
-/* нужно ли задавать ему состояния по hover, active, как для logo html academy ?*/
 
 .footer-hashtag {
   width: 160px;
