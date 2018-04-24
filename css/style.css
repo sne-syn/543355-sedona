@@ -729,6 +729,7 @@ a {
   display: flex;
   justify-content: flex-end;
   margin: 0;
+
 }
 
 .filter-range {
@@ -748,7 +749,6 @@ a {
 
 .filter-range-title {
   margin-bottom: 9px;
-  padding-left: 1px;
 
   font-weight: 600;
   font-size: 16px;
@@ -756,10 +756,9 @@ a {
 
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 33px;
   margin-bottom: 20px;
   margin-top: -1px;
-
 
   font-size: 0;
 
@@ -858,14 +857,14 @@ a {
 
 .btn-transparent {
   display: block;
-  /* width: 126px; */
+  /*  width: 126px;*/
   margin: 0 auto;
   padding: 6px 33px;
   padding-top: 7px;
+  /*
   margin-bottom: 30px;
   margin-left: 85px;
-
-
+*/
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
