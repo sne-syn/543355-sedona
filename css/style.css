@@ -430,11 +430,15 @@ a {
 
 .input-field input[id="check-in"],
 .input-field input[id="check-out"] {
+  display: inline-block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 347px;
 
-  padding: 6px 10px;
+  width: 347px;
+  height: 38px;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-right: 35px;
   padding-left: 13px;
 
@@ -448,7 +452,7 @@ a {
 .calendar-button {
   position: relative;
   left: 154px;
-  bottom: 31px;
+  bottom: 30px;
 
   padding: 0;
   margin: 0;
@@ -752,7 +756,7 @@ a {
 
 .price-controls {
   position: relative;
-  height: 33px;
+  height: 36px;
   margin-bottom: 20px;
   margin-top: -1px;
 
@@ -1035,7 +1039,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-
 }
 
 .hotel-img {
@@ -1283,6 +1286,7 @@ a {
 
 .logo-link {
   width: 110px;
+  height: 37px;
   margin-left: 0px;
 }
 
