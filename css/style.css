@@ -690,7 +690,7 @@ a {
 }
 
 .checkbox-field input[type="checkbox"]:focus + .checkbox-indicator {
-  outline: rgb(59, 153, 252) auto 3px;
+  outline: 5px auto rgb(0,128,255);  
 }
 
 .checkbox-field input[type="checkbox"]:disabled + .checkbox-indicator {
@@ -855,13 +855,13 @@ a {
   left: 80%;
 }
 
-/* пересмотрет. ширин */
+/* пересмотрет. ширинy */
 
 .btn-transparent {
   display: block;
-  /*  width: 126px;*/
   margin: 0 auto;
   margin-left: 84px;
+/*  margin-right: 85px;*/
   padding: 6px 33px;
   padding-top: 7px;
 
