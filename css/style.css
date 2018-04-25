@@ -858,7 +858,7 @@ a {
 /* пересмотрет. ширинy */
 
 .btn-transparent {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   margin-left: 84px;
   /*  margin-right: 85px;*/
