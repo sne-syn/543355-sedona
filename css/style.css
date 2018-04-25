@@ -855,11 +855,11 @@ a {
   left: 80%;
 }
 
-/* пересмотрет. ширин */
+/* пересмотрет. ширину */
 
 .btn-transparent {
   display: block;
-  /*  width: 126px;*/
+  width: 126px;
   margin: 0 auto;
   margin-left: 84px;
   padding: 6px 33px;
