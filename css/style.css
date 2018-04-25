@@ -859,9 +859,9 @@ a {
 
 .btn-transparent {
   display: flex;
-  justify-content: center;
+  align-self: center;
   margin: 0 auto;
-  margin-left: 84px;
+/*  margin-left: 84px;*/
   /*  margin-right: 85px;*/
   padding: 6px 33px;
   padding-top: 7px;
