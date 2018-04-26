@@ -320,7 +320,6 @@ a {
 }
 
 .background-map {
-  position: absolute;
   display: block;
 
   width: 100%;
@@ -1183,6 +1182,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 34px;
   background-color: #fefefe;
 }
@@ -1194,17 +1196,19 @@ a {
   display: flex;
 
   z-index: 2;
-  opacity: 0.9;
-  padding: 34px;
-  margin-top: 475px;
 
-  background-color: #fefefe;
+  margin-top: -123px;
+  padding-top: 23px;
+  padding-bottom: 24px;
+  padding-left: 120px;
+  padding-right: 100px;
+
+  background-color: rgba(253, 253, 253, 0.9);
 }
 
 .footer-hashtag {
   width: 160px;
-  margin-top: 12px;
-  margin-left: 86px;
+  margin-top: 25px;
 
   font-size: 21px;
   line-height: 26px;
@@ -1219,11 +1223,9 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 151px;
-  margin: 0 auto;
-  margin-left: 244px;
-  padding: 0;
-  padding-right: 3px;
+  margin-left: 19px;
 
+  padding: 0;
 }
 
 .social-btn {
@@ -1266,20 +1268,18 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-
-  width: 263px;
-  margin-top: 5px;
 }
 
 .footer-made-by p {
-  margin-top: 7px;
-  margin-right: 9px;
+  margin-top: 25px;
 }
 
 .logo-link {
-  width: 110px;
+  width: 109px;
   height: 37px;
-  margin-left: 0px;
+  margin-top: 19px;
+  margin-right: 6px;
+  margin-left: 9px;
 }
 
 .logo-link:hover path {
