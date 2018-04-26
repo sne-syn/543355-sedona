@@ -1259,8 +1259,10 @@ a {
 .social-btn:active path {
   fill: rgba(255, 255, 255, 0.5);
 }
+/*
 
 .footer-made-by {
+    
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1269,12 +1271,17 @@ a {
   -ms-flex-direction: row;
   flex-direction: row;
 }
+*/
 
 .footer-made-by p {
-  margin-top: 25px;
+ display: inline-block;
+ vertical-align: top;
+ margin-top: 25px;
 }
 
 .logo-link {
+  display: inline-block;
+  vertical-align: top;
   width: 109px;
   height: 37px;
   margin-top: 18px;
