@@ -150,14 +150,13 @@
       </section>
 
       <section>
-
         <h2 class="visually-hidden">Карта Седоны</h2>
-        <div id="background-map"></div>
+        <div class="background-map"></div>
       </section>
 
       <script>
         function initMap() {
-          var element = document.getElementById("background-map");
+          var element = document.getElementsByClassName("background-map")[0];
           var options = {
             zoom: 10,
             center: {
@@ -184,8 +183,6 @@
 
 
       </script>
-
-
 
     </main>
     <footer class="main-footer footer-relative ">
@@ -215,8 +212,6 @@
 
       </div>
     </footer>
-
-
 
   </div>
   <!--  Java Script -->
