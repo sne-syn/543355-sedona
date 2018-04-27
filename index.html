@@ -149,10 +149,43 @@
         </form>
       </section>
 
-      <section class="background-map modal-map">
+      <section>
+
         <h2 class="visually-hidden">Карта Седоны</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18052164184!2d-111.83024372360255!3d34.85437335642978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+Arizona+86336%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1524826805008" frameborder="0" style="border:0" width="100%" height="595" allowfullscreen></iframe>
+        <div id="background-map"></div>
       </section>
+
+      <script>
+        function initMap() {
+          var element = document.getElementById("background-map");
+          var options = {
+            zoom: 15,
+            center: {
+              lat: 34.8697,
+              lng: 111.7610
+            }
+          };
+
+          var myMap = new google.maps.Map(element, options);
+
+          var marker = new google.maps.Marker({
+            position: {
+              lat: 34.8697,
+              lng: 111.7610
+            },
+            map: myMap
+          });
+
+        }
+
+      </script>
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn-3kWFCkwVxKJaChXKfgDae9fIBILboY&callback=initMap">
+
+
+      </script>
+
+
 
     </main>
     <footer class="main-footer footer-relative ">
@@ -204,15 +237,13 @@
     form.addEventListener("submit", function(evt) {
       if (!checkIn.value || !checkOut.value || !roomAdults.value) {
         evt.preventDefault();
-        //        form.classList.remove("input-error");
-        //        form.offsetWidth = form.offsetWidth;
-        //        form.classList.add("input-error");
         console.log("Введите интересующие вас даты");
       }
     });
-    // // var mapModal = document.querySelector(".modal-map"); // var mapClose = mapModal.querySelector(".modal-close"); // // mapModal.addEventListener("click", function(evt) { // evt.preventDefault(); // mapModal.classList.add("modal-show"); // }); // // mapClose.addEventListener("click", function(evt) { // evt.preventDefault(); // mapModal.classList.remove("modal-show"); // }); // // window.addEventListener("keydown", function(evt) { // evt.preventDefault(); // if (evt.keyCode === 27) { // if (mapModal.classList.contains("modal-show")) { // mapModal.classList.remove("modal-show"); // } // } // });
 
   </script>
+
+
 
 </body>
 
