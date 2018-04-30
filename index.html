@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -184,58 +185,25 @@
     </footer>
 
   </div>
-  <!--  button toggle Script -->
 
-  <script>
-    var link = document.querySelector(".hotel-button");
-    var form = document.querySelector(".booking-fields");
-    var checkIn = form.querySelector("[id=check-in]");
-    var checkOut = form.querySelector("[id=check-out]");
-    var roomAdults = form.querySelector("[id=adults-field]");
+  <script src="js/form.js">
 
-    link.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      form.classList.toggle("booking-fields-js");
-      checkIn.focus();
-    });
-
-    form.addEventListener("submit", function(evt) {
-      if (!checkIn.value || !checkOut.value || !roomAdults.value) {
-        evt.preventDefault();
-        console.log("Введите интересующие вас даты");
-      }
-    });
 
   </script>
 
-  <!-- Map script -->
+  <script src="js/map.js">
 
-  <script>
-    function initMap() {
-      var element = document.getElementsByClassName("background-map")[0];
-      var options = {
-        zoom: 10,
-        center: {
-          lat: 34.857323,
-          lng: -111.794933
-        }
-      };
-
-      var myMap = new google.maps.Map(element, options);
-
-      var marker = new google.maps.Marker({
-        position: {
-          lat: 34.857323,
-          lng: -111.794933
-        },
-        map: myMap
-      });
-    }
 
   </script>
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn-3kWFCkwVxKJaChXKfgDae9fIBILboY&callback=initMap">
 
+
+  </script>
+
+  <script>
+    document.documentElement
+      .classList.replace('no-js', 'js');
 
   </script>
 
