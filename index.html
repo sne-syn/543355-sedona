@@ -154,36 +154,6 @@
         <div class="background-map"></div>
       </section>
 
-      <script>
-        function initMap() {
-          var element = document.getElementsByClassName("background-map")[0];
-          var options = {
-            zoom: 10,
-            center: {
-              lat: 34.857323,
-              lng: -111.794933
-            }
-          };
-
-          var myMap = new google.maps.Map(element, options);
-
-          var marker = new google.maps.Marker({
-            position: {
-              lat: 34.857323,
-              lng: -111.794933
-            },
-            map: myMap
-          });
-
-        }
-
-      </script>
-
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn-3kWFCkwVxKJaChXKfgDae9fIBILboY&callback=initMap">
-
-
-      </script>
-
     </main>
     <footer class="main-footer footer-relative ">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
@@ -214,7 +184,7 @@
     </footer>
 
   </div>
-  <!--  Java Script -->
+  <!--  button toggle Script -->
 
   <script>
     var link = document.querySelector(".hotel-button");
@@ -238,7 +208,36 @@
 
   </script>
 
+  <!-- Map script -->
 
+  <script>
+    function initMap() {
+      var element = document.getElementsByClassName("background-map")[0];
+      var options = {
+        zoom: 10,
+        center: {
+          lat: 34.857323,
+          lng: -111.794933
+        }
+      };
+
+      var myMap = new google.maps.Map(element, options);
+
+      var marker = new google.maps.Marker({
+        position: {
+          lat: 34.857323,
+          lng: -111.794933
+        },
+        map: myMap
+      });
+    }
+
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn-3kWFCkwVxKJaChXKfgDae9fIBILboY&callback=initMap">
+
+
+  </script>
 
 </body>
 
