@@ -1235,12 +1235,15 @@ a {
 }
 
 .main-footer {
+    display: inline-block;
+/*
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+*/
   padding-top: 22px;
   padding-bottom: 24px;
   padding-left: 120px;
@@ -1279,7 +1282,7 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 151px;
-  margin-left: 19px;
+  margin-left: 89px;
 
   padding: 0;
 }
