@@ -390,12 +390,25 @@ a {
   margin-left: -285px;
   z-index: 1;
 
+  animation: falling 0.5s;
+  animation-timing-function: ease-out;
   background: #ffffff;
 }
 
 .booking-fields-js {
   display: none;
 }
+
+@keyframes falling {
+  0% {
+    transform: translateY(-80px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 .booking-fields fieldset {
   width: 458px;
