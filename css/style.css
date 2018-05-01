@@ -250,31 +250,35 @@ a {
 }
 
 .advantage-icon-block h3 {
+  display: inline-block;
   margin-top: 30px;
-  margin-bottom: 10px;
+
 }
 
 .advantage-icon-block .advantage-text {
   padding-bottom: 68px;
   padding-top: 132px;
-
-  background-repeat: no-repeat;
-  background-position: 50% 23%;
 }
 
-.advantage-icon-block .advantage-accomodation {
-  background-image: url("../img/icon-1.svg");
-  background-position: 50% 23%;
+.advantage-icon-block .advantage-accomodation:before {
+  content: url(../img/icon-1.svg);
+  position: relative;
+  top: -72px;
+  left: 75px;
 }
 
-.advantage-icon-block .advantage-food {
-  background-image: url("../img/icon-3.svg");
-  background-position: 49% 23%;
+.advantage-icon-block .advantage-food:before {
+  content: url(../img/icon-3.svg);
+  position: relative;
+  top: -72px;
+  left: 75px;
 }
 
-.advantage-icon-block .advantage-souvenir {
-  background-image: url("../img/icon-2.svg");
-  background-position: 50% 22%;
+.advantage-icon-block .advantage-souvenir:before {
+  content: url(../img/icon-2.svg);
+  position: relative;
+  top: -75px;
+  left: 76px;
 }
 
 .advantage-background-block {
