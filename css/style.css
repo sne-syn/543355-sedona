@@ -108,7 +108,7 @@ a {
 
 .site-navigation li {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 20%;
 }
 
@@ -389,9 +389,9 @@ a {
 
 .js .booking-fields {
   -webkit-animation: falling 0.5s;
-          animation: falling 0.5s;
+  animation: falling 0.5s;
   -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 
 .js .booking-fields-js {
@@ -400,38 +400,39 @@ a {
 
 .booking-field-error {
   -webkit-animation: shake 0.6s;
-          animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 
 @-webkit-keyframes falling {
   0% {
     -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    transform: translateY(-100px);
   }
 
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes falling {
   0% {
     -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    transform: translateY(-100px);
   }
 
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
+
 
 @-webkit-keyframes shake {
   0%,
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 
   10%,
@@ -440,7 +441,7 @@ a {
   70%,
   90% {
     -webkit-transform: translateX(-3px);
-            transform: translateX(-3px);
+    transform: translateX(-3px);
   }
 
   20%,
@@ -448,15 +449,16 @@ a {
   60%,
   80% {
     -webkit-transform: translateX(3px);
-            transform: translateX(3px);
+    transform: translateX(3px);
   }
 }
+
 
 @keyframes shake {
   0%,
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 
   10%,
@@ -465,7 +467,7 @@ a {
   70%,
   90% {
     -webkit-transform: translateX(-3px);
-            transform: translateX(-3px);
+    transform: translateX(-3px);
   }
 
   20%,
@@ -473,7 +475,7 @@ a {
   60%,
   80% {
     -webkit-transform: translateX(3px);
-            transform: translateX(3px);
+    transform: translateX(3px);
   }
 }
 
@@ -491,11 +493,11 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 458px;
   height: 38px;
   margin: 0;
@@ -574,8 +576,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 458px;
   margin-bottom: 54px;
 
@@ -716,7 +718,7 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
   -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 1056px;
   margin-left: 6%;
   margin-right: 6%;
@@ -832,8 +834,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin: 0;
 
 }
@@ -1298,7 +1300,7 @@ a {
 
 .main-footer {
   display: inline-block;
-  
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
