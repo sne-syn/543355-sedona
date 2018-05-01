@@ -259,21 +259,21 @@ a {
   padding-bottom: 68px;
 }
 
-.advantage-icon-block .advantage-accomodation:before {
+.advantage-icon-block .advantage-accomodation::before {
   content: url(../img/icon-1.svg);
   position: relative;
   top: 60px;
   left: -2px;
 }
 
-.advantage-icon-block .advantage-food:before {
+.advantage-icon-block .advantage-food::before {
   content: url(../img/icon-3.svg);
   position: relative;
   top: 62px;
   left: -3px;
 }
 
-.advantage-icon-block .advantage-souvenir:before {
+.advantage-icon-block .advantage-souvenir::before {
   content: url(../img/icon-2.svg);
   position: relative;
   top: 55px;
@@ -286,7 +286,7 @@ a {
 }
 
 .advantage-food h3 {
-  padding-bottom: 2px
+  padding-bottom: 2px;
 }
 
 .advantage-background-block {
