@@ -260,10 +260,16 @@ a {
 }
 
 .advantage-icon-block .advantage-accomodation::before {
-  content: url(../img/icon-1.svg);
+  content: "";
   position: relative;
   top: 60px;
   left: -2px;
+  background-image: url(../img/icon-1.svg);
+  background-repeat: no-repeat;
+  display: block;
+    height: 72px;
+    width: 75px;
+  
 }
 
 .advantage-icon-block .advantage-food::before {
