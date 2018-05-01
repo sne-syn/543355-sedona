@@ -196,9 +196,9 @@ a {
 }
 
 .advantage-text h3 {
-  display: inline-block;
 
   width: 150px;
+  margin-left: 125px;
 
   font-weight: bold;
   font-size: 21px;
@@ -218,7 +218,7 @@ a {
 
 .advantage-image-block h3,
 .advantage-background-block h3 {
-  margin-bottom: 8px;
+  margin-bottom: 23px;
 }
 
 .advantage-image-block p,
@@ -243,42 +243,50 @@ a {
 
 .advantage-text p,
 .advantage-background p {
-  padding-left: 61px;
+  margin-top: 14px;
+  padding-left: 59px;
   padding-right: 62px;
 
   text-align: center;
 }
 
 .advantage-icon-block h3 {
-  display: inline-block;
-  margin-top: 30px;
-
+  margin-top: 85px;
+  padding-left: -10px;
 }
 
 .advantage-icon-block .advantage-text {
   padding-bottom: 68px;
-  padding-top: 132px;
 }
 
 .advantage-icon-block .advantage-accomodation:before {
   content: url(../img/icon-1.svg);
   position: relative;
-  top: -72px;
-  left: 75px;
+  top: 60px;
+  left: -2px;
 }
 
 .advantage-icon-block .advantage-food:before {
   content: url(../img/icon-3.svg);
   position: relative;
-  top: -72px;
-  left: 75px;
+  top: 62px;
+  left: -3px;
 }
 
 .advantage-icon-block .advantage-souvenir:before {
   content: url(../img/icon-2.svg);
   position: relative;
-  top: -75px;
-  left: 76px;
+  top: 55px;
+  left: 0;
+}
+
+.advantage-souvenir h3 {
+   margin-top: 80px;
+   padding-bottom: 2px
+}
+
+.advantage-food h3 {
+  padding-bottom: 2px
 }
 
 .advantage-background-block {
@@ -321,7 +329,6 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-
 }
 
 .booking-form h3 {
@@ -841,7 +848,6 @@ a {
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin: 0;
-
 }
 
 .filter-range {
